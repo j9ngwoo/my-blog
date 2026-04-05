@@ -33,3 +33,11 @@ section {
     padding: 20px;
     border-radius: 10px;
 }
+
+.js-box {
+    text-align: center;
+    margin: 30px;
+    padding: 20px;
+    background: #e3f2fd;
+    border-radius: 10px;
+}
