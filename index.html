@@ -1,303 +1,217 @@
 <!DOCTYPE html>
-
-<html class="light" lang="ko">
+<html lang="ko">
 
 <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Indigo Code | Intellectual Architect</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WKU CSE Portfolio | Home</title>
+    <meta name="description" content="원광대학교 컴퓨터공학과 포트폴리오 사이트">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-tertiary": "#ffffff",
-                        "on-secondary": "#ffffff",
-                        "on-primary-fixed": "#00105c",
-                        "surface-bright": "#f7f9fb",
-                        "surface": "#f7f9fb",
-                        "primary": "#24389c",
-                        "on-primary": "#ffffff",
-                        "surface-dim": "#d8dadc",
-                        "surface-container-low": "#f2f4f6",
-                        "surface-container": "#eceef0",
-                        "secondary": "#505f76",
-                        "on-primary-container": "#cacfff",
-                        "on-secondary-fixed": "#0b1c30",
-                        "inverse-primary": "#bac3ff",
-                        "on-surface-variant": "#454652",
-                        "on-secondary-container": "#54647a",
-                        "on-primary-fixed-variant": "#293ca0",
-                        "on-background": "#191c1e",
-                        "tertiary-fixed-dim": "#4cd7f6",
-                        "secondary-fixed-dim": "#b7c8e1",
-                        "tertiary-container": "#006374",
-                        "on-tertiary-container": "#66e2ff",
-                        "primary-container": "#3f51b5",
-                        "on-error": "#ffffff",
-                        "primary-fixed": "#dee0ff",
-                        "surface-container-highest": "#e0e3e5",
-                        "on-error-container": "#93000a",
-                        "outline-variant": "#c5c5d4",
-                        "inverse-surface": "#2d3133",
-                        "secondary-container": "#d0e1fb",
-                        "background": "#f7f9fb",
-                        "primary-fixed-dim": "#bac3ff",
-                        "on-surface": "#191c1e",
-                        "tertiary-fixed": "#acedff",
-                        "on-tertiary-fixed": "#001f26",
-                        "outline": "#757684",
-                        "error-container": "#ffdad6",
-                        "surface-container-lowest": "#ffffff",
-                        "error": "#ba1a1a",
-                        "inverse-on-surface": "#eff1f3",
-                        "secondary-fixed": "#d3e4fe",
-                        "tertiary": "#004a57",
-                        "on-tertiary-fixed-variant": "#004e5c",
-                        "surface-tint": "#4355b9",
-                        "surface-variant": "#e0e3e5",
-                        "surface-container-high": "#e6e8ea",
-                        "on-secondary-fixed-variant": "#38485d"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "fontFamily": {
-                        "headline": ["Manrope"],
-                        "body": ["Inter"],
-                        "label": ["Inter"]
-                    }
-                },
-            },
-        }
-    </script>
-    <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f7f9fb;
-            color: #191c1e;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4 {
-            font-family: 'Manrope', sans-serif;
-        }
-    </style>
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-surface text-on-surface selection:bg-primary/10 selection:text-primary">
-    <!-- TopNavBar Implementation -->
-    <nav class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl transition-all duration-300">
-        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-            <a class="text-xl font-bold tracking-tighter text-indigo-900" href="index.html">Indigo Code</a>
-            <div class="hidden md:flex items-center gap-8">
-                <a class="text-indigo-700 font-bold border-b-2 border-indigo-600 text-sm tracking-tight font-['Manrope']"
-                    href="index.html">Home</a>
-                <a class="text-slate-600 hover:text-indigo-600 transition-colors text-sm tracking-tight font-['Manrope']"
-                    href="list.html">Essays</a>
-                <a class="text-slate-600 hover:text-indigo-600 transition-colors text-sm tracking-tight font-['Manrope']"
-                    href="projects.html">Projects</a>
-                <a class="text-slate-600 hover:text-indigo-600 transition-colors text-sm tracking-tight font-['Manrope']"
-                    href="about.html">About</a>
+<body>
+
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a class="brand" href="index.html">WKU CSE Portfolio</a>
+            <div class="nav-links">
+                <a data-nav href="index.html">Home</a>
+                <a data-nav href="list.html">Archive</a>
+                <a data-nav href="projects.html">Projects</a>
+                <a data-nav href="about.html">About</a>
+                <a data-nav href="curriculum.html">Curriculum</a>
+                <a data-nav href="github-guide.html">GitHub</a>
+                <a data-nav href="contact.html">Contact</a>
             </div>
-            <a class="px-5 py-2 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-lg font-medium text-sm transition-transform active:scale-95 duration-200"
-                href="#contact">Contact</a>
+            <div class="nav-actions">
+                <a class="nav-cta" href="sitemap.html">Start Here</a>
+            </div>
         </div>
     </nav>
-    <main class="pt-24">
-        <!-- Hero Section: Intellectual Architect -->
-        <section class="relative px-8 py-20 md:py-32 max-w-7xl mx-auto overflow-hidden">
-            <!-- Decorative Glow -->
-            <div
-                class="absolute -top-24 -right-24 w-96 h-96 bg-tertiary-fixed-dim/20 rounded-full blur-[100px] pointer-events-none">
+
+    <header class="hero">
+        <div class="container hero-grid">
+            <section class="hero-surface">
+                <span class="badge">원광대학교 컴퓨터공학과 · Portfolio Website</span>
+                <h1>과제 모음이 아니라<br>하나의 <span style="color:var(--primary)">브랜드형 포트폴리오 사이트</span>처럼 보이도록</h1>
+                <p>이 사이트는 전공 공부, 프로젝트, 활동 기록, 진로 설계를 따로 흩어놓지 않고 한 흐름 안에서 보여주는 정적 포트폴리오입니다. HTML 파일 여러 장으로 나뉘어 있어서 GitHub
+                    업로드와 Antigravity 편집에도 바로 맞습니다.</p>
+                <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:22px">
+                    <a class="button" href="list.html">전체 아카이브 보기</a>
+                    <a class="button secondary" href="projects.html">프로젝트 모아보기</a>
+                    <a class="button ghost" href="about.html">사이트 소개</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><strong>56</strong><span>총 사이트 페이지</span></div>
+                    <div class="stat"><strong>48</strong><span>상세 포트폴리오 문서</span></div>
+                    <div class="stat"><strong>4</strong><span>핵심 카테고리</span></div>
+                </div>
+            </section>
+            <aside class="hero-photo">
+                <div class="circle">WKU</div>
+                <h3 style="margin:20px 0 10px;font-size:1.65rem">Computer Engineering Portfolio</h3>
+                <p class="mini">사이트 구조, 색감, 카드형 레이아웃, 문서 연결성을 통일해서 “제출용 웹 포트폴리오”처럼 보이게 다듬었습니다.</p>
+                <div class="tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">GitHub Pages</span>
+                    <span class="tag">Antigravity</span>
+                </div>
+                <div class="notice" style="margin-top:18px">모든 페이지가 개별 HTML이라서 수정이 쉽고, 필요한 페이지를 추가할 때도 기존 형식을 그대로 복제하면
+                    됩니다.</div>
+            </aside>
+        </div>
+    </header>
+
+    <section class="section soft">
+        <div class="container">
+            <div class="section-title">
+                <div>
+                    <h2>첫 화면에서 보여주는 포트폴리오 구조</h2>
+                    <p class="lead">학업, 프로젝트, 활동, 진로를 각각 따로가 아니라 연결된 성장 흐름으로 정리했습니다.</p>
+                </div>
             </div>
-            <div class="grid md:grid-cols-12 gap-12 items-center">
-                <div class="md:col-span-7 lg:col-span-8 z-10">
-                    <span
-                        class="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold mb-6 tracking-wide">PORTFOLIO
-                        &amp; JOURNAL</span>
-                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-on-surface mb-8 leading-[1.1]">
-                        Intellectual <br />
-                        <span
-                            class="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-container">Architect.</span>
-                    </h1>
-                    <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-10">
-                        지식의 구조를 설계하고 코드로 구현하는 개발자, <span class="font-semibold text-on-surface">김장우(Kim
-                            Jang-woo)</span>입니다.
-                        기술적 깊이와 인문학적 통찰을 연결하여 지속 가능한 디지털 생태계를 구축합니다.
+            <div class="stats-band">
+                <div class="card stat-card"><strong>학업</strong><span>전공 과목별 개념 이해와 시험 대비 정리</span></div>
+                <div class="card stat-card"><strong>프로젝트</strong><span>직접 만든 웹사이트와 공부용 시스템 기록</span></div>
+                <div class="card stat-card"><strong>활동</strong><span>스터디, 발표, 협업, 회고를 보여주는 기록</span></div>
+                <div class="card stat-card"><strong>진로</strong><span>관심 분야와 성장 계획을 설명하는 문서</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <div>
+                    <h2>핵심 카테고리</h2>
+                    <p class="lead">한눈에 보기 좋게 카드형 섹션으로 정리했습니다.</p>
+                </div>
+                <a href="curriculum.html" class="mini">학업 로드맵 보기</a>
+            </div>
+            <div class="grid cols-2">
+                <article class="feature-card card">
+                    <span class="badge">학업 포트폴리오</span>
+                    <h3>전공 과목별 이해도와 학습 기록</h3>
+                    <p>컴퓨터개론, 자료구조, 알고리즘, 운영체제, 데이터베이스처럼 전공 과목을 주제별 문서로 나눠 두었습니다. 시험 대비 필기와 개념 설명형 포트폴리오로도 활용할 수 있습니다.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a class="px-8 py-4 bg-primary text-on-primary rounded-lg font-semibold flex items-center gap-2 hover:shadow-lg transition-all"
-                            href="projects.html">
-                            Explore Projects <span class="material-symbols-outlined">arrow_forward</span>
-                        </a>
-                        <a class="px-8 py-4 bg-surface-container-highest text-on-surface rounded-lg font-semibold border-outline-variant/15 border hover:bg-surface-container-high transition-all"
-                            href="about.html">
-                            View Biography
-                        </a>
-                    </div>
-                </div>
-                <div class="md:col-span-5 lg:col-span-4 relative">
-                    <div class="aspect-square rounded-2xl overflow-hidden bg-surface-container-low">
-                        <img alt="Kim Jang-woo"
-                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                            data-alt="Professional portrait of a young man with glasses in a minimalist studio setting with soft side lighting and slate blue background"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO6mTwKHP9cFLjFVSO61455EwuNDFuLPzI3Hoj3VN9Ak-YTvBkIpgOw3CMmq_HurybtNES7Dwm9VGqEXTo19U-RseATdP94VYYvDkYSJ16iQzv07MDz-Wm89gTXBsUKQ5r84gPrqYkMFg9qIfwlE_fzNDqEL8Az4ayxXHPJGyXIErumPWgKJpPHaSQsakeJT3gNYdm1s-lnuxhcf_r7trfkZWkJbk0FZBU6-dYMvWpnUxzx_dwnBVWvBnp9kiT6TFwPQdWb5qi5Us" />
-                    </div>
+                </article>
+                <article class="feature-card card">
+                    <span class="badge">프로젝트 기록</span>
+                    <h3>직접 만든 웹 페이지와 개발 문서</h3>
+                    <p>정적 사이트 제작, GitHub Pages 배포, 공부 아카이브, 학습용 대시보드 같은 결과물을 카드와 상세 문서로 연결했습니다.</p>
+                </article>
+                <article class="feature-card card">
+                    <span class="badge">활동 및 경험</span>
+                    <h3>스터디·발표·멘토링·협업 도구 사용 경험</h3>
+                    <p>학과 세미나, 팀 프로젝트 발표, GitHub 협업, 피드백 반영, 학습 회고처럼 스토리형으로 설명할 수 있는 경험을 따로 정리했습니다.</p>
+                </article>
+                <article class="feature-card card">
+                    <span class="badge">진로 설계</span>
+                    <h3>취업 준비와 성장 계획</h3>
+                    <p>프론트엔드·백엔드·풀스택 비교, 기술 스택 정리, GitHub 운영 전략, 면접 준비 노트까지 진로 문서 흐름을 만들었습니다.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section soft">
+        <div class="container">
+            <div class="section-title">
+                <div>
+                    <h2>대표 문서</h2>
+                    <p class="lead">홈에서 바로 들어갈 수 있도록 대표 문서를 뽑아 두었습니다.</p>
                 </div>
             </div>
-        </section>
-        <!-- Featured Essays Bento Grid -->
-        <section class="bg-surface-container-low py-24 px-8">
-            <div class="max-w-7xl mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-                    <div>
-                        <h2 class="text-3xl font-bold tracking-tight mb-4">Featured Essays</h2>
-                        <p class="text-on-surface-variant">코드를 넘어서는 생각의 기록들 (Recent thoughts beyond code)</p>
+            <div class="posts-grid">
+                <article class="post-card card">
+                    <div><span class="badge">학업 포트폴리오</span>
+                        <h3>컴퓨터개론</h3>
+                        <p>컴퓨터 시스템의 기본 구조와 폰 노이만 아키텍처 이해</p>
                     </div>
-                    <a class="text-primary font-semibold flex items-center gap-1 group" href="list.html">
-                        View All Essays <span
-                            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
-                    </a>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 min-h-[600px]">
-                    <!-- Main Essay Card -->
-                    <div
-                        class="md:col-span-2 md:row-span-2 bg-surface-container-lowest rounded-xl overflow-hidden group border border-outline-variant/10">
-                        <div class="h-1/2 overflow-hidden">
-                            <img alt="The Architecture of Modern Systems"
-                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                data-alt="Modern dark workspace with multiple glowing computer monitors showing complex lines of code and abstract data visualizations"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxOcoUuN_S-a_0tXaoLiBxMAWvRFpoGnXTOcGuirkQGBjBU7kTZ5smLJQ2slRADcDj0WbbtrtdRM-Fr1BhME6KVUanRIkeLodijVdxdHTKeK1dRPNa4TUyjomNacvGZocCRffKirj3ASL0jkZ4ZJPR2VY_8IXFiQhk5GNVlEGKXsXb5SoCTw2B-K2fpMsut4pDujM2mot8WjfKrHHbvVfPy-ve-LiCz7Ec7-PTAOv3b_XP0Ed56WvMGBu1dx_ZywOKRdObv-s7cSo" />
-                        </div>
-                        <div class="p-8 h-1/2 flex flex-col justify-between">
-                            <div>
-                                <span class="text-xs font-bold text-tertiary tracking-widest mb-3 block">SYSTEMS
-                                    DESIGN</span>
-                                <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">현대적 아키텍처의
-                                    철학적 고찰</h3>
-                                <p class="text-on-surface-variant text-sm line-clamp-3">기술적 결정 뒤에 숨겨진 인간적 의도와 구조적 견고함에
-                                    대한 심도 있는 탐구입니다. 왜 우리는 더 나은 코드를 작성해야 하는가에 대한 답변.</p>
-                            </div>
-                            <div class="flex items-center justify-between text-xs font-medium text-outline">
-                                <span>12 Min Read</span>
-                                <span>Oct 24, 2023</span>
-                            </div>
-                        </div>
+                    <div class="meta"><span>2026-01-03</span><span>8분</span><a href="post1.html"
+                            style="color:var(--primary);font-weight:700">열기 →</a></div>
+                </article>
+                <article class="post-card card">
+                    <div><span class="badge">학업 포트폴리오</span>
+                        <h3>웹프로그래밍</h3>
+                        <p>HTML, CSS, JavaScript 기반 프론트엔드 구현</p>
                     </div>
-                    <!-- Side Card 1 -->
-                    <div
-                        class="md:col-span-2 bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between group border border-outline-variant/10">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <span class="text-xs font-bold text-secondary tracking-widest mb-3 block">DEVELOPER
-                                    EXPERIENCE</span>
-                                <h3 class="text-xl font-bold group-hover:text-primary transition-colors">몰입의 도구: DX가
-                                    생산성에 미치는 영향</h3>
-                            </div>
-                            <span
-                                class="material-symbols-outlined text-primary-fixed-dim bg-primary/5 p-2 rounded-lg">integration_instructions</span>
-                        </div>
-                        <div class="flex items-center justify-between text-xs font-medium text-outline mt-6">
-                            <span>8 Min Read</span>
-                            <span class="text-primary font-bold">Read Now</span>
-                        </div>
+                    <div class="meta"><span>2026-06-13</span><span>8분</span><a href="post6.html"
+                            style="color:var(--primary);font-weight:700">열기 →</a></div>
+                </article>
+                <article class="post-card card">
+                    <div><span class="badge">프로젝트 기록</span>
+                        <h3>학과 포트폴리오 사이트</h3>
+                        <p>정적 웹사이트 구조 설계와 GitHub Pages 배포</p>
                     </div>
-                    <!-- Side Card 2 -->
-                    <div
-                        class="md:col-span-1 bg-surface-container-lowest rounded-xl p-6 flex flex-col justify-between border border-outline-variant/10 group">
-                        <span
-                            class="text-xs font-bold text-on-tertiary-container bg-tertiary-container px-2 py-1 rounded w-fit">AI</span>
-                        <h3 class="text-lg font-bold mt-4 leading-tight">생성형 AI 시대의 코드 품질</h3>
-                        <span class="text-xs text-outline mt-4">5 Min Read</span>
+                    <div class="meta"><span>2026-01-27</span><span>10분</span><a href="post13.html"
+                            style="color:var(--primary);font-weight:700">열기 →</a></div>
+                </article>
+                <article class="post-card card">
+                    <div><span class="badge">프로젝트 기록</span>
+                        <h3>개인 이력 정리 시스템</h3>
+                        <p>자기소개, 스킬, 경험을 체계화한 웹 문서</p>
                     </div>
-                    <!-- Side Card 3 -->
-                    <div
-                        class="md:col-span-1 bg-primary text-on-primary rounded-xl p-6 flex flex-col justify-between group">
-                        <div class="flex items-center justify-center h-full">
-                            <span
-                                class="material-symbols-outlined text-4xl opacity-50 group-hover:scale-125 transition-transform"
-                                style="font-variation-settings: 'FILL' 1;">terminal</span>
-                        </div>
-                        <h3 class="text-lg font-bold leading-tight">Rust를 선택한 이유</h3>
+                    <div class="meta"><span>2026-07-12</span><span>11분</span><a href="post19.html"
+                            style="color:var(--primary);font-weight:700">열기 →</a></div>
+                </article>
+                <article class="post-card card">
+                    <div><span class="badge">활동 및 대외 경험</span>
+                        <h3>학습 회고 노트</h3>
+                        <p>실패 원인과 개선 방식을 정리해 성장 흐름을 설명</p>
                     </div>
-                </div>
+                    <div class="meta"><span>2026-06-07</span><span>7분</span><a href="post30.html"
+                            style="color:var(--primary);font-weight:700">열기 →</a></div>
+                </article>
+                <article class="post-card card">
+                    <div><span class="badge">진로 설계</span>
+                        <h3>GitHub 포트폴리오 운영</h3>
+                        <p>저장소 구조와 README 관리 전략</p>
+                    </div>
+                    <div class="meta"><span>2026-05-02</span><span>8분</span><a href="post41.html"
+                            style="color:var(--primary);font-weight:700">열기 →</a></div>
+                </article>
             </div>
-        </section>
-        <!-- Contact Section -->
-        <section class="py-24 px-8 max-w-4xl mx-auto" id="contact">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold mb-4">Let's Build Something Meaningful.</h2>
-                <p class="text-on-surface-variant">프로젝트 제안이나 커피 챗, 언제든 환영합니다.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container banner">
+            <h2 style="margin-top:0">정적 사이트인데도 충분히 “사이트답게” 보이도록</h2>
+            <p>첫 화면의 메시지, 카드형 정보 배치, 대표 문서 연결, 통일된 내비게이션, 정보 페이지까지 갖춰서 단순한 과제 묶음이 아니라 하나의 웹 포트폴리오처럼 보이게 만들었습니다.</p>
+            <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px">
+                <a class="button secondary" href="github-guide.html">업로드 가이드 보기</a>
+                <a class="button secondary" href="sitemap.html">사이트맵 보기</a>
             </div>
-            <form class="space-y-6">
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-semibold ml-1">Name</label>
-                        <input
-                            class="bg-surface-container border-none focus:ring-2 focus:ring-primary rounded-lg p-4 transition-all"
-                            placeholder="이름을 입력하세요" type="text" />
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <label class="text-sm font-semibold ml-1">Email</label>
-                        <input
-                            class="bg-surface-container border-none focus:ring-2 focus:ring-primary rounded-lg p-4 transition-all"
-                            placeholder="example@email.com" type="email" />
-                    </div>
-                </div>
-                <div class="flex flex-col gap-2">
-                    <label class="text-sm font-semibold ml-1">Message</label>
-                    <textarea
-                        class="bg-surface-container border-none focus:ring-2 focus:ring-primary rounded-lg p-4 transition-all"
-                        placeholder="프로젝트에 대해 말씀해주세요..." rows="5"></textarea>
-                </div>
-                <button
-                    class="w-full py-4 bg-primary text-on-primary font-bold rounded-lg hover:shadow-xl transition-all active:scale-[0.99]"
-                    type="submit">
-                    Send Message
-                </button>
-            </form>
-        </section>
-    </main>
-    <!-- Footer Implementation -->
-    <footer class="bg-slate-100 mt-24">
-        <div class="w-full py-12 px-8 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-            <div class="flex flex-col items-center md:items-start gap-2">
-                <span class="text-lg font-semibold text-slate-900">Indigo Code</span>
-                <p class="text-slate-500 text-sm font-['Inter']">© 2024 Indigo Code. Built with precision.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3 class="brand">WKU CSE Portfolio</h3>
+                <p>원광대학교 컴퓨터공학과 학생 포트폴리오를 주제로 구성한 정적 웹사이트입니다. 학업, 프로젝트, 활동, 진로 문서를 한 구조 안에 담아 GitHub 업로드와 Antigravity
+                    편집에 맞도록 만들었습니다.</p>
             </div>
-            <div class="flex gap-8">
-                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100 text-sm font-['Inter']"
-                    href="#">Twitter</a>
-                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100 text-sm font-['Inter']"
-                    href="#">GitHub</a>
-                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100 text-sm font-['Inter']"
-                    href="#">LinkedIn</a>
-                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100 text-sm font-['Inter']"
-                    href="#">RSS</a>
+            <div>
+                <h4>Quick Links</h4>
+                <p><a href="list.html">전체 문서 보기</a><br><a href="projects.html">프로젝트</a><br><a href="curriculum.html">학업
+                        로드맵</a><br><a href="github-guide.html">업로드 가이드</a></p>
+            </div>
+            <div>
+                <h4>Portfolio Scope</h4>
+                <p>총 56개 HTML 페이지 구성<br>Home + Archive + 48 Detail Pages + 7 Info Pages<br>Static HTML · CSS · JS</p>
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
