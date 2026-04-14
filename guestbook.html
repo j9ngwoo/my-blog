@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Study Roadmap | Indigo Code</title>
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#006374",
+                        "primary-fixed": "#dee0ff",
+                        "primary": "#24389c",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#54647a",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "secondary-fixed": "#d3e4fe",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e6e8ea",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary-fixed-variant": "#293ca0",
+                        "on-tertiary-container": "#66e2ff",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "background": "#f7f9fb",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#4355b9",
+                        "outline": "#757684",
+                        "surface-dim": "#d8dadc",
+                        "secondary": "#505f76",
+                        "primary-container": "#3f51b5",
+                        "on-surface-variant": "#454652",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-container": "#eceef0",
+                        "secondary-container": "#d0e1fb",
+                        "on-surface": "#191c1e",
+                        "on-primary-container": "#cacfff",
+                        "surface-variant": "#e0e3e5",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-background": "#191c1e",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-primary-fixed": "#00105c",
+                        "tertiary-fixed": "#acedff",
+                        "surface": "#f7f9fb",
+                        "tertiary": "#004a57",
+                        "outline-variant": "#c5c5d4",
+                        "surface-bright": "#f7f9fb",
+                        "inverse-primary": "#bac3ff",
+                        "primary-fixed-dim": "#bac3ff",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "inverse-on-surface": "#eff1f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: repeating-linear-gradient(to bottom, transparent, transparent 4px, #c5c5d4 4px, #c5c5d4 8px);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopAppBar -->
+    <nav
+        class="sticky top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-2xl font-bold text-indigo-900 dark:text-white tracking-tighter font-headline">Indigo Code
+            </div>
+            <div class="hidden md:flex items-center gap-8 font-manrope tracking-tight text-sm">
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-all duration-300"
+                    href="#">Home</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-all duration-300"
+                    href="#">Essays</a>
+                <a class="text-indigo-700 dark:text-indigo-400 border-b-2 border-indigo-700 dark:border-indigo-400 pb-1"
+                    href="#">Projects</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-all duration-300"
+                    href="#">About</a>
+            </div>
+            <button
+                class="bg-indigo-700 text-white px-6 py-2 rounded-lg font-medium hover:bg-indigo-800 scale-95 active:scale-90 transition-transform">
+                Contact
+            </button>
+        </div>
+    </nav>
+    <main class="max-w-7xl mx-auto px-8 py-16">
+        <!-- Hero Section -->
+        <header
+            class="mb-20 text-center md:text-left relative overflow-hidden rounded-xl p-12 bg-surface-container-low">
+            <div class="absolute -right-24 -top-24 w-96 h-96 bg-tertiary-fixed-dim opacity-20 blur-3xl rounded-full">
+            </div>
+            <h1
+                class="text-6xl md:text-7xl font-headline font-extrabold text-on-surface tracking-tighter mb-6 leading-none">
+                Engineering <br /><span class="text-primary italic">Expertise.</span>
+            </h1>
+            <p class="text-xl text-secondary max-w-2xl leading-relaxed">
+                A non-linear journey through the technologies and patterns that shape the modern web. From fundamental
+                semantics to distributed systems.
+            </p>
+        </header>
+        <!-- Roadmap Timeline Container -->
+        <div class="relative">
+            <!-- Past Milestones -->
+            <section class="mb-16">
+                <div class="flex items-center gap-4 mb-10">
+                    <span
+                        class="text-xs font-bold tracking-widest uppercase text-outline px-3 py-1 bg-surface-container-highest rounded-full">Completed</span>
+                    <div class="h-px flex-grow bg-outline-variant opacity-20"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- HTML/CSS Mastery -->
+                    <div
+                        class="group bg-surface-container-lowest p-8 rounded-xl transition-all duration-300 hover:shadow-[0_32px_48px_-12px_rgba(36,56,156,0.08)]">
+                        <div class="flex justify-between items-start mb-6">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined" data-icon="html">html</span>
+                            </div>
+                            <span class="text-sm font-medium text-primary bg-primary-fixed px-3 py-1 rounded-full">Q1
+                                2023</span>
+                        </div>
+                        <h3 class="text-2xl font-headline font-bold text-on-surface mb-3 tracking-tight">HTML/CSS
+                            Mastery</h3>
+                        <p class="text-secondary mb-6 leading-relaxed">Semantic architecture, CSS Grid/Flexbox layouts,
+                            and advanced responsive design principles.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">BEM</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">Sass</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">A11y</span>
+                        </div>
+                    </div>
+                    <!-- JavaScript Deep Dive -->
+                    <div
+                        class="group bg-surface-container-lowest p-8 rounded-xl transition-all duration-300 hover:shadow-[0_32px_48px_-12px_rgba(36,56,156,0.08)]">
+                        <div class="flex justify-between items-start mb-6">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined" data-icon="javascript">javascript</span>
+                            </div>
+                            <span class="text-sm font-medium text-primary bg-primary-fixed px-3 py-1 rounded-full">Q3
+                                2023</span>
+                        </div>
+                        <h3 class="text-2xl font-headline font-bold text-on-surface mb-3 tracking-tight">JavaScript Deep
+                            Dive</h3>
+                        <p class="text-secondary mb-6 leading-relaxed">Asynchronous patterns, memory management, and
+                            ESNext features for modern applications.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">Closures</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">Promises</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">V8
+                                Engine</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Current Focus -->
+            <section class="mb-16 relative">
+                <div class="flex items-center gap-4 mb-10">
+                    <span
+                        class="text-xs font-bold tracking-widest uppercase text-primary px-3 py-1 bg-primary-fixed rounded-full">Active
+                        Focus</span>
+                    <div class="h-px flex-grow bg-primary-container opacity-20"></div>
+                </div>
+                <!-- Featured Active Card -->
+                <div class="bg-gradient-to-br from-primary to-primary-container p-[1px] rounded-xl overflow-hidden">
+                    <div
+                        class="bg-surface-container-lowest p-10 rounded-[calc(0.75rem-1px)] flex flex-col md:flex-row gap-12 items-center">
+                        <div class="flex-shrink-0 relative">
+                            <div
+                                class="w-32 h-32 rounded-2xl bg-primary flex items-center justify-center text-on-primary">
+                                <span class="material-symbols-outlined text-5xl" data-icon="hub">hub</span>
+                            </div>
+                            <div
+                                class="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-tertiary flex items-center justify-center animate-pulse">
+                                <span class="material-symbols-outlined text-white text-sm" data-icon="bolt"
+                                    data-weight="fill" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                            </div>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-4xl font-headline font-bold text-on-surface mb-4 tracking-tight">React
+                                Framework &amp; Ecosystem</h3>
+                            <p class="text-lg text-secondary mb-8 leading-relaxed max-w-3xl">Implementing
+                                high-performance interfaces with server components, state synchronization, and complex
+                                interaction patterns using Framer Motion.</p>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                <div class="bg-surface-container p-4 rounded-lg">
+                                    <div class="text-xs text-outline mb-1 uppercase tracking-wider font-bold">In
+                                        Progress</div>
+                                    <div class="font-bold text-primary">Next.js 14</div>
+                                </div>
+                                <div class="bg-surface-container p-4 rounded-lg">
+                                    <div class="text-xs text-outline mb-1 uppercase tracking-wider font-bold">Mastered
+                                    </div>
+                                    <div class="font-bold text-primary">Zustand</div>
+                                </div>
+                                <div class="bg-surface-container p-4 rounded-lg">
+                                    <div class="text-xs text-outline mb-1 uppercase tracking-wider font-bold">Up Next
+                                    </div>
+                                    <div class="font-bold text-primary">React Query</div>
+                                </div>
+                                <div class="bg-surface-container p-4 rounded-lg">
+                                    <div class="text-xs text-outline mb-1 uppercase tracking-wider font-bold">
+                                        Researching</div>
+                                    <div class="font-bold text-primary">TRPC</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Future Horizon -->
+            <section class="mb-16">
+                <div class="flex items-center gap-4 mb-10">
+                    <span
+                        class="text-xs font-bold tracking-widest uppercase text-outline px-3 py-1 bg-surface-container-highest rounded-full">Future
+                        Horizon</span>
+                    <div class="h-px flex-grow bg-outline-variant opacity-20"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Data Structures -->
+                    <div
+                        class="bg-surface-container-low p-8 rounded-xl opacity-80 hover:opacity-100 transition-opacity">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary mb-6">
+                            <span class="material-symbols-outlined" data-icon="schema">schema</span>
+                        </div>
+                        <h4 class="text-xl font-headline font-bold text-on-surface mb-2 tracking-tight">Data Structures
+                        </h4>
+                        <p class="text-sm text-secondary leading-relaxed">Algorithmic complexity, Big O analysis, and
+                            advanced graph theory for scalable systems.</p>
+                    </div>
+                    <!-- System Design -->
+                    <div
+                        class="bg-surface-container-low p-8 rounded-xl opacity-80 hover:opacity-100 transition-opacity">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary mb-6">
+                            <span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+                        </div>
+                        <h4 class="text-xl font-headline font-bold text-on-surface mb-2 tracking-tight">System Design
+                        </h4>
+                        <p class="text-sm text-secondary leading-relaxed">Microservices, event-driven architecture, and
+                            database sharding strategies.</p>
+                    </div>
+                    <!-- WebAssembly -->
+                    <div
+                        class="bg-surface-container-low p-8 rounded-xl opacity-80 hover:opacity-100 transition-opacity">
+                        <div
+                            class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary mb-6">
+                            <span class="material-symbols-outlined" data-icon="memory">memory</span>
+                        </div>
+                        <h4 class="text-xl font-headline font-bold text-on-surface mb-2 tracking-tight">WebAssembly</h4>
+                        <p class="text-sm text-secondary leading-relaxed">Low-level execution performance for
+                            browser-based heavy computation tasks.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Call to Action -->
+        <section class="mt-24 p-12 rounded-xl bg-surface-container-highest text-center relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="text-3xl font-headline font-bold text-on-surface mb-4">Want to build together?</h2>
+                <p class="text-secondary mb-8 max-w-xl mx-auto">I'm always looking for ambitious projects that push the
+                    boundaries of what's possible on the web.</p>
+                <div class="flex justify-center gap-4">
+                    <button
+                        class="bg-primary text-on-primary px-8 py-3 rounded-lg font-bold transition-transform hover:scale-105 active:scale-95 shadow-lg">
+                        Reach Out
+                    </button>
+                    <button
+                        class="bg-surface-container-lowest text-primary border border-outline-variant/20 px-8 py-3 rounded-lg font-bold transition-transform hover:scale-105 active:scale-95">
+                        View Projects
+                    </button>
+                </div>
+            </div>
+            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5">
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-12 bg-slate-100 dark:bg-slate-950 border-t border-slate-200/20">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-6">
+            <div class="font-manrope font-bold text-indigo-900 dark:text-indigo-100">Indigo Code</div>
+            <p class="font-inter text-sm text-slate-500 dark:text-slate-400">© 2024 Indigo Code. Designed for the
+                Intellectual Architect.</p>
+            <div class="flex gap-8 font-inter text-sm">
+                <a class="text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-opacity opacity-80 hover:opacity-100 underline-offset-4 hover:underline"
+                    href="#">GitHub</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-opacity opacity-80 hover:opacity-100 underline-offset-4 hover:underline"
+                    href="#">LinkedIn</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-opacity opacity-80 hover:opacity-100 underline-offset-4 hover:underline"
+                    href="#">Twitter</a>
+                <a class="text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-opacity opacity-80 hover:opacity-100 underline-offset-4 hover:underline"
+                    href="#">RSS</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
