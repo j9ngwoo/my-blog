@@ -1,39 +1,329 @@
 <!DOCTYPE html>
-<html lang="ko">
+
+<html class="light" lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <title>웹 개발 기초</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>웹 개발 기초 | Indigo Code</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "tertiary-fixed": "#acedff",
+                        "on-primary-fixed-variant": "#293ca0",
+                        "primary-fixed-dim": "#bac3ff",
+                        "outline": "#757684",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "on-tertiary-fixed": "#001f26",
+                        "error-container": "#ffdad6",
+                        "surface-container-highest": "#e0e3e5",
+                        "secondary": "#505f76",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#bac3ff",
+                        "on-surface": "#191c1e",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-high": "#e6e8ea",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary": "#004a57",
+                        "secondary-fixed": "#d3e4fe",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container": "#eceef0",
+                        "on-secondary-container": "#54647a",
+                        "on-tertiary-container": "#66e2ff",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-error-container": "#93000a",
+                        "on-background": "#191c1e",
+                        "on-surface-variant": "#454652",
+                        "surface-bright": "#f7f9fb",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "inverse-on-surface": "#eff1f3",
+                        "outline-variant": "#c5c5d4",
+                        "secondary-container": "#d0e1fb",
+                        "on-secondary-fixed": "#0b1c30",
+                        "surface": "#f7f9fb",
+                        "primary-container": "#3f51b5",
+                        "tertiary-container": "#006374",
+                        "surface-dim": "#d8dadc",
+                        "on-primary-fixed": "#00105c",
+                        "primary-fixed": "#dee0ff",
+                        "primary": "#24389c",
+                        "on-primary-container": "#cacfff",
+                        "background": "#f7f9fb",
+                        "surface-tint": "#4355b9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+            color: #191c1e;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-headline {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <h1>📝 게시글</h1>
-        <nav>
-            <a href="index.html">홈</a>
-            <a href="list.html">글 목록</a>
-        </nav>
-    </header>
-
-    <section class="post">
-        <h2>웹 개발 기초</h2>
-
-        <p>
-            HTML과 CSS를 활용하여 웹페이지를 제작하는 방법을 학습했습니다.
-        </p>
-
-        <p>
-            구조와 디자인을 분리하는 방식에 대해 이해할 수 있었습니다.
-        </p>
-
-        <p>
-            앞으로 JavaScript를 활용한 동적인 웹 개발도 도전해보고 싶습니다.
-        </p>
-    </section>
-
-    <footer>
-        <p>© 2026 My Blog</p>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+    <!-- TopAppBar -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-12">
+                <a class="text-xl font-bold tracking-tighter text-slate-900" href="#">Indigo Code</a>
+                <div class="hidden md:flex gap-8 items-center">
+                    <a class="text-slate-600 font-medium hover:text-indigo-500 transition-colors duration-200 font-manrope tracking-tight"
+                        href="#">Essays</a>
+                    <a class="text-indigo-700 font-bold border-b-2 border-indigo-600 font-manrope tracking-tight"
+                        href="#">Guides</a>
+                    <a class="text-slate-600 font-medium hover:text-indigo-500 transition-colors duration-200 font-manrope tracking-tight"
+                        href="#">Tutorials</a>
+                    <a class="text-slate-600 font-medium hover:text-indigo-500 transition-colors duration-200 font-manrope tracking-tight"
+                        href="#">Changelog</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <div
+                    class="hidden lg:flex items-center bg-surface-container rounded-full px-4 py-2 text-on-surface-variant">
+                    <span class="material-symbols-outlined text-[20px] mr-2">search</span>
+                    <input class="bg-transparent border-none focus:ring-0 text-sm w-48"
+                        placeholder="Search documentation..." type="text" />
+                </div>
+                <button
+                    class="bg-primary text-on-primary px-6 py-2 rounded-DEFAULT font-semibold hover:opacity-90 active:scale-95 transition-all">Subscribe</button>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-24 pb-20">
+        <!-- Hero Section -->
+        <header class="relative max-w-7xl mx-auto px-8 py-20 overflow-hidden">
+            <div class="grid md:grid-cols-2 gap-12 items-center relative z-10">
+                <div class="space-y-6">
+                    <div class="flex gap-2">
+                        <span
+                            class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Web
+                            Foundation</span>
+                    </div>
+                    <h1 class="text-6xl md:text-7xl font-extrabold tracking-tighter text-on-surface leading-[1.1]">
+                        웹 개발 <br /><span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-container">기초</span>
+                    </h1>
+                    <p class="text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                        HTML과 CSS를 통한 웹 생태계의 첫걸음. 구조적 설계와 시각적 구현을 위한 현대적 가이드라인을 제시합니다.
+                    </p>
+                    <div class="flex items-center gap-4 text-sm font-medium">
+                        <div class="flex -space-x-2">
+                            <img class="w-10 h-10 rounded-full border-2 border-surface"
+                                data-alt="portrait of a professional developer in a bright studio environment"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgCaZNUBSWIFiupLpp56p-_oj2cPOkumELpVWBwc_CY6ZrWNFod_GwFek9WN_ZGPi5W8FESOyemzpdLrEllFyuGTDuxYguxoak01d3GsXjo0dIq5ZVvVg7HGi3vkXVmB_stNZLWrYUDmd2ei9NOYKSG8PUECIkwM09pCAmBdq95S3H8-45dp-pdX2nIxxF78gUqU-cFpOtT6EvsTgqOxEwpQO98W9ioHe2T808mGBVpp2ZNByK2O7HlaGFdxy64d6W1Fn0zAYbIOI" />
+                        </div>
+                        <span class="text-on-surface">By Indigo Architect</span>
+                        <span class="text-outline">·</span>
+                        <span class="text-outline">8 min read</span>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-surface-container-low relative">
+                        <img class="w-full h-full object-cover"
+                            data-alt="clean minimalist desk setup with a high-end monitor displaying abstract code lines and soft neon backlighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8JvkiMkA6EjsNC-ShJZNjahQmpZCg6ZQ_pHLjrV4XcIJfNG52XgvvEjZVUXjIxuw2MjSShiJ9nKMLp6VfqOXPgRsUVNgbQfLWCXigmu8RvQyFA-mEPkfPCvq_-vcSBPZPuU8ibyUenAD0Q1OnbTWV922kR0_3rQxLgextbqT0aeRvx3yjAPrNHtNBlCx3ahPqpJTWd2NA11-MVYsDH0Nc9mYf-op0kONVF06CkVhpBoU01LqW1maKztOW7yi0cwQ1LqUqjk7dhBc" />
+                        <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+                    </div>
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-6 -right-6 w-32 h-32 bg-tertiary/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
+                </div>
+            </div>
+        </header>
+        <!-- Content Section -->
+        <article class="max-w-7xl mx-auto px-8 grid md:grid-cols-[1fr_300px] gap-16">
+            <div class="space-y-12">
+                <!-- Section 1: HTML -->
+                <section class="space-y-6">
+                    <h2 class="text-3xl font-bold tracking-tight border-l-4 border-primary pl-6">1. HTML: 웹의 뼈대 (The
+                        Skeleton)</h2>
+                    <div class="bg-surface-container-low p-8 rounded-lg space-y-4">
+                        <p class="text-lg leading-relaxed text-on-surface-variant">
+                            HTML(HyperText Markup Language)은 웹 페이지의 구조를 정의하는 마크업 언어입니다. 제목, 단락, 이미지, 링크 등 모든 콘텐츠의 의미와
+                            배치를 결정합니다.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                            <div class="bg-surface-container-lowest p-6 rounded-DEFAULT shadow-sm">
+                                <span class="material-symbols-outlined text-primary mb-3">check</span>
+                                <h3 class="font-bold text-lg mb-2">시맨틱 태그</h3>
+                                <p class="text-sm text-on-surface-variant"><code>&lt;header&gt;</code>,
+                                    <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code> 등 의미 있는 요소를 사용하여 검색 엔진
+                                    최적화(SEO)와 접근성을 높입니다.</p>
+                            </div>
+                            <div class="bg-surface-container-lowest p-6 rounded-DEFAULT shadow-sm">
+                                <span class="material-symbols-outlined text-primary mb-3">account_tree</span>
+                                <h3 class="font-bold text-lg mb-2">DOM 구조</h3>
+                                <p class="text-sm text-on-surface-variant">계층적 트리 구조로 데이터를 표현하여 브라우저가 문서의 내용을 정확히 파악하도록
+                                    돕습니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section 2: CSS -->
+                <section class="space-y-6">
+                    <h2 class="text-3xl font-bold tracking-tight border-l-4 border-tertiary pl-6">2. CSS: 시각적 설계 (The
+                        Style)</h2>
+                    <p class="text-lg leading-relaxed text-on-surface-variant">
+                        CSS(Cascading Style Sheets)는 HTML로 만든 뼈대에 살을 붙이고 옷을 입히는 역할을 합니다. 레이아웃, 색상, 폰트 및 애니메이션을 제어합니다.
+                    </p>
+                    <!-- Bento Grid for CSS Concepts -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div
+                            class="md:col-span-2 bg-gradient-to-br from-primary to-primary-container p-8 rounded-lg text-on-primary">
+                            <span class="material-symbols-outlined text-4xl mb-4">view_quilt</span>
+                            <h3 class="text-2xl font-bold mb-2">Modern Layouts</h3>
+                            <p class="opacity-90">Flexbox와 CSS Grid를 활용하여 복잡한 반응형 레이아웃을 코드 몇 줄로 우아하게 구현할 수 있습니다.</p>
+                        </div>
+                        <div class="bg-surface-container-high p-8 rounded-lg">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-4">palette</span>
+                            <h4 class="font-bold mb-2">Variables</h4>
+                            <p class="text-sm text-on-surface-variant">CSS Variables(Custom Properties)를 사용한 테마 관리 시스템.
+                            </p>
+                        </div>
+                        <div class="bg-secondary-container p-8 rounded-lg">
+                            <span
+                                class="material-symbols-outlined text-on-secondary-container text-3xl mb-4">aspect_ratio</span>
+                            <h4 class="font-bold mb-2">Box Model</h4>
+                            <p class="text-sm text-on-secondary-container/80">Margin, Border, Padding, Content의 상호작용 이해.
+                            </p>
+                        </div>
+                        <div class="md:col-span-2 bg-surface-container-low p-8 rounded-lg flex items-center gap-8">
+                            <img class="w-24 h-24 rounded-lg object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                                data-alt="close-up of a high-resolution laptop screen showing elegant colorful css code syntax highlighting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu7albtkinNb_Zpc9wHfrB7TbzoFvDwnMLzAESNHcXNL9_MScMBHKlruP0gPTqzUbYDW8XusMQfAqrJ4AIkVZp8i1pcoEbIp_nOvahuwODaLrUTpmNF_d6eHRNFhtS7s_6rfYa50V-7mCM0YZlJQ1Fh_Gg9V47Krg3suKz5mMjEjvnQkOOjWklI20Who1JT86nUCLvVr_EyS1iRkExlP-FqNIGB6mecUndkZO89MCSP-Hr-Xzh1RWQaoOmvag_T6gS-luP1PjPUGE" />
+                            <div>
+                                <h4 class="font-bold mb-1">디자인 시스템의 조화</h4>
+                                <p class="text-sm text-on-surface-variant">일관된 시각적 언어를 통해 사용자 경험을 극대화하는 방법론을 학습합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section 3: Summary -->
+                <section class="bg-surface-container-lowest p-10 rounded-xl border border-outline-variant/15">
+                    <h2 class="text-2xl font-bold mb-6">마치며: 웹 개발의 미래</h2>
+                    <p class="text-on-surface-variant leading-relaxed mb-6">
+                        기초는 지루할 수 있지만, 가장 강력한 무기가 됩니다. HTML의 구조와 CSS의 정교함을 마스터하는 것은 현대적인 JavaScript 프레임워크(React, Next.js
+                        등)를 이해하기 위한 필수적인 선행 단계입니다.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-4 py-1 bg-surface-container rounded-full text-sm font-medium text-on-surface-variant">#HTML</span>
+                        <span
+                            class="px-4 py-1 bg-surface-container rounded-full text-sm font-medium text-on-surface-variant">#CSS</span>
+                        <span
+                            class="px-4 py-1 bg-surface-container rounded-full text-sm font-medium text-on-surface-variant">#Frontend</span>
+                        <span
+                            class="px-4 py-1 bg-surface-container rounded-full text-sm font-medium text-on-surface-variant">#Beginner</span>
+                    </div>
+                </section>
+            </div>
+            <!-- Sidebar -->
+            <aside class="space-y-12">
+                <div class="bg-surface-container-high p-8 rounded-lg">
+                    <h3 class="font-bold text-lg mb-4">관련 아티클</h3>
+                    <ul class="space-y-6">
+                        <li class="group cursor-pointer">
+                            <span class="text-xs text-primary font-bold uppercase">Guide</span>
+                            <p class="font-bold group-hover:text-primary transition-colors">반응형 웹 디자인 핵심 원칙</p>
+                        </li>
+                        <li class="group cursor-pointer">
+                            <span class="text-xs text-primary font-bold uppercase">Tutorial</span>
+                            <p class="font-bold group-hover:text-primary transition-colors">CSS Grid로 레이아웃 부수기</p>
+                        </li>
+                        <li class="group cursor-pointer">
+                            <span class="text-xs text-primary font-bold uppercase">Essay</span>
+                            <p class="font-bold group-hover:text-primary transition-colors">시맨틱 마크업의 가치</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-slate-900 text-white p-8 rounded-lg relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h3 class="font-bold text-xl mb-2">뉴스레터 구독</h3>
+                        <p class="text-sm opacity-70 mb-6">최신 웹 개발 기술 트렌드를 매주 금요일 아침에 배달해 드립니다.</p>
+                        <input
+                            class="w-full bg-white/10 border-white/20 rounded-DEFAULT px-4 py-3 mb-3 text-sm focus:ring-primary focus:border-primary"
+                            placeholder="Email address" type="email" />
+                        <button
+                            class="w-full bg-indigo-500 text-white font-bold py-3 rounded-DEFAULT hover:bg-indigo-400 transition-all">구독하기</button>
+                    </div>
+                    <div class="absolute -bottom-4 -right-4 text-indigo-500/20">
+                        <span class="material-symbols-outlined text-[120px]">mail</span>
+                    </div>
+                </div>
+            </aside>
+        </article>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-20 border-t border-slate-200 bg-slate-100">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 py-12 max-w-7xl mx-auto">
+            <div class="mb-8 md:mb-0 space-y-4">
+                <div class="font-manrope font-black text-slate-900 text-2xl">Indigo Code</div>
+                <p class="text-slate-500 font-inter text-sm max-w-xs">© 2024 Indigo Code. Built for the Intellectual
+                    Architect.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a class="text-slate-500 hover:text-slate-900 transition-colors duration-200 font-inter text-sm"
+                    href="#">Documentation</a>
+                <a class="text-slate-500 hover:text-slate-900 transition-colors duration-200 font-inter text-sm"
+                    href="#">Github</a>
+                <a class="text-slate-500 hover:text-slate-900 transition-colors duration-200 font-inter text-sm"
+                    href="#">Newsletter</a>
+                <a class="text-slate-500 hover:text-slate-900 transition-colors duration-200 font-inter text-sm"
+                    href="#">Privacy Policy</a>
+                <a class="text-slate-500 hover:text-slate-900 transition-colors duration-200 font-inter text-sm"
+                    href="#">Terms of Service</a>
+            </div>
+        </div>
     </footer>
 </body>
 

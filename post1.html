@@ -1,43 +1,258 @@
 <!DOCTYPE html>
-<html lang="ko">
+
+<html class="light" lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <title>게시글</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AI 블로그 제작 과정 | The Architect</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e0e3e5",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#cacfff",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#acedff",
+                        "on-primary-fixed": "#00105c",
+                        "on-surface": "#191c1e",
+                        "on-tertiary-fixed": "#001f26",
+                        "surface-container": "#eceef0",
+                        "primary-container": "#3f51b5",
+                        "on-secondary-fixed": "#0b1c30",
+                        "surface-container-high": "#e6e8ea",
+                        "secondary": "#505f76",
+                        "on-primary-fixed-variant": "#293ca0",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-dim": "#d8dadc",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#eff1f3",
+                        "background": "#f7f9fb",
+                        "on-tertiary-container": "#66e2ff",
+                        "outline-variant": "#c5c5d4",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#d0e1fb",
+                        "error-container": "#ffdad6",
+                        "primary": "#24389c",
+                        "surface-bright": "#f7f9fb",
+                        "primary-fixed": "#dee0ff",
+                        "surface-container-low": "#f2f4f6",
+                        "on-secondary-container": "#54647a",
+                        "surface-tint": "#4355b9",
+                        "primary-fixed-dim": "#bac3ff",
+                        "error": "#ba1a1a",
+                        "tertiary-container": "#006374",
+                        "outline": "#757684",
+                        "tertiary": "#004a57",
+                        "inverse-surface": "#2d3133",
+                        "secondary-fixed": "#d3e4fe",
+                        "inverse-primary": "#bac3ff",
+                        "on-background": "#191c1e",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "on-surface-variant": "#454652",
+                        "surface": "#f7f9fb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+            color: #191c1e;
+        }
+
+        .headline {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <h1>📝 게시글</h1>
-        <nav>
-            <a href="index.html">홈</a>
-            <a href="list.html">글 목록</a>
+<body
+    class="bg-background text-on-background antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+    <!-- TopAppBar -->
+    <header class="fixed top-0 left-0 right-0 z-50 flex justify-center w-full">
+        <nav
+            class="bg-slate-50/80 backdrop-blur-xl rounded-full mt-4 mx-auto max-w-fit px-6 py-2 flex items-center gap-8 shadow-xl shadow-indigo-900/5">
+            <div class="text-xl font-bold tracking-tighter text-indigo-900 headline">The Architect</div>
+            <div class="hidden md:flex items-center gap-6 font-['Manrope'] tracking-tight font-semibold">
+                <a class="text-indigo-600 font-bold border-b-2 border-indigo-500 pb-0.5 transition-all"
+                    href="#">Essays</a>
+                <a class="text-slate-500 hover:text-indigo-600 transition-colors" href="#">Projects</a>
+                <a class="text-slate-500 hover:text-indigo-600 transition-colors" href="#">Library</a>
+                <a class="text-slate-500 hover:text-indigo-600 transition-colors" href="#">Archive</a>
+            </div>
+            <div class="flex items-center gap-3">
+                <button class="p-2 hover:bg-slate-100 rounded-lg transition-all text-indigo-700">
+                    <span class="material-symbols-outlined" data-icon="search">search</span>
+                </button>
+            </div>
         </nav>
     </header>
-
-    <section class="post">
-        <h2>AI 블로그 제작 과정</h2>
-
-        <p>
-            이번 프로젝트에서는 ChatGPT(OpenAI)를 활용하여
-            HTML과 CSS 기반의 블로그를 제작하였습니다.
-        </p>
-
-        <p>
-            GitHub를 이용하여 버전 관리를 하고,
-            GitHub Pages를 통해 실제 웹사이트로 배포하였습니다.
-        </p>
-
-        <p>
-            이 과정을 통해 웹 개발의 기본 구조와
-            AI를 활용한 개발 방법을 학습할 수 있었습니다.
-        </p>
-
-    </section>
-
-    <footer>
-        <p>© 2026 My Blog</p>
+    <main class="pt-32 pb-20">
+        <!-- Article Header -->
+        <article class="max-w-4xl mx-auto px-6">
+            <header class="mb-12 text-center">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-wider uppercase mb-6">
+                    Technical Log
+                </div>
+                <h1
+                    class="headline text-4xl md:text-6xl font-extrabold tracking-tight text-on-surface mb-6 leading-tight">
+                    AI 블로그 제작 과정
+                </h1>
+                <div class="flex items-center justify-center gap-4 text-secondary text-sm font-medium">
+                    <span class="flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                        2024년 5월 20일
+                    </span>
+                    <span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+                    <span class="flex items-center gap-1">
+                        <span class="material-symbols-outlined text-[18px]">schedule</span>
+                        5분 읽기
+                    </span>
+                </div>
+            </header>
+            <!-- Hero Image with Glassmorphism Overlay -->
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden mb-16 shadow-2xl">
+                <img alt="AI and Development Visualization" class="w-full h-full object-cover"
+                    data-alt="Futuristic digital workspace with abstract glowing blue neural network patterns and code snippets floating in high-end studio lighting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnL4xeLza4U_5tVBS2zmIHQsrDTDwpwKD4N09UE82CP4Ubl8VGO4QAoP2GZB-WTjqm8VZi-PMmFq0ocxf9q2DjCJm2dYeHE5CFigBt0_AqVbS65NXe8sEu2dDlv_nBYxF7uGNLMXlK02BG_G9TopCSxAvb_dhSsC-xZi_MaCXntiAXxrE4nEwMd0paVoaElcs5MpuNMH7gAD9d1WS1hwnPGn31ZJCE4TEEmthStuae6CJf4e7qbILUIRmYfYm1A_oTIczKwLzeR1U" />
+                <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+            </div>
+            <!-- Central Article Column -->
+            <div class="max-w-2xl mx-auto">
+                <div
+                    class="prose prose-slate lg:prose-lg prose-indigo max-w-none text-on-surface-variant leading-relaxed font-body">
+                    <p class="text-xl text-on-surface font-medium mb-8">
+                        이번 프로젝트에서는 ChatGPT(OpenAI)를 활용하여 HTML과 CSS 기반의 블로그를 제작하였습니다. 단순한 도구 사용을 넘어, AI와의 협업을 통해 창의적인
+                        결과물을 도출하는 과정에 집중했습니다.
+                    </p>
+                    <h2 class="headline text-2xl font-bold text-on-surface mt-12 mb-6 flex items-center gap-3">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-[20px]">smart_toy</span>
+                        </span>
+                        AI 기술의 활용
+                    </h2>
+                    <p class="mb-6">
+                        프로젝트의 핵심은 ChatGPT와의 정교한 프롬프트 엔지니어링이었습니다. HTML 구조 설계부터 현대적인 CSS 스타일링까지, AI는 개발의 가속도와 완성도를 동시에
+                        높여주었습니다.
+                    </p>
+                    <div
+                        class="my-10 p-8 bg-surface-container-low rounded-xl flex items-start gap-6 border-l-4 border-primary">
+                        <div class="flex-1">
+                            <h3 class="headline text-lg font-bold text-primary mb-2">Technical Insight</h3>
+                            <p class="text-sm">AI는 코드의 초안을 작성하는 데 매우 효율적이지만, 최종적인 시각적 디테일과 UX 최적화는 인간 개발자의 세심한 조율이 필요하다는
+                                점을 체감했습니다.</p>
+                        </div>
+                    </div>
+                    <h2 class="headline text-2xl font-bold text-on-surface mt-12 mb-6 flex items-center gap-3">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-[20px]">gite</span>
+                        </span>
+                        배포 및 버전 관리
+                    </h2>
+                    <p class="mb-6">
+                        GitHub를 이용하여 모든 코드의 변경 사항을 기록하고 버전 관리를 수행하였습니다. 팀 단위 협업의 기초가 되는 브랜치 전략과 커밋 메시지 규칙을 준수하며 프로젝트를
+                        진행했습니다.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
+                        <div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm">
+                            <div class="text-tertiary mb-2 font-bold flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[18px]">terminal</span>
+                                GitHub
+                            </div>
+                            <p class="text-sm leading-snug">코드 이력 관리 및 변경 사항의 투명한 추적</p>
+                        </div>
+                        <div class="p-6 bg-surface-container-lowest rounded-xl shadow-sm">
+                            <div class="text-tertiary mb-2 font-bold flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[18px]">language</span>
+                                GitHub Pages
+                            </div>
+                            <p class="text-sm leading-snug">정적 사이트 호스팅을 통한 빠르고 효율적인 웹 배포</p>
+                        </div>
+                    </div>
+                    <p class="mb-6">
+                        최종적으로 GitHub Pages를 통해 실제 웹사이트로 배포를 완료했습니다. 이 과정을 통해 로컬 개발 환경에서 작성된 코드가 전 세계 누구나 접근 가능한 실제 프로덕션
+                        환경으로 전환되는 매커니즘을 깊이 있게 이해할 수 있었습니다.
+                    </p>
+                    <h2 class="headline text-2xl font-bold text-on-surface mt-12 mb-6 flex items-center gap-3">
+                        <span
+                            class="w-8 h-8 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-[20px]">lightbulb</span>
+                        </span>
+                        학습의 결과
+                    </h2>
+                    <p class="mb-12">
+                        이 과정을 통해 웹 개발의 기본 구조와 AI를 활용한 개발 방법을 학습할 수 있었습니다. 현대 개발 생태계에서 AI 도구가 단순한 보조 수단을 넘어, 개발자의 역량을
+                        증폭시키는 강력한 파트너가 될 수 있음을 확인한 소중한 경험이었습니다.
+                    </p>
+                </div>
+                <!-- Tags and Social -->
+                <div class="pt-10 border-t border-slate-200/50 flex flex-wrap gap-2">
+                    <span
+                        class="px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold tracking-wide">AI-Powered</span>
+                    <span
+                        class="px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold tracking-wide">Web-Development</span>
+                    <span
+                        class="px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold tracking-wide">GitHub</span>
+                    <span
+                        class="px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold tracking-wide">ChatGPT</span>
+                </div>
+            </div>
+        </article>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-slate-100 mt-20">
+        <div
+            class="max-w-7xl mx-auto py-12 px-8 flex flex-col md:flex-row justify-between items-center border-t border-slate-200/50">
+            <div class="mb-6 md:mb-0">
+                <div class="font-['Manrope'] font-black text-slate-900 text-lg mb-2">The Architect</div>
+                <p class="font-['Inter'] text-sm tracking-wide text-slate-500">© 2024 Intellectual Architect. Built with
+                    Precision.</p>
+            </div>
+            <div class="flex gap-8 font-['Inter'] text-sm tracking-wide">
+                <a class="text-slate-500 hover:text-indigo-500 transition-colors" href="#">RSS</a>
+                <a class="text-slate-500 hover:text-indigo-500 transition-colors" href="#">Newsletter</a>
+                <a class="text-slate-500 hover:text-indigo-500 transition-colors" href="#">Contact</a>
+            </div>
+        </div>
     </footer>
 </body>
 

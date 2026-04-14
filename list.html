@@ -1,43 +1,313 @@
 <!DOCTYPE html>
-<html lang="ko">
+
+<html class="light" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>글 목록</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Essays | The Architect</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-highest": "#e0e3e5",
+                        "primary": "#24389c",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#001f26",
+                        "on-tertiary-container": "#66e2ff",
+                        "inverse-surface": "#2d3133",
+                        "secondary-container": "#d0e1fb",
+                        "tertiary": "#004a57",
+                        "on-secondary-container": "#54647a",
+                        "on-surface": "#191c1e",
+                        "on-secondary-fixed": "#0b1c30",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#bac3ff",
+                        "tertiary-fixed": "#acedff",
+                        "tertiary-container": "#006374",
+                        "primary-container": "#3f51b5",
+                        "surface-tint": "#4355b9",
+                        "background": "#f7f9fb",
+                        "secondary": "#505f76",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f7f9fb",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-primary-fixed": "#00105c",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface": "#f7f9fb",
+                        "on-background": "#191c1e",
+                        "outline-variant": "#c5c5d4",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#cacfff",
+                        "outline": "#757684",
+                        "surface-container": "#eceef0",
+                        "primary-fixed": "#dee0ff",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#293ca0",
+                        "surface-container-high": "#e6e8ea",
+                        "surface-dim": "#d8dadc",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#454652",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "inverse-primary": "#bac3ff",
+                        "secondary-fixed": "#d3e4fe"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-headline {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
 </head>
 
-<body>
-    <header>
-        <h1>📚 글 목록</h1>
-        <nav>
-            <a href="index.html">홈</a>
-        </nav>
-    </header>
-
-    <section>
-        <h2>📌 게시글 리스트</h2>
-
-        <ul class="post-list">
-            <li>
-                <a href="post1.html">AI 블로그 제작 과정</a>
-                <p>ChatGPT를 활용하여 블로그를 만든 과정 정리</p>
-            </li>
-
-            <li>
-                <a href="post2.html">C언어 알고리즘 공부</a>
-                <p>소수 판별, 진법 변환 문제 풀이</p>
-            </li>
-
-            <li>
-                <a href="post3.html">웹 개발 기초</a>
-                <p>HTML과 CSS를 활용한 웹페이지 제작</p>
-            </li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>© 2026 My Blog</p>
+<body class="bg-background text-on-background antialiased selection:bg-primary/10 selection:text-primary">
+    <!-- TopNavBar -->
+    <nav
+        class="sticky top-0 z-50 flex items-center justify-between px-8 py-3 w-full bg-white/70 dark:bg-slate-900/70 backdrop-blur-lg rounded-full mt-6 mx-auto max-w-5xl shadow-xl shadow-indigo-900/5 dark:shadow-none transition-all duration-300 ease-in-out">
+        <div class="flex items-center gap-2">
+            <span class="text-xl font-extrabold tracking-tighter text-indigo-900 dark:text-white">The Architect</span>
+        </div>
+        <div class="hidden md:flex items-center gap-6">
+            <a class="font-manrope tracking-tight font-medium text-indigo-600 dark:text-indigo-300 font-bold border-b-2 border-indigo-600 pb-1 px-3 py-1"
+                href="#">에세이</a>
+            <a class="font-manrope tracking-tight font-medium text-slate-500 dark:text-slate-400 hover:text-indigo-600 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg px-3 py-1"
+                href="#">프로젝트</a>
+            <a class="font-manrope tracking-tight font-medium text-slate-500 dark:text-slate-400 hover:text-indigo-600 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg px-3 py-1"
+                href="#">서재</a>
+            <a class="font-manrope tracking-tight font-medium text-slate-500 dark:text-slate-400 hover:text-indigo-600 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg px-3 py-1"
+                href="#">아카이브</a>
+        </div>
+        <button
+            class="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-2 rounded-lg font-medium tracking-tight hover:shadow-lg hover:shadow-primary/20 transition-all active:scale-95">문의하기</button>
+    </nav>
+    <main class="max-w-7xl mx-auto px-6 md:px-12 pt-20">
+        <!-- Hero Section -->
+        <header class="mb-24 relative">
+            <div class="absolute -top-20 -left-20 w-64 h-64 bg-tertiary-fixed-dim/20 blur-[100px] rounded-full -z-10">
+            </div>
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter text-indigo-900 mb-6 leading-tight">글과
+                <br /><span class="text-primary/40 italic">탐구</span></h1>
+            <p class="text-xl text-secondary max-w-2xl leading-relaxed font-body">시스템 디자인, 클린 코드 철학, 그리고 인간 심리와 디지털
+                인터페이스의 접점에 대한 깊은 고민을 나눕니다.</p>
+        </header>
+        <!-- Bento Grid Featured -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-24">
+            <article
+                class="md:col-span-8 group relative overflow-hidden bg-surface-container-lowest rounded-xl shadow-sm border border-outline-variant/10 p-8 flex flex-col justify-between min-h-[480px]">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                </div>
+                <div>
+                    <span
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold tracking-widest uppercase mb-6">시스템</span>
+                    <h2
+                        class="text-4xl font-bold tracking-tight text-on-surface mb-4 group-hover:text-primary transition-colors">
+                        침묵의 건축: 낮은 인지 부하를 위한 디자인</h2>
+                    <p class="text-lg text-secondary leading-relaxed max-w-xl">SOLID 원칙을 팀 리더십과 조직 설계에 적용하여 마찰을 줄이고 개발자
+                        자율성을 높이는 방법.</p>
+                </div>
+                <div class="flex items-center justify-between mt-12">
+                    <div class="flex items-center gap-4">
+                        <img class="w-12 h-12 rounded-full object-cover grayscale"
+                            data-alt="close-up portrait of a thoughtful man in a dark turtleneck looking away from camera"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCajNt0k0X_-8kyVRIfii5enCYwYRT1buTxHkX9jC8aojrr-R1SbaZP3WrFa5CrhnacC0jK2azh6poKIhe-vshBBUdKJqAXEIvtMTXd45sKqrYkXflsC1PXX9bA8PBBJeXYR0O5wUPTYvb4xkeQK30kCHKl0az5ydxIZ3M4Ud1Fa_7ZWpBi3kq709XY5Je7Yawe0v1MQYr427enfFRDWmyQuq43r8hKcRQzrk-pWgkEhJzPBXEJaePZHW5uftSLGQygs1wYRVXKLwc" />
+                        <div>
+                            <p class="text-sm font-bold text-on-surface">SOLID 원칙을 팀 리더십과 조직 설계에 적용하여 마찰을 줄이고 개발자 자율성을
+                                높이는 방법.</p>
+                            <p class="text-xs text-secondary">SOLID 원칙을 팀 리더십과 조직 설계에 적용하여 마찰을 줄이고 개발자 자율성을 높이는 방법.</p>
+                        </div>
+                    </div>
+                    <a class="flex items-center gap-2 text-primary font-bold tracking-tight" href="#">글 보기 <span
+                            class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </div>
+            </article>
+            <div class="md:col-span-4 flex flex-col gap-8">
+                <div
+                    class="bg-primary p-8 rounded-xl text-white flex flex-col justify-between flex-1 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-20">
+                        <span class="material-symbols-outlined text-6xl">architecture</span>
+                    </div>
+                    <h3 class="text-2xl font-bold leading-snug">주간 딥다이브 구독하기</h3>
+                    <div class="mt-6">
+                        <input
+                            class="w-full bg-white/10 border-none rounded-lg px-4 py-3 text-white placeholder:text-white/50 focus:ring-2 focus:ring-tertiary-fixed transition-all mb-3"
+                            placeholder="Email address" type="email" />
+                        <button
+                            class="w-full bg-tertiary-fixed text-on-tertiary-fixed font-bold py-3 rounded-lg hover:bg-white transition-colors">2,400명
+                            이상의 독자와 함께하기</button>
+                    </div>
+                </div>
+                <div
+                    class="bg-surface-container-low p-8 rounded-xl flex-1 flex flex-col justify-center border border-outline-variant/5">
+                    <h3 class="text-xl font-bold text-on-surface mb-2">기술 아카이브</h3>
+                    <p class="text-secondary text-sm mb-4">언어, 스택, 아키텍처 패턴별로 분류된 50개 이상의 항목을 살펴보세요.</p>
+                    <a class="text-indigo-600 font-bold text-sm inline-flex items-center gap-1" href="#">아카이브 열기 <span
+                            class="material-symbols-outlined text-sm">open_in_new</span></a>
+                </div>
+            </div>
+        </section>
+        <!-- The List - Refined Card Pattern -->
+        <section class="max-w-4xl mx-auto space-y-12 mb-32">
+            <div class="flex items-center justify-between mb-12">
+                <h3 class="text-2xl font-bold tracking-tight text-on-surface">최근 게시글</h3>
+                <div class="flex gap-4">
+                    <button class="text-sm font-medium text-secondary hover:text-primary transition-colors">주제별
+                        필터</button>
+                    <button class="text-sm font-medium text-secondary hover:text-primary transition-colors">최신순</button>
+                </div>
+            </div>
+            <!-- List Item 1 -->
+            <article
+                class="group grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-outline-variant/10 transition-all">
+                <div class="md:col-span-1">
+                    <time class="text-sm font-bold text-primary/40 group-hover:text-primary transition-colors">Feb 28,
+                        2024</time>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <span
+                            class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-[10px] font-bold uppercase tracking-wider">시스템</span>
+                    </div>
+                </div>
+                <div class="md:col-span-3">
+                    <h4 class="text-2xl font-bold text-on-surface mb-3 group-hover:translate-x-1 transition-transform">
+                        인간 조직에서의 제어 반전</h4>
+                    <p class="text-secondary leading-relaxed mb-6 font-body">SOLID 원칙을 팀 리더십과 조직 설계에 적용하여 마찰을 줄이고 개발자
+                        자율성을 높이는 방법.</p>
+                    <a class="text-tertiary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all"
+                        href="#">글 보기 <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </div>
+            </article>
+            <!-- List Item 2 -->
+            <article
+                class="group grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-outline-variant/10 transition-all">
+                <div class="md:col-span-1">
+                    <time class="text-sm font-bold text-primary/40 group-hover:text-primary transition-colors">Feb 12,
+                        2024</time>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <span
+                            class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-[10px] font-bold uppercase tracking-wider">UI
+                            디자인</span>
+                    </div>
+                </div>
+                <div class="md:col-span-3">
+                    <h4 class="text-2xl font-bold text-on-surface mb-3 group-hover:translate-x-1 transition-transform">
+                        기능적 미니멀리즘의 가치</h4>
+                    <p class="text-secondary leading-relaxed mb-6 font-body">더 많은 기능을 추가하는 것이 왜 종종 디자인 실패의 징후인지, 그리고 제품
+                        가치 제안의 핵심을 찾는 방법.</p>
+                    <a class="text-tertiary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all"
+                        href="#">글 보기 <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </div>
+            </article>
+            <!-- List Item 3 -->
+            <article
+                class="group grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-outline-variant/10 transition-all">
+                <div class="md:col-span-1">
+                    <time class="text-sm font-bold text-primary/40 group-hover:text-primary transition-colors">Jan 25,
+                        2024</time>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <span
+                            class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-[10px] font-bold uppercase tracking-wider">회고</span>
+                    </div>
+                </div>
+                <div class="md:col-span-3">
+                    <h4 class="text-2xl font-bold text-on-surface mb-3 group-hover:translate-x-1 transition-transform">
+                        TypeScript와 함께한 첫 10,000시간의 기록</h4>
+                    <p class="text-secondary leading-relaxed mb-6 font-body">타입 안전성, 개발자 경험, 그리고 유지보수 가능한 엔터프라이즈 코드베이스
+                        구축에 대해 배운 것들에 대한 회고.</p>
+                    <a class="text-tertiary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all"
+                        href="#">글 보기 <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </div>
+            </article>
+            <!-- List Item 4 -->
+            <article
+                class="group grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-outline-variant/10 transition-all">
+                <div class="md:col-span-1">
+                    <time class="text-sm font-bold text-primary/40 group-hover:text-primary transition-colors">Jan 02,
+                        2024</time>
+                    <div class="flex flex-wrap gap-2 mt-3">
+                        <span
+                            class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-[10px] font-bold uppercase tracking-wider">AI</span>
+                    </div>
+                </div>
+                <div class="md:col-span-3">
+                    <h4 class="text-2xl font-bold text-on-surface mb-3 group-hover:translate-x-1 transition-transform">
+                        인터페이스 프록시로서의 LLM</h4>
+                    <p class="text-secondary leading-relaxed mb-6 font-body">UI가 인간을 위해 만들어지는 것이 아니라, 사용자 의도에 따라 모델에 의해
+                        즉석에서 생성되는 미래를 탐구합니다.</p>
+                    <a class="text-tertiary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all"
+                        href="#">글 보기 <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                </div>
+            </article>
+        </section>
+        <!-- Pagination / Load More -->
+        <div class="flex justify-center mb-32">
+            <button
+                class="flex items-center gap-3 px-8 py-4 bg-surface-container-low text-on-surface font-bold rounded-lg border border-outline-variant/10 hover:bg-surface-container transition-all group">더
+                많은 생각 읽기 <span
+                    class="material-symbols-outlined group-hover:rotate-90 transition-transform">expand_more</span></button>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-20 bg-slate-50 dark:bg-slate-950">
+        <div
+            class="w-full py-12 px-8 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 font-inter text-sm antialiased text-slate-900 dark:text-slate-100">
+            <p class="text-slate-500">© 2024 Intellectual Architect. 논리와 정밀함으로 구축되었습니다.</p>
+            <div class="flex items-center gap-8">
+                <a class="text-slate-500 hover:text-indigo-600 transition-opacity duration-200 hover:underline decoration-indigo-500 underline-offset-4"
+                    href="#">소스 코드</a>
+                <a class="text-slate-500 hover:text-indigo-600 transition-opacity duration-200 hover:underline decoration-indigo-500 underline-offset-4"
+                    href="#">링크드인</a>
+                <a class="text-slate-500 hover:text-indigo-600 transition-opacity duration-200 hover:underline decoration-indigo-500 underline-offset-4"
+                    href="#">이력서</a>
+            </div>
+        </div>
     </footer>
 </body>
 
