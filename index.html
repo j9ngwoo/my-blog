@@ -5,84 +5,78 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>📘 My AI Blog | Kim Jang-woo</title>
-    <!-- Material Symbols -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <!-- Google Fonts: Manrope & Inter -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;700;800&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <!-- Tailwind CSS -->
+    <title>Indigo Code | AI로 만든 나만의 블로그</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
-                        "secondary-fixed": "#d3e4fe",
-                        "inverse-primary": "#bac3ff",
-                        "error": "#ba1a1a",
-                        "outline": "#757684",
-                        "surface-container-low": "#f2f4f6",
-                        "tertiary": "#004a57",
-                        "on-secondary-fixed": "#0b1c30",
-                        "on-primary": "#ffffff",
-                        "secondary": "#505f76",
-                        "primary-fixed": "#dee0ff",
-                        "surface-tint": "#4355b9",
-                        "on-secondary-fixed-variant": "#38485d",
-                        "primary": "#24389c",
-                        "inverse-on-surface": "#eff1f3",
-                        "on-background": "#191c1e",
-                        "surface-bright": "#f7f9fb",
-                        "tertiary-container": "#006374",
-                        "on-error-container": "#93000a",
                         "surface-container-high": "#e6e8ea",
-                        "surface-container-highest": "#e0e3e5",
-                        "error-container": "#ffdad6",
-                        "surface": "#f7f9fb",
-                        "background": "#f7f9fb",
-                        "on-tertiary-container": "#66e2ff",
-                        "tertiary-fixed": "#acedff",
-                        "on-surface": "#191c1e",
-                        "outline-variant": "#c5c5d4",
-                        "on-primary-container": "#cacfff",
-                        "on-primary-fixed-variant": "#293ca0",
-                        "on-tertiary": "#ffffff",
-                        "surface-container": "#eceef0",
-                        "surface-dim": "#d8dadc",
-                        "tertiary-fixed-dim": "#4cd7f6",
                         "secondary-fixed-dim": "#b7c8e1",
-                        "on-primary-fixed": "#00105c",
+                        "secondary-container": "#d0e1fb",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#001f26",
+                        "surface-container": "#eceef0",
+                        "primary-container": "#3f51b5",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#004a57",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dee0ff",
+                        "on-error-container": "#93000a",
                         "surface-variant": "#e0e3e5",
                         "on-secondary-container": "#54647a",
-                        "primary-container": "#3f51b5",
-                        "primary-fixed-dim": "#bac3ff",
-                        "on-surface-variant": "#454652",
-                        "on-secondary": "#ffffff",
-                        "surface-container-lowest": "#ffffff",
-                        "on-error": "#ffffff",
-                        "secondary-container": "#d0e1fb",
-                        "on-tertiary-fixed": "#001f26",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "outline-variant": "#c5c5d4",
+                        "secondary-fixed": "#d3e4fe",
+                        "surface-dim": "#d8dadc",
+                        "primary": "#24389c",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary-container": "#66e2ff",
+                        "inverse-primary": "#bac3ff",
+                        "on-background": "#191c1e",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f7f9fb",
+                        "surface": "#f7f9fb",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-primary-fixed": "#00105c",
+                        "tertiary-fixed": "#acedff",
+                        "background": "#f7f9fb",
+                        "on-primary-container": "#cacfff",
+                        "error": "#ba1a1a",
+                        "secondary": "#505f76",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "on-primary-fixed-variant": "#293ca0",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "surface-tint": "#4355b9",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-container": "#006374",
                         "on-tertiary-fixed-variant": "#004e5c",
-                        "inverse-surface": "#2d3133"
+                        "outline": "#757684",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#0b1c30",
+                        "primary-fixed-dim": "#bac3ff",
+                        "on-surface-variant": "#454652"
                     },
                     "borderRadius": {
-                        "DEFAULT": "0.5rem",
-                        "lg": "1rem",
-                        "xl": "1.5rem",
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
                         "full": "9999px"
                     },
                     "fontFamily": {
-                        "headline": ["Manrope", "sans-serif"],
-                        "body": ["Inter", "sans-serif"],
-                        "label": ["Inter", "sans-serif"]
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
                     }
                 },
             },
@@ -91,7 +85,6 @@
     <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
         }
 
         body {
@@ -100,156 +93,251 @@
 
         h1,
         h2,
-        h3 {
+        h3,
+        .headline {
             font-family: 'Manrope', sans-serif;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+
+        .hero-orb {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, #acedff 0%, rgba(172, 237, 255, 0) 70%);
+            filter: blur(60px);
+            opacity: 0.4;
+            z-index: -1;
         }
     </style>
 </head>
 
-<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
-    <!-- Top Navigation Bar -->
-    <nav
-        class="sticky top-0 z-50 flex items-center justify-between px-8 py-3 w-full bg-white/70 backdrop-blur-lg rounded-full mt-6 mx-auto max-w-5xl shadow-xl shadow-indigo-900/5 font-manrope tracking-tight font-medium">
-        <div class="text-xl font-extrabold tracking-tighter text-indigo-900">
-            The Architect
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed-variant">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
+            <div class="text-xl font-bold tracking-tighter text-indigo-900">
+                Indigo Code
+            </div>
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-indigo-700 font-semibold border-b-2 border-indigo-600 font-inter tracking-wide py-1"
+                    href="index.html">Home</a>
+                <a class="text-slate-600 hover:text-indigo-600 transition-colors font-inter tracking-wide py-1"
+                    href="list.html">Essays</a>
+                <a class="text-slate-600 hover:text-indigo-600 transition-colors font-inter tracking-wide py-1"
+                    href="#">Projects</a>
+                <a class="text-slate-600 hover:text-indigo-600 transition-colors font-inter tracking-wide py-1"
+                    href="#">Archive</a>
+            </div>
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <button
+                    class="p-2 hover:bg-slate-100/50 rounded-lg transition-colors scale-95 duration-200 ease-in-out">
+                    <span class="material-symbols-outlined text-slate-600" data-icon="search">search</span>
+                </button>
+                <button
+                    class="p-2 hover:bg-slate-100/50 rounded-lg transition-colors scale-95 duration-200 ease-in-out">
+                    <span class="material-symbols-outlined text-slate-600" data-icon="dark_mode">dark_mode</span>
+                </button>
+            </div>
         </div>
-        <div class="hidden md:flex items-center gap-6">
-            <a class="text-indigo-600 font-bold border-b-2 border-indigo-600 pb-1" href="#">Essays</a>
-            <a class="text-slate-500 hover:text-indigo-600 transition-colors px-3 py-1 hover:bg-slate-100 rounded-lg"
-                href="#">Projects</a>
-            <a class="text-slate-500 hover:text-indigo-600 transition-colors px-3 py-1 hover:bg-slate-100 rounded-lg"
-                href="#">Library</a>
-            <a class="text-slate-500 hover:text-indigo-600 transition-colors px-3 py-1 hover:bg-slate-100 rounded-lg"
-                href="#">Archive</a>
-        </div>
-        <button
-            class="bg-primary text-on-primary px-6 py-2 rounded-full font-bold transition-all duration-300 ease-in-out active:scale-95 shadow-lg shadow-primary/20">
-            Connect
-        </button>
     </nav>
-    <main class="max-w-7xl mx-auto px-6 mt-12 md:mt-24">
+    <main class="pt-32">
         <!-- Hero Section -->
-        <section
-            class="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary to-primary-container p-12 md:p-24 text-on-primary mb-20">
-            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-tertiary-fixed-dim/20 rounded-full blur-3xl">
-            </div>
-            <div class="relative z-10 max-w-3xl">
-                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-tight">
-                    AI로 만든 나만의 블로그
-                </h1>
-                <p
-                    class="text-xl md:text-2xl text-on-primary-container font-medium max-w-xl opacity-90 leading-relaxed">
-                    이 사이트는 AI를 활용하여 제작되었습니다.
-                </p>
-                <div class="mt-10 flex flex-wrap gap-4">
-                    <button
-                        class="bg-surface-container-lowest text-primary px-8 py-3 rounded-full font-bold transition-all active:scale-95">
-                        Read Essays
-                    </button>
-                    <button
-                        class="border border-on-primary/20 hover:bg-on-primary/10 text-on-primary px-8 py-3 rounded-full font-bold transition-all active:scale-95">
-                        View Projects
-                    </button>
+        <section class="max-w-7xl mx-auto px-6 mb-32 relative">
+            <div class="hero-orb -top-20 -left-20"></div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-8">
+                    <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter text-primary mb-6 leading-none">
+                        AI로 만든<br /><span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">나만의
+                            블로그</span>
+                    </h1>
+                    <p class="text-xl text-secondary max-w-2xl mb-10 font-body leading-relaxed">
+                        코드와 디자인의 경계를 허무는 지적인 건축가, 김장우의 디지털 일지입니다. 현대적인 기술 스택과 세련된 감각으로 빚어낸 기록들을 탐험해보세요.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button
+                            class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-lg font-semibold flex items-center gap-2 hover:shadow-xl transition-all duration-300">
+                            Click to interact
+                            <span class="material-symbols-outlined text-lg"
+                                data-icon="arrow_forward">arrow_forward</span>
+                        </button>
+                        <button
+                            class="px-8 py-4 rounded-lg font-semibold text-primary border border-outline-variant/20 hover:bg-surface-container-low transition-all">
+                            View Portfolio
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <!-- Decorative Visual -->
-            <div
-                class="hidden lg:block absolute right-12 bottom-12 w-1/3 aspect-square bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 rotate-3 shadow-2xl">
-                <img class="w-full h-full object-cover rounded-lg mix-blend-overlay opacity-60"
-                    data-alt="Abstract visualization of artificial intelligence neural networks with soft blue glowing lines and particles on dark background"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsdn2_F5TrVPHYi4xthF9OVQy4MBdX6hzvsokgy70mdergC9uwCuxiOwZYT5kAzM0zWiFCiGk7IKP2jD_NVq48JBNtveSAvAL7gpMEzbY0lLcedDW8Va_5qzJJVLqkrfQMryMsQiShT36HLeUQMIzhKFv4-ZRkqet2QQw3dNDIHzV93seLm35UnxFu6INZq01m6eG1UIyjnsBKto0c9MWdTuSewBzOODrlAdE0NtYdH-6NSQ7BpS3_aOtA81O_aHZYPX7USKTwaHw" />
+                <div class="lg:col-span-4 hidden lg:block">
+                    <div
+                        class="aspect-square rounded-2xl overflow-hidden bg-surface-container-low shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+                        <img alt="Modern workspace" class="w-full h-full object-cover"
+                            data-alt="Close-up of a high-end mechanical keyboard on a minimalist desk with soft blue neon ambient lighting and a laptop screen showing clean code."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdr0KLavx1gRXhg1q4H2b9-U0rsr9Cqq47eCZ3MXJ_RnLt_TJBiCRwN7zYsRK6jJYgZTNvRu56v4l_cymUUPeO098NAxttFA7fcvyhMUfP-a3C4LCmaynNY1daq79kyv7KeYj6onqrBYTo4Epjr83RHpiXv9nLnshgsfLwTQ4_95jl_OwSp6-0FJiaghDOHV5Z8mboMGAj5AynVKhJSnEkfdQQd6cB9oWN9Y7ZQW5kSQSaNFGk6m4AfhKmnVg8ACGfKuGLrk3sBlc" />
+                    </div>
+                </div>
             </div>
         </section>
-        <!-- Bento Content Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <!-- About Section (Large Card) -->
-            <section class="md:col-span-8 bg-surface-container-low p-8 md:p-12 rounded-xl">
-                <div class="flex items-center gap-4 mb-8">
-                    <span class="material-symbols-outlined text-4xl text-primary" data-icon="person">person</span>
-                    <h2 class="text-3xl font-bold tracking-tight text-on-surface">👨‍💻 About Me</h2>
-                </div>
-                <div class="space-y-6">
-                    <p class="text-xl text-on-surface-variant leading-relaxed font-body">
-                        안녕하세요, 저는 AI와 프로그래밍에 관심이 많은 학생 김장우입니다.
-                    </p>
-                    <div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm border border-outline-variant/10">
-                        <p class="text-lg text-secondary leading-relaxed">
-                            ChatGPT(OpenAI)를 활용하여 이 블로그를 제작하였습니다. 기술과 창의성이 만나는 지점에서 새로운 가치를 발견하는 것을 즐깁니다.
-                        </p>
+        <!-- Bento Grid: About & Skills -->
+        <section class="max-w-7xl mx-auto px-6 mb-32">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- About Me -->
+                <div class="md:col-span-2 bg-surface-container-low rounded-xl p-10 flex flex-col justify-between">
+                    <div>
+                        <span class="text-tertiary font-bold tracking-widest text-xs uppercase mb-4 block">THE
+                            ARCHITECT</span>
+                        <h2 class="text-3xl font-bold text-on-surface mb-6">Kim Jang-woo</h2>
+                        <div class="space-y-4 text-secondary leading-relaxed font-body">
+                            <p>저는 기술의 정밀함과 디자인의 미학적 균형을 추구하는 개발자입니다. 복잡한 문제를 단순하고 우아한 솔루션으로 풀어내는 과정에서 즐거움을 찾습니다.</p>
+                            <p>단순한 코드 작성을 넘어, 사용자가 경험하는 디지털 공간의 구조와 질감을 설계하는 '지적인 건축가'로서의 정체성을 가지고 활동하고 있습니다.</p>
+                        </div>
+                    </div>
+                    <div class="mt-12 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
+                            <span class="material-symbols-outlined text-on-primary-fixed"
+                                data-icon="school">school</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-semibold text-on-surface">Computer Science &amp; Engineering</p>
+                            <p class="text-xs text-secondary">Hanyang University</p>
+                        </div>
                     </div>
                 </div>
-            </section>
-            <!-- Skills Section (Side Card) -->
-            <section class="md:col-span-4 bg-surface-container-high p-8 rounded-xl flex flex-col">
-                <div class="flex items-center gap-3 mb-8">
-                    <span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
-                    <h2 class="text-2xl font-bold tracking-tight">🛠 Skills</h2>
-                </div>
-                <div class="flex flex-wrap gap-3">
-                    <span
-                        class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full text-sm font-semibold tracking-wide">
-                        HTML/CSS
-                    </span>
-                    <span
-                        class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full text-sm font-semibold tracking-wide">
-                        C 언어
-                    </span>
-                    <span
-                        class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full text-sm font-semibold tracking-wide">
-                        기초 알고리즘
-                    </span>
-                    <span
-                        class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full text-sm font-semibold tracking-wide">
-                        AI Prompting
-                    </span>
-                    <span
-                        class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full text-sm font-semibold tracking-wide">
-                        Python
-                    </span>
-                </div>
-                <div class="mt-auto pt-8">
-                    <div class="rounded-lg overflow-hidden grayscale contrast-125 opacity-50">
-                        <img class="w-full h-32 object-cover"
-                            data-alt="Macro shot of computer code on a monitor with high contrast black and white lighting"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLxjU4BxElG8W0HWOCSOu0JQZQcw5VLi4fBM3B540dgBgEcoJSbCmmFaJBF94q5WFcudBtC9DT_5VIjSRlwKXHaFpHgowIFmOZXPNpEiFfuwECTu30gccwp7qyJ9ZYic05iWi0yYh_2diNn8SRLR2KdMT1ge5sd0E_xZayOrqVkkLqpC2L7tey-8efajjnQ3XXqYsLhj3Y6vqjMLnjXMlXxpXorKnMLnrfyzpA-Tkfm32XMAQR0glPRqzJv_cE8GnyBSCAAXzmiZE" />
+                <!-- Skills Section -->
+                <div class="bg-surface-container-highest rounded-xl p-10">
+                    <span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">TECH STACK</span>
+                    <h2 class="text-3xl font-bold text-on-surface mb-8">Skills</h2>
+                    <div class="flex flex-wrap gap-2">
+                        <span
+                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">React.js</span>
+                        <span
+                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">Tailwind
+                            CSS</span>
+                        <span
+                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">TypeScript</span>
+                        <span
+                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">Next.js</span>
+                        <span
+                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">Node.js</span>
+                        <span
+                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">PostgreSQL</span>
+                        <span
+                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">Figma</span>
+                        <span
+                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">Git</span>
+                        <span
+                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">Docker</span>
+                    </div>
+                    <div class="mt-10 pt-10 border-t border-outline-variant/10">
+                        <p class="text-sm text-on-surface-variant font-medium mb-4">Focusing on:</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-center gap-3 text-sm text-secondary">
+                                <span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Performance Optimization
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-secondary">
+                                <span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                UI/UX Engineering
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </section>
-            <!-- Interactive Section (Wide Card) -->
-            <section
-                class="md:col-span-12 bg-surface-container-lowest border border-outline-variant/15 p-12 rounded-xl text-center shadow-2xl shadow-primary/5">
-                <div class="max-w-2xl mx-auto">
-                    <div
-                        class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-tertiary-container/10 text-tertiary">
-                        <span class="material-symbols-outlined text-3xl" data-icon="celebration">celebration</span>
-                    </div>
-                    <h2 class="text-4xl font-extrabold tracking-tight text-on-surface mb-8 transition-all duration-300"
-                        id="welcome-message">
-                        👋 방문을 환영합니다!
-                    </h2>
-                    <button
-                        class="group relative inline-flex items-center gap-3 bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg transition-all hover:scale-105 active:scale-95 shadow-xl shadow-primary/30"
-                        onclick="document.getElementById('welcome-message').innerText = '🎉 버튼을 눌렀네요!'">
-                        <span class="material-symbols-outlined" data-icon="touch_app">touch_app</span>
-                        <span>Click to Interact</span>
-                    </button>
+            </div>
+        </section>
+        <!-- Featured Essays -->
+        <section class="max-w-7xl mx-auto px-6 mb-32">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-bold text-on-surface tracking-tight mb-2">Latest Essays</h2>
+                    <p class="text-secondary">생각의 깊이를 더하는 기술적 고찰</p>
                 </div>
-            </section>
-        </div>
+                <a class="text-primary font-semibold flex items-center gap-2 hover:gap-3 transition-all"
+                    href="list.html">
+                    View all archive
+                    <span class="material-symbols-outlined" data-icon="east">east</span>
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Essay Card 1 -->
+                <div
+                    class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-outline-variant/10">
+                    <div class="h-64 overflow-hidden">
+                        <img alt="Coding"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Overhead shot of a minimalist workspace with a laptop, a cup of coffee, and a notebook on a clean white desk with soft natural window light."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNVkhwTj3BmIPet3AluLv5sD7-WoxRGoKt8gOhcPg0N6MTCJrm9wHLbtuaWrYqX9U5cwQeclAoJkETFtjoCHJDhvJBYr88R7UzzGl9BIZrz1Mt5EmDlsffP2nGUk7xSjD3hqz7bk_oeJFQIhW_QqoeWgJJAwKD2I9xnoO8E0p8B0Sq2DBcpDKE3I9jYYCc3n8BJKk-VED7QePdTV8wbOY0FoPrx4U3vXROVA55rU2PCQgpcxIvCOoZiEt9IwT0YqaX-oaQBHzkN-c" />
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="text-xs font-bold text-tertiary">DEVELOPMENT</span>
+                            <span class="text-xs text-slate-400">2024.03.15</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-on-surface mb-4 group-hover:text-primary transition-colors">
+                            리액트 디자인 패턴: 선언적 UI의 힘</h3>
+                        <p class="text-secondary leading-relaxed mb-6">컴포넌트 중심의 설계가 어떻게 코드의 재사용성과 유지보수성을 극대화하는지에 대한 심층적인
+                            탐구...</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-semibold text-primary">Read More</span>
+                            <span
+                                class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors"
+                                data-icon="open_in_new">open_in_new</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Essay Card 2 -->
+                <div
+                    class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-outline-variant/10">
+                    <div class="h-64 overflow-hidden">
+                        <img alt="Technology"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Close-up of a high-tech circuit board with glowing blue light paths and microchips, representing futuristic computing and AI technology."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF9KPuLiXHwVpSRrvAjrFmGdoF7gaQC-ZmXfioTCylyXiU3u0uXvvAcXsoz5HR5GkfLwit0c4D5l1N5VD0hqqr8-ySjZflNz3f4B0131UAyc7DTyE7Aupes9CDAHGcXq7hsiCbbZtRIH12dMZs_ocjhTqpEQB8UucJOj-x0ITRx07ic3GKUD1D3S2ydYCLyy9ZVDCeiGq88VDTIp1MssDwoYIrAAvI1Wf2gL_HCwLzJNeEVk7ogUgdDRk4O0CL2mzVFoR1oHfbWeY" />
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="text-xs font-bold text-tertiary">DESIGN SYSTEM</span>
+                            <span class="text-xs text-slate-400">2024.03.02</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-on-surface mb-4 group-hover:text-primary transition-colors">
+                            토큰 기반의 디자인 시스템 구축기</h3>
+                        <p class="text-secondary leading-relaxed mb-6">일관된 브랜드 아이덴티티를 위해 디자인 토큰을 활용하여 확장 가능한 UI 시스템을 구축한
+                            과정...</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm font-semibold text-primary">Read More</span>
+                            <span
+                                class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors"
+                                data-icon="open_in_new">open_in_new</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <!-- Footer -->
-    <footer
-        class="bg-slate-50 mt-20 py-12 px-8 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 font-inter text-sm antialiased border-t border-slate-200/50">
-        <div class="text-slate-500">
-            © 2024 Intellectual Architect. Built with logic and precision.
-        </div>
-        <div class="flex gap-8">
-            <a class="text-slate-500 hover:text-indigo-600 transition-opacity hover:underline decoration-indigo-500 underline-offset-4"
-                href="#">Source Code</a>
-            <a class="text-slate-500 hover:text-indigo-600 transition-opacity hover:underline decoration-indigo-500 underline-offset-4"
-                href="#">LinkedIn</a>
-            <a class="text-slate-500 hover:text-indigo-600 transition-opacity hover:underline decoration-indigo-500 underline-offset-4"
-                href="#">Resume</a>
+    <footer class="w-full border-t border-slate-200/20 bg-slate-50">
+        <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto py-12 px-6 gap-6">
+            <div class="flex flex-col gap-2 items-center md:items-start">
+                <div class="text-lg font-black text-slate-900">Indigo Code</div>
+                <p class="text-sm font-inter tracking-wide text-slate-500">© 2024 Kim Jang-woo. Built with Precision.
+                </p>
+            </div>
+            <div class="flex gap-8">
+                <a class="text-slate-500 hover:text-indigo-500 transition-all text-sm font-inter tracking-wide opacity-80 hover:opacity-100"
+                    href="#">Twitter</a>
+                <a class="text-slate-500 hover:text-indigo-500 transition-all text-sm font-inter tracking-wide opacity-80 hover:opacity-100"
+                    href="#">GitHub</a>
+                <a class="text-slate-500 hover:text-indigo-500 transition-all text-sm font-inter tracking-wide opacity-80 hover:opacity-100"
+                    href="#">LinkedIn</a>
+                <a class="text-slate-500 hover:text-indigo-500 transition-all text-sm font-inter tracking-wide opacity-80 hover:opacity-100"
+                    href="#">RSS</a>
+            </div>
         </div>
     </footer>
 </body>
