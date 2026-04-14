@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 
-<html lang="ko">
+<html class="light" lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>글과 탐구 - Indigo Code</title>
+    <title>Essays | Indigo Code</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -22,58 +19,58 @@
             theme: {
                 extend: {
                     "colors": {
-                        "surface-container-high": "#e6e8ea",
-                        "secondary-fixed-dim": "#b7c8e1",
-                        "secondary-container": "#d0e1fb",
-                        "on-error": "#ffffff",
-                        "on-tertiary-fixed": "#001f26",
-                        "surface-container": "#eceef0",
-                        "primary-container": "#3f51b5",
-                        "on-secondary": "#ffffff",
-                        "tertiary": "#004a57",
-                        "surface-container-lowest": "#ffffff",
-                        "primary-fixed": "#dee0ff",
-                        "on-error-container": "#93000a",
-                        "surface-variant": "#e0e3e5",
-                        "on-secondary-container": "#54647a",
-                        "on-primary": "#ffffff",
                         "on-tertiary": "#ffffff",
-                        "on-surface": "#191c1e",
-                        "outline-variant": "#c5c5d4",
-                        "secondary-fixed": "#d3e4fe",
-                        "surface-dim": "#d8dadc",
-                        "primary": "#24389c",
-                        "inverse-surface": "#2d3133",
-                        "on-tertiary-container": "#66e2ff",
-                        "inverse-primary": "#bac3ff",
-                        "on-background": "#191c1e",
-                        "surface-container-low": "#f2f4f6",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#00105c",
                         "surface-bright": "#f7f9fb",
                         "surface": "#f7f9fb",
-                        "surface-container-highest": "#e0e3e5",
-                        "on-primary-fixed": "#00105c",
-                        "tertiary-fixed": "#acedff",
-                        "background": "#f7f9fb",
-                        "on-primary-container": "#cacfff",
-                        "error": "#ba1a1a",
+                        "primary": "#24389c",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-container": "#eceef0",
                         "secondary": "#505f76",
-                        "on-secondary-fixed-variant": "#38485d",
+                        "on-primary-container": "#cacfff",
+                        "on-secondary-fixed": "#0b1c30",
+                        "inverse-primary": "#bac3ff",
+                        "on-surface-variant": "#454652",
+                        "on-secondary-container": "#54647a",
                         "on-primary-fixed-variant": "#293ca0",
+                        "on-background": "#191c1e",
                         "tertiary-fixed-dim": "#4cd7f6",
-                        "surface-tint": "#4355b9",
-                        "inverse-on-surface": "#eff1f3",
+                        "secondary-fixed-dim": "#b7c8e1",
                         "tertiary-container": "#006374",
-                        "on-tertiary-fixed-variant": "#004e5c",
+                        "on-tertiary-container": "#66e2ff",
+                        "primary-container": "#3f51b5",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#dee0ff",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c5c5d4",
+                        "inverse-surface": "#2d3133",
+                        "secondary-container": "#d0e1fb",
+                        "background": "#f7f9fb",
+                        "primary-fixed-dim": "#bac3ff",
+                        "on-surface": "#191c1e",
+                        "tertiary-fixed": "#acedff",
+                        "on-tertiary-fixed": "#001f26",
                         "outline": "#757684",
                         "error-container": "#ffdad6",
-                        "on-secondary-fixed": "#0b1c30",
-                        "primary-fixed-dim": "#bac3ff",
-                        "on-surface-variant": "#454652"
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary-fixed": "#d3e4fe",
+                        "tertiary": "#004a57",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface-tint": "#4355b9",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-high": "#e6e8ea",
+                        "on-secondary-fixed-variant": "#38485d"
                     },
                     "borderRadius": {
-                        "DEFAULT": "0.5rem",
-                        "lg": "1rem",
-                        "xl": "1.5rem",
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
                         "full": "9999px"
                     },
                     "fontFamily": {
@@ -96,181 +93,223 @@
 
         h1,
         h2,
-        h3 {
+        h3,
+        .brand {
             font-family: 'Manrope', sans-serif;
+        }
+
+        .glass-nav {
+            background: rgba(247, 249, 251, 0.8);
+            backdrop-filter: blur(20px);
         }
     </style>
 </head>
 
 <body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
     <!-- TopNavBar -->
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl transition-all duration-200">
-        <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
-            <a class="text-xl font-bold tracking-tighter text-indigo-900" href="index.html">Indigo Code</a>
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <a class="text-xl font-bold tracking-tighter text-indigo-900 dark:text-indigo-100" href="index.html">Indigo
+                Code</a>
             <div class="hidden md:flex items-center gap-8">
-                <a class="text-slate-600 hover:text-indigo-600 transition-colors font-inter tracking-wide text-sm"
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 transition-colors font-['Manrope'] tracking-tight"
                     href="index.html">Home</a>
-                <a class="text-indigo-700 font-semibold border-b-2 border-indigo-600 font-inter tracking-wide text-sm"
+                <a class="text-indigo-700 dark:text-indigo-400 font-bold border-b-2 border-indigo-600 font-['Manrope'] tracking-tight"
                     href="list.html">Essays</a>
-                <a class="text-slate-600 hover:text-indigo-600 transition-colors font-inter tracking-wide text-sm"
-                    href="#">Projects</a>
-                <a class="text-slate-600 hover:text-indigo-600 transition-colors font-inter tracking-wide text-sm"
-                    href="#">Archive</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 transition-colors font-['Manrope'] tracking-tight"
+                    href="projects.html">Projects</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 transition-colors font-['Manrope'] tracking-tight"
+                    href="about.html">About</a>
             </div>
             <div class="flex items-center gap-4">
-                <button class="p-2 hover:bg-slate-100/50 rounded-lg transition-all scale-95 duration-200 ease-in-out">
-                    <span class="material-symbols-outlined text-indigo-700" data-icon="search">search</span>
-                </button>
-                <button class="p-2 hover:bg-slate-100/50 rounded-lg transition-all scale-95 duration-200 ease-in-out">
-                    <span class="material-symbols-outlined text-indigo-700" data-icon="dark_mode">dark_mode</span>
-                </button>
+                <button
+                    class="bg-primary text-on-primary px-5 py-2 rounded-lg font-medium hover:bg-primary-container transition-all active:scale-95 duration-200">Contact</button>
             </div>
         </div>
     </nav>
-    <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+    <main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
         <!-- Hero Header -->
-        <header class="mb-20">
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
-                <div>
-                    <span
-                        class="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-widest text-tertiary uppercase bg-tertiary-fixed-dim/20 rounded-full">Archive
-                        &amp; Thoughts</span>
-                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface leading-tight">글과 탐구
-                    </h1>
-                </div>
-                <div class="max-w-xs text-on-surface-variant font-body leading-relaxed">
-                    지적 호기심을 바탕으로 기록된 개발 여정과 깊이 있는 사유의 조각들입니다.
-                </div>
+        <header class="mb-20 max-w-3xl">
+            <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-semibold mb-6">
+                <span class="material-symbols-outlined text-sm"
+                    style="font-variation-settings: 'FILL' 1;">edit_note</span>
+                WRITINGS &amp; REFLECTIONS
             </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-on-surface mb-8">Essays on Code <span
+                    class="text-primary italic">&amp;</span> Life.</h1>
+            <p class="text-xl text-on-surface-variant leading-relaxed font-body">
+                A collection of technical deep-dives and personal reflections on building software in an evolving
+                landscape. Written in English and Korean (한국어).
+            </p>
         </header>
-        <!-- Bento Grid List -->
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-            <!-- Featured Post (Bento Large) -->
-            <div class="md:col-span-8 group cursor-pointer">
-                <a class="block relative h-full overflow-hidden rounded-xl bg-surface-container-lowest transition-all hover:shadow-2xl hover:shadow-primary/5"
+        <!-- Bento Grid Layout for Essays -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <!-- Featured Post (Large) -->
+            <article class="md:col-span-8 group">
+                <a class="block bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/5 ring-1 ring-outline-variant/10"
                     href="post1.html">
-                    <div class="aspect-[16/9] md:aspect-auto md:h-full relative overflow-hidden">
-                        <img alt="AI Blog Design"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            data-alt="Futuristic neural network visualization with flowing blue data points and soft ambient light against dark background"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ2GjPxzI4FKz1lCGMkFrRrljhqYU3HCydUIXuMp5ZDFMBGjUQhENzektglcO2anmnC2kk_JPGFvPeb0mFQJtVRCrYXwf57kdWWZRvlBuTV1hg_L8l-FuUzi6Puv3jDr_TzgwvpEC_aWz5FkedINz1LPfhTAU2bfgHWtQmb2sJLIcjvx_ADLWMz7W43H20ggNaYed932AQO1VVVCf4-7Us-Atp-8j_eq_MnmVKTXimh6kQd6dHGHS_ZeCQS26MNcpe1UabZEQT3Xc" />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                        <div class="absolute bottom-0 p-8">
+                    <div class="aspect-[16/9] w-full bg-surface-container overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Modern clean workspace with a mechanical keyboard and abstract code displayed on a high-resolution monitor with soft blue lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0PZIpRyQJHZST1YRzEcmOd5L0xDaXc05IV5djeI9ofQmLsMyHfdyjavJZFOkyO2nNW1zoa-VXml1ydu--k33XLPOBIg7D9FqPWJpuT73CalCb0vbXY6g8wXDMxfasKyF_XQ4nxrC9VRsdtQ6uV7u9nwdpYgzSiU8Z-DzKTUVWfxiuo52VtUi60b94mFLAq4a2C5ageQHBpg1ncJYurt3Obk019862GY-yG_rDhEWB6Fhm22gsB8h3dF5n5Y9EMg43agI-fYfn2eg" />
+                    </div>
+                    <div class="p-8 md:p-12">
+                        <div class="flex items-center gap-4 mb-6">
+                            <span class="text-primary font-semibold text-sm tracking-wider uppercase">Engineering</span>
+                            <span class="text-outline text-sm">March 24, 2024</span>
+                        </div>
+                        <h2
+                            class="text-3xl md:text-4xl font-bold mb-4 group-hover:text-primary transition-colors leading-tight">
+                            Architecture of the Modern Web: Beyond the Framework</h2>
+                        <p class="text-lg text-on-surface-variant line-clamp-2 mb-8 leading-relaxed">
+                            How we moved from monoliths to micro-frontends and why the fundamental principles of data
+                            flow still matter in 2024.
+                        </p>
+                        <div class="flex items-center text-primary font-bold gap-2">
+                            Read Article
                             <span
-                                class="text-tertiary-fixed font-bold text-xs tracking-widest uppercase mb-2 block">Development
-                                Log</span>
-                            <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">AI 블로그 제작 과정</h2>
-                            <p class="text-slate-300 text-lg mb-4 max-w-xl line-clamp-2">인공지능을 활용한 현대적인 블로그 시스템을 구축하며 겪은
-                                아키텍처 설계와 구현의 기록.</p>
-                            <div class="flex items-center gap-4 text-slate-400 text-sm">
-                                <span class="flex items-center gap-1"><span
-                                        class="material-symbols-outlined text-sm">calendar_today</span>
-                                    2024.05.20</span>
-                                <span class="flex items-center gap-1"><span
-                                        class="material-symbols-outlined text-sm">timer</span> 12 min read</span>
+                                class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <!-- Side Post (Korean) -->
+            <article class="md:col-span-4 group">
+                <a class="block h-full bg-surface-container-low rounded-xl p-8 transition-all duration-300 hover:bg-surface-container-lowest ring-1 ring-outline-variant/10"
+                    href="post2.html">
+                    <div class="flex flex-col h-full justify-between">
+                        <div>
+                            <div class="flex items-center gap-3 mb-6">
+                                <span
+                                    class="px-2 py-1 bg-tertiary-container text-on-tertiary-container text-[10px] font-bold rounded uppercase">Reflection</span>
+                                <span class="text-outline text-xs">March 15, 2024</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 leading-snug group-hover:text-primary transition-colors">
+                                개발자의 성장을 위한 기록의 중요성</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                                단순히 코드를 작성하는 것을 넘어, 자신의 고민과 해결 과정을 글로 남기는 것이 왜 시니어 개발자로 가는 가장 빠른 길인지에 대하여.
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-2 text-primary text-sm font-semibold">
+                            자세히 보기
+                            <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+            <!-- List Style Posts -->
+            <div class="md:col-span-12 mt-12">
+                <h3
+                    class="text-sm font-bold text-outline uppercase tracking-[0.2em] mb-10 pb-4 border-b border-outline-variant/20">
+                    Recent Archives</h3>
+                <div class="space-y-0">
+                    <!-- Post Row 1 -->
+                    <a class="group flex flex-col md:flex-row md:items-center justify-between py-10 border-b border-outline-variant/10 hover:px-4 transition-all duration-300"
+                        href="post3.html">
+                        <div class="md:w-1/4 mb-4 md:mb-0">
+                            <span class="text-sm text-outline font-medium">Feb 28, 2024</span>
+                            <div class="flex gap-2 mt-2">
+                                <span
+                                    class="text-[10px] px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">Typescript</span>
                             </div>
                         </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Side Post 1 -->
-            <div class="md:col-span-4 group cursor-pointer">
-                <a class="block h-full bg-surface-container-low rounded-xl p-8 transition-all hover:bg-surface-container-high relative overflow-hidden"
-                    href="post2.html">
-                    <div class="relative z-10">
-                        <div
-                            class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-24 transition-transform group-hover:-translate-y-1">
-                            <span class="material-symbols-outlined text-white" data-icon="terminal">terminal</span>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">
+                                Advanced Type Safety: Discriminated Unions and Beyond</h4>
+                            <p class="text-on-surface-variant mt-2 text-sm">Mastering the art of narrowing types for
+                                bulletproof application logic.</p>
                         </div>
-                        <span
-                            class="text-primary font-bold text-xs tracking-widest uppercase mb-2 block">Algorithm</span>
-                        <h2 class="text-2xl font-bold text-on-surface tracking-tight mb-3">C언어 알고리즘 공부</h2>
-                        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">메모리 관리의 기초부터 효율적인 자료구조 구현까지, 로우
-                            레벨 언어로 다지는 핵심 원리.</p>
-                        <div class="flex items-center justify-between mt-auto">
-                            <span class="text-on-surface-variant text-xs">2024.05.15</span>
-                            <span
-                                class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                        <div class="md:w-1/4 flex md:justify-end mt-6 md:mt-0">
+                            <div
+                                class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+                                <span
+                                    class="material-symbols-outlined group-hover:text-on-primary transition-colors">north_east</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="absolute -right-4 -top-4 opacity-5 text-9x1 font-black select-none pointer-events-none">
-                        CODE</div>
-                </a>
-            </div>
-            <!-- Bottom Post 1 -->
-            <div class="md:col-span-4 group cursor-pointer">
-                <a class="block h-full bg-surface-container-lowest border border-outline-variant/10 rounded-xl p-8 transition-all hover:shadow-xl hover:shadow-indigo-500/5"
-                    href="post3.html">
-                    <div class="mb-6 overflow-hidden rounded-lg">
-                        <img alt="Web Dev"
-                            class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110"
-                            data-alt="Clean minimal desk setup with a mechanical keyboard and a laptop showing clean source code in a light interface"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9mLsPNVcE2thcVEDReFVGTkUtLm0-4_Lpjwmp-rk1yh9irz5VU3R1M97P5iXcCvbkAlXq4W22i9JqOdwPR1yHcj3TNqVj0GaH2NYPuaS8nZH8eIMd5jkNjdXGosmlRaebQnHkQJ4pm1J7jY6YfkkhBRyURLNJ-i_73qZucOrku-XVQ-wNJcJ4jHepd7gbRz6_4NV5nKudTAaXSXOuBZ_s6uT-KEt59phkKiS--77cK0kJAJ84xt4cZa4pq4bX_YAJCniVtWRAWQ0" />
-                    </div>
-                    <span class="text-secondary font-bold text-xs tracking-widest uppercase mb-2 block">Basics</span>
-                    <h2 class="text-2xl font-bold text-on-surface tracking-tight mb-3">웹 개발 기초</h2>
-                    <p class="text-on-surface-variant text-sm leading-relaxed mb-6">HTML5, CSS3 그리고 모던 JavaScript가 만들어내는
-                        웹 생태계의 기초 다지기.</p>
-                    <div class="flex items-center gap-4 text-on-surface-variant text-xs">
-                        <span>2024.05.10</span>
-                        <span>•</span>
-                        <span>8 min read</span>
-                    </div>
-                </a>
-            </div>
-            <!-- Static Quote / Decorative Bento (Filler) -->
-            <div
-                class="md:col-span-8 bg-indigo-900 rounded-xl p-10 flex flex-col justify-center relative overflow-hidden">
-                <div
-                    class="absolute top-0 right-0 w-64 h-64 bg-tertiary-fixed-dim/10 rounded-full blur-3xl -mr-20 -mt-20">
-                </div>
-                <div class="relative z-10">
-                    <span class="material-symbols-outlined text-tertiary-fixed text-5xl mb-6">format_quote</span>
-                    <p
-                        class="text-2xl md:text-3xl font-headline font-bold text-indigo-100 leading-snug italic max-w-2xl">
-                        "코드는 단순히 작동하는 기계가 아니라, 인간의 사고를 구조화하여 표현한 하나의 건축물이다."
-                    </p>
-                    <div class="mt-8 flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-indigo-700 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-white text-sm">person</span>
+                    </a>
+                    <!-- Post Row 2 (Korean) -->
+                    <a class="group flex flex-col md:flex-row md:items-center justify-between py-10 border-b border-outline-variant/10 hover:px-4 transition-all duration-300"
+                        href="post4.html">
+                        <div class="md:w-1/4 mb-4 md:mb-0">
+                            <span class="text-sm text-outline font-medium">Jan 12, 2024</span>
+                            <div class="flex gap-2 mt-2">
+                                <span
+                                    class="text-[10px] px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">Performance</span>
+                            </div>
                         </div>
-                        <div>
-                            <p class="text-indigo-200 text-sm font-bold">Kim Jang-woo</p>
-                            <p class="text-indigo-400 text-xs uppercase tracking-widest">Lead Architect</p>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">
+                                리액트 서버 컴포넌트(RSC)의 이해와 활용</h4>
+                            <p class="text-on-surface-variant mt-2 text-sm">새로운 패러다임이 가져오는 성능 최적화의 기회와 실제 프로젝트 적용 사례.
+                            </p>
                         </div>
-                    </div>
+                        <div class="md:w-1/4 flex md:justify-end mt-6 md:mt-0">
+                            <div
+                                class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+                                <span
+                                    class="material-symbols-outlined group-hover:text-on-primary transition-colors">north_east</span>
+                            </div>
+                        </div>
+                    </a>
+                    <!-- Post Row 3 -->
+                    <a class="group flex flex-col md:flex-row md:items-center justify-between py-10 border-b border-outline-variant/10 hover:px-4 transition-all duration-300"
+                        href="post5.html">
+                        <div class="md:w-1/4 mb-4 md:mb-0">
+                            <span class="text-sm text-outline font-medium">Dec 05, 2023</span>
+                            <div class="flex gap-2 mt-2">
+                                <span
+                                    class="text-[10px] px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container">Design
+                                    Systems</span>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2">
+                            <h4 class="text-2xl font-bold text-on-surface group-hover:text-primary transition-colors">
+                                The No-Line UI Philosophy</h4>
+                            <p class="text-on-surface-variant mt-2 text-sm">Designing interfaces using tonal layering
+                                instead of traditional borders for a cleaner aesthetic.</p>
+                        </div>
+                        <div class="md:w-1/4 flex md:justify-end mt-6 md:mt-0">
+                            <div
+                                class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center group-hover:bg-primary group-hover:border-primary transition-all duration-300">
+                                <span
+                                    class="material-symbols-outlined group-hover:text-on-primary transition-colors">north_east</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
-        <!-- Pagination (Minimal) -->
-        <div class="mt-20 flex justify-center items-center gap-4">
-            <button
-                class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-slate-400 hover:bg-surface-container-high transition-colors">
-                <span class="material-symbols-outlined">chevron_left</span>
-            </button>
-            <span class="text-sm font-bold text-primary px-4">01 / 05</span>
-            <button
-                class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors">
+        <!-- Pagination -->
+        <nav class="flex items-center justify-center mt-20 gap-2">
+            <a class="w-10 h-10 flex items-center justify-center rounded-lg bg-surface-container-highest text-on-surface font-bold"
+                href="#">1</a>
+            <a class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors"
+                href="#">2</a>
+            <a class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors"
+                href="#">3</a>
+            <span class="px-2 text-outline">...</span>
+            <a class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container text-on-surface-variant transition-colors"
+                href="#">
                 <span class="material-symbols-outlined">chevron_right</span>
-            </button>
-        </div>
+            </a>
+        </nav>
     </main>
     <!-- Footer -->
-    <footer class="w-full border-t border-slate-200/20 bg-slate-50">
-        <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto py-12 px-6 gap-6">
-            <div class="flex flex-col gap-2 items-center md:items-start">
-                <span class="text-lg font-black text-slate-900">Indigo Code</span>
-                <p class="text-sm font-inter tracking-wide text-slate-500">© 2024 Kim Jang-woo. Built with Precision.
-                </p>
+    <footer class="bg-slate-100 dark:bg-slate-900 w-full py-12 border-t-0">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto">
+            <div class="mb-8 md:mb-0">
+                <span class="text-lg font-semibold text-slate-900 dark:text-slate-100 block mb-2">Indigo Code</span>
+                <p class="font-['Inter'] text-sm text-slate-500">© 2024 Indigo Code. Built with precision.</p>
             </div>
-            <div class="flex gap-8 items-center">
-                <a class="text-sm font-inter tracking-wide text-slate-500 hover:text-indigo-500 transition-all opacity-80 hover:opacity-100"
+            <div class="flex gap-8">
+                <a class="font-['Inter'] text-sm text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100"
                     href="#">Twitter</a>
-                <a class="text-sm font-inter tracking-wide text-slate-500 hover:text-indigo-500 transition-all opacity-80 hover:opacity-100"
+                <a class="font-['Inter'] text-sm text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100"
                     href="#">GitHub</a>
-                <a class="text-sm font-inter tracking-wide text-slate-500 hover:text-indigo-500 transition-all opacity-80 hover:opacity-100"
+                <a class="font-['Inter'] text-sm text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100"
                     href="#">LinkedIn</a>
-                <a class="text-sm font-inter tracking-wide text-slate-500 hover:text-indigo-500 transition-all opacity-80 hover:opacity-100"
+                <a class="font-['Inter'] text-sm text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100"
                     href="#">RSS</a>
             </div>
         </div>

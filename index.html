@@ -5,67 +5,70 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Indigo Code | AI로 만든 나만의 블로그</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <title>Indigo Code | Intellectual Architect</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     "colors": {
-                        "surface-container-high": "#e6e8ea",
-                        "secondary-fixed-dim": "#b7c8e1",
-                        "secondary-container": "#d0e1fb",
-                        "on-error": "#ffffff",
-                        "on-tertiary-fixed": "#001f26",
-                        "surface-container": "#eceef0",
-                        "primary-container": "#3f51b5",
-                        "on-secondary": "#ffffff",
-                        "tertiary": "#004a57",
-                        "surface-container-lowest": "#ffffff",
-                        "primary-fixed": "#dee0ff",
-                        "on-error-container": "#93000a",
-                        "surface-variant": "#e0e3e5",
-                        "on-secondary-container": "#54647a",
-                        "on-primary": "#ffffff",
                         "on-tertiary": "#ffffff",
-                        "on-surface": "#191c1e",
-                        "outline-variant": "#c5c5d4",
-                        "secondary-fixed": "#d3e4fe",
-                        "surface-dim": "#d8dadc",
-                        "primary": "#24389c",
-                        "inverse-surface": "#2d3133",
-                        "on-tertiary-container": "#66e2ff",
-                        "inverse-primary": "#bac3ff",
-                        "on-background": "#191c1e",
-                        "surface-container-low": "#f2f4f6",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#00105c",
                         "surface-bright": "#f7f9fb",
                         "surface": "#f7f9fb",
-                        "surface-container-highest": "#e0e3e5",
-                        "on-primary-fixed": "#00105c",
-                        "tertiary-fixed": "#acedff",
-                        "background": "#f7f9fb",
-                        "on-primary-container": "#cacfff",
-                        "error": "#ba1a1a",
+                        "primary": "#24389c",
+                        "on-primary": "#ffffff",
+                        "surface-dim": "#d8dadc",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-container": "#eceef0",
                         "secondary": "#505f76",
-                        "on-secondary-fixed-variant": "#38485d",
+                        "on-primary-container": "#cacfff",
+                        "on-secondary-fixed": "#0b1c30",
+                        "inverse-primary": "#bac3ff",
+                        "on-surface-variant": "#454652",
+                        "on-secondary-container": "#54647a",
                         "on-primary-fixed-variant": "#293ca0",
+                        "on-background": "#191c1e",
                         "tertiary-fixed-dim": "#4cd7f6",
-                        "surface-tint": "#4355b9",
-                        "inverse-on-surface": "#eff1f3",
+                        "secondary-fixed-dim": "#b7c8e1",
                         "tertiary-container": "#006374",
-                        "on-tertiary-fixed-variant": "#004e5c",
+                        "on-tertiary-container": "#66e2ff",
+                        "primary-container": "#3f51b5",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#dee0ff",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c5c5d4",
+                        "inverse-surface": "#2d3133",
+                        "secondary-container": "#d0e1fb",
+                        "background": "#f7f9fb",
+                        "primary-fixed-dim": "#bac3ff",
+                        "on-surface": "#191c1e",
+                        "tertiary-fixed": "#acedff",
+                        "on-tertiary-fixed": "#001f26",
                         "outline": "#757684",
                         "error-container": "#ffdad6",
-                        "on-secondary-fixed": "#0b1c30",
-                        "primary-fixed-dim": "#bac3ff",
-                        "on-surface-variant": "#454652"
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary-fixed": "#d3e4fe",
+                        "tertiary": "#004a57",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface-tint": "#4355b9",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-high": "#e6e8ea",
+                        "on-secondary-fixed-variant": "#38485d"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.25rem",
@@ -89,253 +92,208 @@
 
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+            color: #191c1e;
         }
 
         h1,
         h2,
         h3,
-        .headline {
+        h4 {
             font-family: 'Manrope', sans-serif;
-        }
-
-        .glass-nav {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
-        }
-
-        .hero-orb {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, #acedff 0%, rgba(172, 237, 255, 0) 70%);
-            filter: blur(60px);
-            opacity: 0.4;
-            z-index: -1;
         }
     </style>
 </head>
 
-<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed-variant">
-    <!-- TopNavBar -->
-    <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300">
-        <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
-            <div class="text-xl font-bold tracking-tighter text-indigo-900">
-                Indigo Code
-            </div>
-            <!-- Desktop Navigation -->
+<body class="bg-surface text-on-surface selection:bg-primary/10 selection:text-primary">
+    <!-- TopNavBar Implementation -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl transition-all duration-300">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <a class="text-xl font-bold tracking-tighter text-indigo-900" href="index.html">Indigo Code</a>
             <div class="hidden md:flex items-center gap-8">
-                <a class="text-indigo-700 font-semibold border-b-2 border-indigo-600 font-inter tracking-wide py-1"
+                <a class="text-indigo-700 font-bold border-b-2 border-indigo-600 text-sm tracking-tight font-['Manrope']"
                     href="index.html">Home</a>
-                <a class="text-slate-600 hover:text-indigo-600 transition-colors font-inter tracking-wide py-1"
+                <a class="text-slate-600 hover:text-indigo-600 transition-colors text-sm tracking-tight font-['Manrope']"
                     href="list.html">Essays</a>
-                <a class="text-slate-600 hover:text-indigo-600 transition-colors font-inter tracking-wide py-1"
-                    href="#">Projects</a>
-                <a class="text-slate-600 hover:text-indigo-600 transition-colors font-inter tracking-wide py-1"
-                    href="#">Archive</a>
+                <a class="text-slate-600 hover:text-indigo-600 transition-colors text-sm tracking-tight font-['Manrope']"
+                    href="projects.html">Projects</a>
+                <a class="text-slate-600 hover:text-indigo-600 transition-colors text-sm tracking-tight font-['Manrope']"
+                    href="about.html">About</a>
             </div>
-            <!-- Actions -->
-            <div class="flex items-center gap-4">
-                <button
-                    class="p-2 hover:bg-slate-100/50 rounded-lg transition-colors scale-95 duration-200 ease-in-out">
-                    <span class="material-symbols-outlined text-slate-600" data-icon="search">search</span>
-                </button>
-                <button
-                    class="p-2 hover:bg-slate-100/50 rounded-lg transition-colors scale-95 duration-200 ease-in-out">
-                    <span class="material-symbols-outlined text-slate-600" data-icon="dark_mode">dark_mode</span>
-                </button>
-            </div>
+            <a class="px-5 py-2 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-lg font-medium text-sm transition-transform active:scale-95 duration-200"
+                href="#contact">Contact</a>
         </div>
     </nav>
-    <main class="pt-32">
-        <!-- Hero Section -->
-        <section class="max-w-7xl mx-auto px-6 mb-32 relative">
-            <div class="hero-orb -top-20 -left-20"></div>
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                <div class="lg:col-span-8">
-                    <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter text-primary mb-6 leading-none">
-                        AI로 만든<br /><span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">나만의
-                            블로그</span>
+    <main class="pt-24">
+        <!-- Hero Section: Intellectual Architect -->
+        <section class="relative px-8 py-20 md:py-32 max-w-7xl mx-auto overflow-hidden">
+            <!-- Decorative Glow -->
+            <div
+                class="absolute -top-24 -right-24 w-96 h-96 bg-tertiary-fixed-dim/20 rounded-full blur-[100px] pointer-events-none">
+            </div>
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7 lg:col-span-8 z-10">
+                    <span
+                        class="inline-block px-4 py-1.5 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold mb-6 tracking-wide">PORTFOLIO
+                        &amp; JOURNAL</span>
+                    <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-on-surface mb-8 leading-[1.1]">
+                        Intellectual <br />
+                        <span
+                            class="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-container">Architect.</span>
                     </h1>
-                    <p class="text-xl text-secondary max-w-2xl mb-10 font-body leading-relaxed">
-                        코드와 디자인의 경계를 허무는 지적인 건축가, 김장우의 디지털 일지입니다. 현대적인 기술 스택과 세련된 감각으로 빚어낸 기록들을 탐험해보세요.
+                    <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-10">
+                        지식의 구조를 설계하고 코드로 구현하는 개발자, <span class="font-semibold text-on-surface">김장우(Kim
+                            Jang-woo)</span>입니다.
+                        기술적 깊이와 인문학적 통찰을 연결하여 지속 가능한 디지털 생태계를 구축합니다.
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <button
-                            class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-lg font-semibold flex items-center gap-2 hover:shadow-xl transition-all duration-300">
-                            Click to interact
-                            <span class="material-symbols-outlined text-lg"
-                                data-icon="arrow_forward">arrow_forward</span>
-                        </button>
-                        <button
-                            class="px-8 py-4 rounded-lg font-semibold text-primary border border-outline-variant/20 hover:bg-surface-container-low transition-all">
-                            View Portfolio
-                        </button>
+                        <a class="px-8 py-4 bg-primary text-on-primary rounded-lg font-semibold flex items-center gap-2 hover:shadow-lg transition-all"
+                            href="projects.html">
+                            Explore Projects <span class="material-symbols-outlined">arrow_forward</span>
+                        </a>
+                        <a class="px-8 py-4 bg-surface-container-highest text-on-surface rounded-lg font-semibold border-outline-variant/15 border hover:bg-surface-container-high transition-all"
+                            href="about.html">
+                            View Biography
+                        </a>
                     </div>
                 </div>
-                <div class="lg:col-span-4 hidden lg:block">
-                    <div
-                        class="aspect-square rounded-2xl overflow-hidden bg-surface-container-low shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
-                        <img alt="Modern workspace" class="w-full h-full object-cover"
-                            data-alt="Close-up of a high-end mechanical keyboard on a minimalist desk with soft blue neon ambient lighting and a laptop screen showing clean code."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdr0KLavx1gRXhg1q4H2b9-U0rsr9Cqq47eCZ3MXJ_RnLt_TJBiCRwN7zYsRK6jJYgZTNvRu56v4l_cymUUPeO098NAxttFA7fcvyhMUfP-a3C4LCmaynNY1daq79kyv7KeYj6onqrBYTo4Epjr83RHpiXv9nLnshgsfLwTQ4_95jl_OwSp6-0FJiaghDOHV5Z8mboMGAj5AynVKhJSnEkfdQQd6cB9oWN9Y7ZQW5kSQSaNFGk6m4AfhKmnVg8ACGfKuGLrk3sBlc" />
+                <div class="md:col-span-5 lg:col-span-4 relative">
+                    <div class="aspect-square rounded-2xl overflow-hidden bg-surface-container-low">
+                        <img alt="Kim Jang-woo"
+                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                            data-alt="Professional portrait of a young man with glasses in a minimalist studio setting with soft side lighting and slate blue background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO6mTwKHP9cFLjFVSO61455EwuNDFuLPzI3Hoj3VN9Ak-YTvBkIpgOw3CMmq_HurybtNES7Dwm9VGqEXTo19U-RseATdP94VYYvDkYSJ16iQzv07MDz-Wm89gTXBsUKQ5r84gPrqYkMFg9qIfwlE_fzNDqEL8Az4ayxXHPJGyXIErumPWgKJpPHaSQsakeJT3gNYdm1s-lnuxhcf_r7trfkZWkJbk0FZBU6-dYMvWpnUxzx_dwnBVWvBnp9kiT6TFwPQdWb5qi5Us" />
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Bento Grid: About & Skills -->
-        <section class="max-w-7xl mx-auto px-6 mb-32">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- About Me -->
-                <div class="md:col-span-2 bg-surface-container-low rounded-xl p-10 flex flex-col justify-between">
+        <!-- Featured Essays Bento Grid -->
+        <section class="bg-surface-container-low py-24 px-8">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                     <div>
-                        <span class="text-tertiary font-bold tracking-widest text-xs uppercase mb-4 block">THE
-                            ARCHITECT</span>
-                        <h2 class="text-3xl font-bold text-on-surface mb-6">Kim Jang-woo</h2>
-                        <div class="space-y-4 text-secondary leading-relaxed font-body">
-                            <p>저는 기술의 정밀함과 디자인의 미학적 균형을 추구하는 개발자입니다. 복잡한 문제를 단순하고 우아한 솔루션으로 풀어내는 과정에서 즐거움을 찾습니다.</p>
-                            <p>단순한 코드 작성을 넘어, 사용자가 경험하는 디지털 공간의 구조와 질감을 설계하는 '지적인 건축가'로서의 정체성을 가지고 활동하고 있습니다.</p>
-                        </div>
+                        <h2 class="text-3xl font-bold tracking-tight mb-4">Featured Essays</h2>
+                        <p class="text-on-surface-variant">코드를 넘어서는 생각의 기록들 (Recent thoughts beyond code)</p>
                     </div>
-                    <div class="mt-12 flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
-                            <span class="material-symbols-outlined text-on-primary-fixed"
-                                data-icon="school">school</span>
-                        </div>
-                        <div>
-                            <p class="text-sm font-semibold text-on-surface">Computer Science &amp; Engineering</p>
-                            <p class="text-xs text-secondary">Hanyang University</p>
-                        </div>
-                    </div>
+                    <a class="text-primary font-semibold flex items-center gap-1 group" href="list.html">
+                        View All Essays <span
+                            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">trending_flat</span>
+                    </a>
                 </div>
-                <!-- Skills Section -->
-                <div class="bg-surface-container-highest rounded-xl p-10">
-                    <span class="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">TECH STACK</span>
-                    <h2 class="text-3xl font-bold text-on-surface mb-8">Skills</h2>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">React.js</span>
-                        <span
-                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">Tailwind
-                            CSS</span>
-                        <span
-                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">TypeScript</span>
-                        <span
-                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">Next.js</span>
-                        <span
-                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">Node.js</span>
-                        <span
-                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">PostgreSQL</span>
-                        <span
-                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">Figma</span>
-                        <span
-                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">Git</span>
-                        <span
-                            class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold">Docker</span>
+                <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-6 min-h-[600px]">
+                    <!-- Main Essay Card -->
+                    <div
+                        class="md:col-span-2 md:row-span-2 bg-surface-container-lowest rounded-xl overflow-hidden group border border-outline-variant/10">
+                        <div class="h-1/2 overflow-hidden">
+                            <img alt="The Architecture of Modern Systems"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Modern dark workspace with multiple glowing computer monitors showing complex lines of code and abstract data visualizations"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxOcoUuN_S-a_0tXaoLiBxMAWvRFpoGnXTOcGuirkQGBjBU7kTZ5smLJQ2slRADcDj0WbbtrtdRM-Fr1BhME6KVUanRIkeLodijVdxdHTKeK1dRPNa4TUyjomNacvGZocCRffKirj3ASL0jkZ4ZJPR2VY_8IXFiQhk5GNVlEGKXsXb5SoCTw2B-K2fpMsut4pDujM2mot8WjfKrHHbvVfPy-ve-LiCz7Ec7-PTAOv3b_XP0Ed56WvMGBu1dx_ZywOKRdObv-s7cSo" />
+                        </div>
+                        <div class="p-8 h-1/2 flex flex-col justify-between">
+                            <div>
+                                <span class="text-xs font-bold text-tertiary tracking-widest mb-3 block">SYSTEMS
+                                    DESIGN</span>
+                                <h3 class="text-2xl font-bold mb-4 group-hover:text-primary transition-colors">현대적 아키텍처의
+                                    철학적 고찰</h3>
+                                <p class="text-on-surface-variant text-sm line-clamp-3">기술적 결정 뒤에 숨겨진 인간적 의도와 구조적 견고함에
+                                    대한 심도 있는 탐구입니다. 왜 우리는 더 나은 코드를 작성해야 하는가에 대한 답변.</p>
+                            </div>
+                            <div class="flex items-center justify-between text-xs font-medium text-outline">
+                                <span>12 Min Read</span>
+                                <span>Oct 24, 2023</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mt-10 pt-10 border-t border-outline-variant/10">
-                        <p class="text-sm text-on-surface-variant font-medium mb-4">Focusing on:</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-center gap-3 text-sm text-secondary">
-                                <span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle"
-                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                Performance Optimization
-                            </li>
-                            <li class="flex items-center gap-3 text-sm text-secondary">
-                                <span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle"
-                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
-                                UI/UX Engineering
-                            </li>
-                        </ul>
+                    <!-- Side Card 1 -->
+                    <div
+                        class="md:col-span-2 bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-between group border border-outline-variant/10">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="text-xs font-bold text-secondary tracking-widest mb-3 block">DEVELOPER
+                                    EXPERIENCE</span>
+                                <h3 class="text-xl font-bold group-hover:text-primary transition-colors">몰입의 도구: DX가
+                                    생산성에 미치는 영향</h3>
+                            </div>
+                            <span
+                                class="material-symbols-outlined text-primary-fixed-dim bg-primary/5 p-2 rounded-lg">integration_instructions</span>
+                        </div>
+                        <div class="flex items-center justify-between text-xs font-medium text-outline mt-6">
+                            <span>8 Min Read</span>
+                            <span class="text-primary font-bold">Read Now</span>
+                        </div>
+                    </div>
+                    <!-- Side Card 2 -->
+                    <div
+                        class="md:col-span-1 bg-surface-container-lowest rounded-xl p-6 flex flex-col justify-between border border-outline-variant/10 group">
+                        <span
+                            class="text-xs font-bold text-on-tertiary-container bg-tertiary-container px-2 py-1 rounded w-fit">AI</span>
+                        <h3 class="text-lg font-bold mt-4 leading-tight">생성형 AI 시대의 코드 품질</h3>
+                        <span class="text-xs text-outline mt-4">5 Min Read</span>
+                    </div>
+                    <!-- Side Card 3 -->
+                    <div
+                        class="md:col-span-1 bg-primary text-on-primary rounded-xl p-6 flex flex-col justify-between group">
+                        <div class="flex items-center justify-center h-full">
+                            <span
+                                class="material-symbols-outlined text-4xl opacity-50 group-hover:scale-125 transition-transform"
+                                style="font-variation-settings: 'FILL' 1;">terminal</span>
+                        </div>
+                        <h3 class="text-lg font-bold leading-tight">Rust를 선택한 이유</h3>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Featured Essays -->
-        <section class="max-w-7xl mx-auto px-6 mb-32">
-            <div class="flex justify-between items-end mb-12">
-                <div>
-                    <h2 class="text-4xl font-bold text-on-surface tracking-tight mb-2">Latest Essays</h2>
-                    <p class="text-secondary">생각의 깊이를 더하는 기술적 고찰</p>
-                </div>
-                <a class="text-primary font-semibold flex items-center gap-2 hover:gap-3 transition-all"
-                    href="list.html">
-                    View all archive
-                    <span class="material-symbols-outlined" data-icon="east">east</span>
-                </a>
+        <!-- Contact Section -->
+        <section class="py-24 px-8 max-w-4xl mx-auto" id="contact">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold mb-4">Let's Build Something Meaningful.</h2>
+                <p class="text-on-surface-variant">프로젝트 제안이나 커피 챗, 언제든 환영합니다.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Essay Card 1 -->
-                <div
-                    class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-outline-variant/10">
-                    <div class="h-64 overflow-hidden">
-                        <img alt="Coding"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                            data-alt="Overhead shot of a minimalist workspace with a laptop, a cup of coffee, and a notebook on a clean white desk with soft natural window light."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNVkhwTj3BmIPet3AluLv5sD7-WoxRGoKt8gOhcPg0N6MTCJrm9wHLbtuaWrYqX9U5cwQeclAoJkETFtjoCHJDhvJBYr88R7UzzGl9BIZrz1Mt5EmDlsffP2nGUk7xSjD3hqz7bk_oeJFQIhW_QqoeWgJJAwKD2I9xnoO8E0p8B0Sq2DBcpDKE3I9jYYCc3n8BJKk-VED7QePdTV8wbOY0FoPrx4U3vXROVA55rU2PCQgpcxIvCOoZiEt9IwT0YqaX-oaQBHzkN-c" />
+            <form class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-semibold ml-1">Name</label>
+                        <input
+                            class="bg-surface-container border-none focus:ring-2 focus:ring-primary rounded-lg p-4 transition-all"
+                            placeholder="이름을 입력하세요" type="text" />
                     </div>
-                    <div class="p-8">
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="text-xs font-bold text-tertiary">DEVELOPMENT</span>
-                            <span class="text-xs text-slate-400">2024.03.15</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-on-surface mb-4 group-hover:text-primary transition-colors">
-                            리액트 디자인 패턴: 선언적 UI의 힘</h3>
-                        <p class="text-secondary leading-relaxed mb-6">컴포넌트 중심의 설계가 어떻게 코드의 재사용성과 유지보수성을 극대화하는지에 대한 심층적인
-                            탐구...</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm font-semibold text-primary">Read More</span>
-                            <span
-                                class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors"
-                                data-icon="open_in_new">open_in_new</span>
-                        </div>
+                    <div class="flex flex-col gap-2">
+                        <label class="text-sm font-semibold ml-1">Email</label>
+                        <input
+                            class="bg-surface-container border-none focus:ring-2 focus:ring-primary rounded-lg p-4 transition-all"
+                            placeholder="example@email.com" type="email" />
                     </div>
                 </div>
-                <!-- Essay Card 2 -->
-                <div
-                    class="group bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-transparent hover:border-outline-variant/10">
-                    <div class="h-64 overflow-hidden">
-                        <img alt="Technology"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                            data-alt="Close-up of a high-tech circuit board with glowing blue light paths and microchips, representing futuristic computing and AI technology."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF9KPuLiXHwVpSRrvAjrFmGdoF7gaQC-ZmXfioTCylyXiU3u0uXvvAcXsoz5HR5GkfLwit0c4D5l1N5VD0hqqr8-ySjZflNz3f4B0131UAyc7DTyE7Aupes9CDAHGcXq7hsiCbbZtRIH12dMZs_ocjhTqpEQB8UucJOj-x0ITRx07ic3GKUD1D3S2ydYCLyy9ZVDCeiGq88VDTIp1MssDwoYIrAAvI1Wf2gL_HCwLzJNeEVk7ogUgdDRk4O0CL2mzVFoR1oHfbWeY" />
-                    </div>
-                    <div class="p-8">
-                        <div class="flex items-center gap-4 mb-4">
-                            <span class="text-xs font-bold text-tertiary">DESIGN SYSTEM</span>
-                            <span class="text-xs text-slate-400">2024.03.02</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-on-surface mb-4 group-hover:text-primary transition-colors">
-                            토큰 기반의 디자인 시스템 구축기</h3>
-                        <p class="text-secondary leading-relaxed mb-6">일관된 브랜드 아이덴티티를 위해 디자인 토큰을 활용하여 확장 가능한 UI 시스템을 구축한
-                            과정...</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-sm font-semibold text-primary">Read More</span>
-                            <span
-                                class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors"
-                                data-icon="open_in_new">open_in_new</span>
-                        </div>
-                    </div>
+                <div class="flex flex-col gap-2">
+                    <label class="text-sm font-semibold ml-1">Message</label>
+                    <textarea
+                        class="bg-surface-container border-none focus:ring-2 focus:ring-primary rounded-lg p-4 transition-all"
+                        placeholder="프로젝트에 대해 말씀해주세요..." rows="5"></textarea>
                 </div>
-            </div>
+                <button
+                    class="w-full py-4 bg-primary text-on-primary font-bold rounded-lg hover:shadow-xl transition-all active:scale-[0.99]"
+                    type="submit">
+                    Send Message
+                </button>
+            </form>
         </section>
     </main>
-    <!-- Footer -->
-    <footer class="w-full border-t border-slate-200/20 bg-slate-50">
-        <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto py-12 px-6 gap-6">
-            <div class="flex flex-col gap-2 items-center md:items-start">
-                <div class="text-lg font-black text-slate-900">Indigo Code</div>
-                <p class="text-sm font-inter tracking-wide text-slate-500">© 2024 Kim Jang-woo. Built with Precision.
-                </p>
+    <!-- Footer Implementation -->
+    <footer class="bg-slate-100 mt-24">
+        <div class="w-full py-12 px-8 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <span class="text-lg font-semibold text-slate-900">Indigo Code</span>
+                <p class="text-slate-500 text-sm font-['Inter']">© 2024 Indigo Code. Built with precision.</p>
             </div>
             <div class="flex gap-8">
-                <a class="text-slate-500 hover:text-indigo-500 transition-all text-sm font-inter tracking-wide opacity-80 hover:opacity-100"
+                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100 text-sm font-['Inter']"
                     href="#">Twitter</a>
-                <a class="text-slate-500 hover:text-indigo-500 transition-all text-sm font-inter tracking-wide opacity-80 hover:opacity-100"
+                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100 text-sm font-['Inter']"
                     href="#">GitHub</a>
-                <a class="text-slate-500 hover:text-indigo-500 transition-all text-sm font-inter tracking-wide opacity-80 hover:opacity-100"
+                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100 text-sm font-['Inter']"
                     href="#">LinkedIn</a>
-                <a class="text-slate-500 hover:text-indigo-500 transition-all text-sm font-inter tracking-wide opacity-80 hover:opacity-100"
+                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100 text-sm font-['Inter']"
                     href="#">RSS</a>
             </div>
         </div>
