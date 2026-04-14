@@ -5,10 +5,13 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Projects | Indigo Code</title>
+    <title>Engineering Elegance | Indigo Code</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -19,53 +22,53 @@
             theme: {
                 extend: {
                     "colors": {
-                        "tertiary-container": "#006374",
-                        "primary-fixed": "#dee0ff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#00105c",
+                        "surface-bright": "#f7f9fb",
+                        "surface": "#f7f9fb",
                         "primary": "#24389c",
                         "on-primary": "#ffffff",
-                        "on-secondary-container": "#54647a",
-                        "secondary-fixed-dim": "#b7c8e1",
-                        "secondary-fixed": "#d3e4fe",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-container-high": "#e6e8ea",
-                        "error": "#ba1a1a",
-                        "surface-container-low": "#f2f4f6",
-                        "on-primary-fixed-variant": "#293ca0",
-                        "on-tertiary-container": "#66e2ff",
-                        "on-error": "#ffffff",
-                        "on-tertiary": "#ffffff",
-                        "error-container": "#ffdad6",
-                        "background": "#f7f9fb",
-                        "on-secondary": "#ffffff",
-                        "surface-tint": "#4355b9",
-                        "outline": "#757684",
                         "surface-dim": "#d8dadc",
-                        "secondary": "#505f76",
-                        "primary-container": "#3f51b5",
-                        "on-surface-variant": "#454652",
-                        "on-error-container": "#93000a",
-                        "on-secondary-fixed-variant": "#38485d",
-                        "surface-container-highest": "#e0e3e5",
+                        "surface-container-low": "#f2f4f6",
                         "surface-container": "#eceef0",
-                        "secondary-container": "#d0e1fb",
-                        "on-surface": "#191c1e",
+                        "secondary": "#505f76",
                         "on-primary-container": "#cacfff",
-                        "surface-variant": "#e0e3e5",
-                        "inverse-surface": "#2d3133",
-                        "on-tertiary-fixed-variant": "#004e5c",
                         "on-secondary-fixed": "#0b1c30",
-                        "on-background": "#191c1e",
-                        "on-tertiary-fixed": "#001f26",
-                        "on-primary-fixed": "#00105c",
-                        "tertiary-fixed": "#acedff",
-                        "surface": "#f7f9fb",
-                        "tertiary": "#004a57",
-                        "outline-variant": "#c5c5d4",
-                        "surface-bright": "#f7f9fb",
                         "inverse-primary": "#bac3ff",
-                        "primary-fixed-dim": "#bac3ff",
+                        "on-surface-variant": "#454652",
+                        "on-secondary-container": "#54647a",
+                        "on-primary-fixed-variant": "#293ca0",
+                        "on-background": "#191c1e",
                         "tertiary-fixed-dim": "#4cd7f6",
-                        "inverse-on-surface": "#eff1f3"
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "tertiary-container": "#006374",
+                        "on-tertiary-container": "#66e2ff",
+                        "primary-container": "#3f51b5",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#dee0ff",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c5c5d4",
+                        "inverse-surface": "#2d3133",
+                        "secondary-container": "#d0e1fb",
+                        "background": "#f7f9fb",
+                        "primary-fixed-dim": "#bac3ff",
+                        "on-surface": "#191c1e",
+                        "tertiary-fixed": "#acedff",
+                        "on-tertiary-fixed": "#001f26",
+                        "outline": "#757684",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary-fixed": "#d3e4fe",
+                        "tertiary": "#004a57",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface-tint": "#4355b9",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-high": "#e6e8ea",
+                        "on-secondary-fixed-variant": "#38485d"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.25rem",
@@ -89,6 +92,8 @@
 
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+            color: #191c1e;
         }
 
         h1,
@@ -99,191 +104,268 @@
     </style>
 </head>
 
-<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
-    <nav
-        class="sticky top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
-        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-            <div class="text-2xl font-bold text-indigo-900 dark:text-white tracking-tighter font-manrope">
+<body class="bg-surface text-on-surface">
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto font-['Manrope'] tracking-tight">
+            <div class="text-xl font-bold tracking-tighter text-indigo-900 dark:text-indigo-100">
                 Indigo Code
             </div>
-            <div class="hidden md:flex items-center gap-8 font-manrope tracking-tight">
-                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-all duration-300 px-3 py-1 rounded-lg"
-                    href="#">Home</a>
-                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-all duration-300 px-3 py-1 rounded-lg"
-                    href="#">Essays</a>
-                <a class="text-indigo-700 dark:text-indigo-400 border-b-2 border-indigo-700 dark:border-indigo-400 pb-1"
-                    href="#">Projects</a>
-                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-all duration-300 px-3 py-1 rounded-lg"
-                    href="#">About</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors"
+                    href="index.html">Home</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors"
+                    href="list.html">Essays</a>
+                <a class="text-indigo-700 dark:text-indigo-400 font-bold border-b-2 border-indigo-600 transition-colors"
+                    href="projects.html">Projects</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors"
+                    href="about.html">About</a>
             </div>
-            <div class="flex items-center gap-4">
-                <button
-                    class="scale-95 active:scale-90 transition-transform bg-primary text-on-primary px-6 py-2 rounded font-medium">
-                    Contact
-                </button>
-            </div>
-        </div>
-    </nav>
-    <main class="max-w-7xl mx-auto px-8 py-16">
-        <header class="mb-20 max-w-3xl">
-            <h1 class="text-6xl font-extrabold tracking-tighter text-on-surface mb-6 leading-none">
-                Engineering <span class="text-primary">Elegance</span>.
-            </h1>
-            <p class="text-xl text-secondary leading-relaxed font-body">
-                A curated selection of technical experiments, open-source contributions, and architectural deep-dives.
-                These projects represent the intersection of logic and creativity.
-            </p>
-        </header>
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-            <section class="md:col-span-8 group">
-                <div
-                    class="bg-surface-container-low rounded-xl overflow-hidden flex flex-col h-full border-none transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5">
-                    <div class="h-[400px] w-full overflow-hidden relative">
-                        <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                            data-alt="futuristic abstract representation of neural networks with glowing blue nodes and thin digital connections on a dark sleek background"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9g5CmMh6RWAeYxekFXs5uXECT0lhZOwhWHzqA25_ZBc80tHbW4X1Yl9gRhgp0CwCF3OFUfF82C7QkFgDSRIZ0dOqMvORpe_S-hlESt3_sr2TRGohALlDkWLkgjr3TjbfxDTVzsozzAhGX6jfKMTQbbrwrCyIBRUm6qBX1cauOyP20Oel86MDCfFg7Rvgniwx2U5_Rf1JzkBeYRYggX41i7ZMXAPOSyjdmKD_5KqC6zE5sKaEn2idz1GLHa4XsV8ctjD97Ym3FnZY" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
-                            <span class="text-white font-medium flex items-center gap-2">
-                                <span class="material-symbols-outlined">visibility</span> View Case Study
-                            </span>
-                        </div>
-                    </div>
-                    <div class="p-10 flex-grow">
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span
-                                class="px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-semibold uppercase tracking-wider">Python</span>
-                            <span
-                                class="px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-semibold uppercase tracking-wider">TensorFlow</span>
-                            <span
-                                class="px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-semibold uppercase tracking-wider">OpenAI
-                                API</span>
-                        </div>
-                        <h3 class="text-3xl font-bold mb-4 text-on-surface tracking-tight">AI Chatbot</h3>
-                        <p class="text-secondary text-lg leading-relaxed mb-6">
-                            An advanced conversational interface utilizing LLMs to provide context-aware technical
-                            documentation support. Built with a custom vector storage layer for millisecond retrieval of
-                            semantic data.
-                        </p>
-                        <div class="flex items-center gap-4 text-primary font-bold tracking-tight">
-                            <span>Repository</span>
-                            <span class="material-symbols-outlined text-sm">arrow_outward</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="md:col-span-4 flex flex-col gap-8">
-                <div
-                    class="bg-surface-container-lowest rounded-xl p-8 flex flex-col justify-center h-full border-none shadow-sm group hover:bg-primary transition-colors duration-500">
-                    <div class="mb-4">
-                        <span class="material-symbols-outlined text-primary group-hover:text-white text-4xl"
-                            data-weight="fill">terminal</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-2 group-hover:text-white transition-colors">Personal Portfolio</h3>
-                    <p class="text-secondary group-hover:text-on-primary/80 transition-colors mb-6">
-                        A bespoke digital journal built for performance and minimalist aesthetics.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span
-                            class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-[10px] font-bold uppercase">React</span>
-                        <span
-                            class="px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-[10px] font-bold uppercase">Tailwind</span>
-                    </div>
-                </div>
-                <div class="bg-surface-container-high rounded-xl overflow-hidden h-full group">
-                    <div class="h-48 relative overflow-hidden">
-                        <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                            data-alt="Close-up of a high-tech computer circuit board with glowing green and blue light paths and microchips"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVqPogehReCzW7zlydJ1f-xfERLDjN7lMjmGQo0zKamZGBrGlQCKMhuAn9EaU2qznb3x5Ipbpbbu9gi1nMObDij2Rs-gXYb3tftJrHaXPRhgSN5ohyTfZjjr1MJ7RtXyTXflqznUQHQ6W9c7zI4QURdjtm3jHgTzPRkZyjeZjKZGF4NpPiTn6rN8xR-zGdAaxt5v9uMQVCorMsmL1X2S7mb_WERHyI9itCk40tFyGOPKM2aE9CQoDVyYApO5JuePdavyGSFYuAG68" />
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold mb-2">Algorithm Visualizer</h3>
-                        <p class="text-sm text-secondary mb-4">
-                            Interactive platform to see sorting and pathfinding algorithms in real-time.
-                        </p>
-                        <div class="flex items-center gap-2 text-tertiary font-semibold text-sm">
-                            <span>Launch Demo</span>
-                            <span class="material-symbols-outlined text-sm">play_circle</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="md:col-span-6 bg-surface-container-low rounded-xl overflow-hidden group">
-                <div class="flex flex-col md:flex-row h-full">
-                    <div class="md:w-1/2 overflow-hidden">
-                        <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                            data-alt="Symmetric rows of server racks in a modern data center with blue and magenta ambient lighting"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkR5OA_lnYu5IHsZupolsn0pKwX7Wa2HupUpjzevLyAvrnlJy0puArVSfgAwZTY4yujhpLMDdgcb-6udoI-KEy03olglGPnuWXhg5jwOeafs2Q1tJkeZqdsrHLwM5JtDFV8kXO_72o3E1XF9_LUxjN0t860x3zvafJfFz4YuXEsfNQOikTh4UkkWPCZ2oGIhUoCv8cEn4iy0pxLcvii4wqQPLAwHeWD1D7BS7w44thkakJmMhSQRV9RPGn_twMY5QArO3WvY8qJOk" />
-                    </div>
-                    <div class="p-10 md:w-1/2 flex flex-col justify-center">
-                        <h3 class="text-2xl font-bold mb-3 tracking-tight">Cloud Infrastructure</h3>
-                        <p class="text-secondary text-sm leading-relaxed mb-6">
-                            Automated deployment pipelines using Terraform and AWS for highly-scalable microservices
-                            architecture.
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="text-[10px] font-bold text-outline-variant uppercase">AWS</span>
-                            <span class="text-[10px] font-bold text-outline-variant uppercase">Terraform</span>
-                            <span class="text-[10px] font-bold text-outline-variant uppercase">Docker</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section
-                class="md:col-span-6 bg-surface-container-lowest rounded-xl p-10 flex flex-col justify-between border-none shadow-sm relative overflow-hidden group">
-                <div class="relative z-10">
-                    <div class="flex justify-between items-start mb-12">
-                        <span class="material-symbols-outlined text-4xl text-tertiary-container">database</span>
-                        <div class="text-right">
-                            <div class="text-3xl font-bold text-on-surface">99.9%</div>
-                            <div class="text-xs text-outline uppercase font-bold tracking-widest">Uptime Achieved</div>
-                        </div>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Distributed Database Engine</h3>
-                    <p class="text-secondary text-base mb-8 max-w-sm">
-                        A low-latency storage engine written in Rust, focusing on eventual consistency and
-                        high-throughput write operations.
-                    </p>
-                    <button
-                        class="bg-tertiary text-white px-6 py-2 rounded-lg font-bold text-sm tracking-tight inline-flex items-center gap-2 hover:bg-tertiary-container transition-colors">
-                        Read Whitepaper <span class="material-symbols-outlined text-xs">description</span>
-                    </button>
-                </div>
-                <!-- Glassmorphism decorative orb -->
-                <div
-                    class="absolute -right-20 -bottom-20 w-64 h-64 bg-tertiary-fixed-dim/20 rounded-full blur-3xl group-hover:bg-tertiary-fixed-dim/40 transition-all duration-700">
-                </div>
-            </section>
-        </div>
-        <!-- Pagination or CTA -->
-        <div class="mt-24 pt-16 border-t border-outline-variant/10 flex flex-col items-center">
-            <h2 class="text-4xl font-extrabold mb-4 tracking-tighter">Have a vision in mind?</h2>
-            <p class="text-secondary mb-10 text-center max-w-md">Let's collaborate on building something that lasts
-                beyond the current development cycle.</p>
             <button
-                class="bg-primary text-on-primary px-10 py-4 rounded-full font-bold text-lg shadow-xl shadow-primary/20 hover:scale-105 active:scale-95 transition-all">
-                Let's Build Together
+                class="bg-indigo-700 text-white px-6 py-2 rounded-lg font-bold hover:scale-95 duration-200 transition-transform">
+                Contact
             </button>
         </div>
+    </nav>
+    <main class="pt-32 pb-24 max-w-7xl mx-auto px-8">
+        <!-- Hero Section -->
+        <header class="mb-20">
+            <h1 class="text-6xl md:text-8xl font-extrabold tracking-tighter text-primary mb-6 leading-none">
+                Engineering<br />Elegance
+            </h1>
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+                <p class="max-w-xl text-lg text-on-surface-variant leading-relaxed">
+                    A curated gallery of software architecture and digital craftsmanship.
+                    기술과 예술의 경계에서 탄생한 현대적인 시스템 디자인과 구현체들을 소개합니다.
+                </p>
+                <div class="flex gap-4">
+                    <span
+                        class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold uppercase tracking-widest">Selected
+                        Works</span>
+                    <span
+                        class="px-4 py-2 bg-surface-container-highest text-on-surface-variant rounded-full text-xs font-semibold uppercase tracking-widest">2023
+                        - 2024</span>
+                </div>
+            </div>
+        </header>
+        <!-- Bento Grid Projects Showcase -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <!-- Distributed Database Engine (Large Feature) -->
+            <section
+                class="md:col-span-8 group relative overflow-hidden rounded-xl bg-surface-container-low transition-all hover:bg-surface-container">
+                <div class="flex flex-col h-full">
+                    <div class="p-8 md:p-12 order-2 md:order-1">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="material-symbols-outlined text-primary" data-icon="database">database</span>
+                            <span class="text-primary font-bold tracking-widest text-xs uppercase">Infrastructure</span>
+                        </div>
+                        <h2 class="text-4xl font-bold mb-4 tracking-tight text-on-surface">Distributed Database Engine
+                        </h2>
+                        <p class="text-on-surface-variant mb-6 leading-relaxed max-w-2xl">
+                            A high-concurrency storage engine implementing the Raft consensus algorithm.
+                            Built for extreme availability and horizontal scalability in cloud-native environments.
+                            분산 환경에서의 데이터 일관성과 고가용성을 보장하는 고성능 스토리지 엔진입니다.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span
+                                class="px-3 py-1 bg-surface-container-highest rounded-full text-xs font-medium">Rust</span>
+                            <span
+                                class="px-3 py-1 bg-surface-container-highest rounded-full text-xs font-medium">gRPC</span>
+                            <span
+                                class="px-3 py-1 bg-surface-container-highest rounded-full text-xs font-medium">Kubernetes</span>
+                        </div>
+                        <a class="inline-flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all"
+                            href="#">
+                            Explore Technical Docs <span class="material-symbols-outlined"
+                                data-icon="arrow_forward">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div class="order-1 md:order-2 h-64 md:h-96 w-full bg-slate-200">
+                        <img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                            data-alt="abstract visualization of glowing blue data nodes connected by thin fiber optic lines in a dark server room environment"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGXaOLHp79DWPZa62mXX16q_vO_qI66QSEUubPqkUWeoaMc-hMa4xBkJVVi00x_PolpAZ7VItELwcXhEN1hPWG7W_jFqJDi4KDg4uJfFgl3lfFxYpd4Sf_-MdexxvbMCUnzgmCbnAZxC7vqISTb-AYamvN4_043yjX2-KQzCFE2uBKN-JSc2x6pIpuF22CS_X8XBYedXqIrxAQMHNDfwzSfvyzWNtqqR6FaMZKSThgeywxV71MZcTfSyZJ_xhZ45rENUQduJRlxEk" />
+                    </div>
+                </div>
+            </section>
+            <!-- AI Chatbot (Vertical Accent) -->
+            <section
+                class="md:col-span-4 group bg-primary text-on-primary rounded-xl p-8 flex flex-col justify-between overflow-hidden relative">
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-primary-container/20 rounded-full blur-3xl -mr-20 -mt-20">
+                </div>
+                <div>
+                    <div class="w-12 h-12 bg-on-primary/10 rounded-lg flex items-center justify-center mb-8">
+                        <span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-4">AI Chatbot</h2>
+                    <p class="text-on-primary-container leading-relaxed mb-8">
+                        Context-aware conversational agent utilizing RAG architecture.
+                        지식 베이스 기반의 정교한 컨텍스트 이해를 제공하는 차세대 대화형 인터페이스입니다.
+                    </p>
+                </div>
+                <div class="space-y-4">
+                    <div class="h-[1px] bg-on-primary/20 w-full"></div>
+                    <div class="flex justify-between items-center text-sm font-medium">
+                        <span>Status: Operational</span>
+                        <span class="flex items-center gap-1"><span
+                                class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span> v2.4</span>
+                    </div>
+                    <img class="rounded-lg shadow-2xl transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500"
+                        data-alt="minimalist dark user interface displaying a futuristic chat window with subtle neon cyan accents and glowing typography"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG1n_DKm3ONKIwFAZv_kIiBvb_gxMinuDOSlkKi88OHIx7rlvbAEjExXmTh3ClW5XHDb_-_FzXfpKq5GVfk7wePIW19o0jxPTcKdZw6vgO40KhzGk3dmObdItePbhHiNxbPFGQX8E3mPpgOSK2TQpy9GpIoO80k5TQgi3Rb8iyGrvtRyNldZ7Kb-T76SnoacRwQctYRgBam3RdGu8ehLaTgTnVhybEklBkmfZmZeGhFGv1AAMSzbQIHl5C_qO140n0gQJ3L4vwwWk" />
+                </div>
+            </section>
+            <!-- Reactive Trading Dashboard (Horizontal) -->
+            <section class="md:col-span-6 bg-surface-container-lowest rounded-xl overflow-hidden group">
+                <div class="p-8">
+                    <div class="flex items-center justify-between mb-12">
+                        <span
+                            class="px-3 py-1 bg-tertiary text-on-tertiary rounded text-[10px] font-bold uppercase tracking-widest">FinTech</span>
+                        <span class="material-symbols-outlined text-outline" data-icon="monitoring">monitoring</span>
+                    </div>
+                    <h2 class="text-2xl font-bold mb-3">Reactive Trading Dashboard</h2>
+                    <p class="text-on-surface-variant text-sm mb-6 leading-relaxed">
+                        Real-time visualization of market liquidity and order flow. Designed with RxJS and WebSockets
+                        for sub-millisecond updates.
+                        초저지연 시장 데이터 시각화와 주문 흐름 분석을 위한 반응형 대시보드 솔루션입니다.
+                    </p>
+                    <div class="flex gap-4">
+                        <img class="w-full h-48 object-cover rounded-lg"
+                            data-alt="close-up of complex financial charts on a dark screen with vibrant neon green and red candle sticks and volumetric lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb0vWM4oLcHS6FoKfC7YxoCgJlF1ompvYhISZ3UpWfgwn1m1xGTZ9JifhazL-ln8mvI4l99f6Q8_3RdNa5nhNk9uq4vDpmV_40ytKwyFuGs9lWol7kfP9uwTVrQFVsmYr_XYsRhH_-RklSpA0FRiC0UpHCT7Zwzc1WlMg5exokZRVTp2T8dBxkcE5_k4NJUbQrzslj9oiJTaXjwj2s40AcYRDCztPiBH_HclRb9n37J3OVUTjLOYt00r6U3oMUNcr_m8QusnyMf_I" />
+                    </div>
+                </div>
+            </section>
+            <!-- Secure Auth Framework (Box) -->
+            <section class="md:col-span-6 bg-surface-container-low rounded-xl p-8 relative overflow-hidden group">
+                <div class="flex flex-col md:flex-row gap-8 items-center h-full">
+                    <div class="flex-1">
+                        <h2 class="text-2xl font-bold mb-3">Secure Auth Framework</h2>
+                        <p class="text-on-surface-variant text-sm mb-6">
+                            Zero-knowledge proof authentication library for decentralized identity management.
+                            탈중앙화 신원 증명을 위한 영지식 증명 기반 보안 인증 라이브러리입니다.
+                        </p>
+                        <button
+                            class="flex items-center gap-2 px-5 py-2 border border-outline/20 rounded-lg text-sm font-bold group-hover:bg-primary group-hover:text-on-primary transition-colors">
+                            <span class="material-symbols-outlined text-sm" data-icon="lock">lock</span>
+                            View Repository
+                        </button>
+                    </div>
+                    <div class="flex-1 flex justify-center">
+                        <div class="relative">
+                            <div
+                                class="w-32 h-32 rounded-full border-4 border-dashed border-primary/20 animate-[spin_20s_linear_infinite]">
+                            </div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-5xl text-primary"
+                                    data-icon="fingerprint">fingerprint</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Featured Technical Stack Section (Intentional Asymmetry) -->
+        <section class="mt-32 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-bold tracking-tight mb-8">Architectural Philosophy</h2>
+                <div class="space-y-8">
+                    <div class="flex gap-6">
+                        <div class="text-primary font-bold text-xl leading-none">01.</div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Performance First</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed">
+                                Optimized for efficiency at every layer. From system calls to rendering cycles, speed is
+                                a primary feature, not an afterthought.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="text-primary font-bold text-xl leading-none">02.</div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Scalable Resilience</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed">
+                                Designing systems that embrace failure as a constant. Implementing circuit breakers,
+                                retries, and stateless patterns.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-6">
+                        <div class="text-primary font-bold text-xl leading-none">03.</div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-2">Clean Semantics</h3>
+                            <p class="text-on-surface-variant text-sm leading-relaxed">
+                                Meaningful code that speaks for itself. Maintaining readability while pushing the
+                                boundaries of what's possible.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-surface-container-high rounded-2xl p-12 aspect-square flex items-center justify-center relative overflow-hidden">
+                <div
+                    class="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent">
+                </div>
+                <div class="grid grid-cols-3 gap-6 relative z-10">
+                    <div
+                        class="w-20 h-20 bg-surface-container-lowest rounded-xl flex items-center justify-center shadow-sm">
+                        <img class="w-12 opacity-80"
+                            data-alt="minimalist logo of the rust programming language on a clean white background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrxtweqD826-Fz2JdQzc9ixw4D4iBewTF3d7eAotyEgLvQSYBkD-W1xfXUiKHyXpK0YXTK34eDKdHLl_6BHQvJlsHIwF7xKzWe1ajB80yzrrn_iJX9_kRzctWMduq6O_a5JnE2-x9JQ7VmEoXN0znW5ZexeJ20cEkowW2QHWvwQ6Ng4yhmmKToRbleCdmdEgRbyYz90-KxdEUxt2tDFwmSBd8UQL7ZZDADrEdr38--N6fvup6kq6qIh9iL74TsbxKCHkYet2k4qvU" />
+                    </div>
+                    <div
+                        class="w-20 h-20 bg-surface-container-lowest rounded-xl flex items-center justify-center shadow-sm mt-8">
+                        <img class="w-12 opacity-80"
+                            data-alt="minimalist logo of the go programming language gopher on a clean white background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPxWdcqZXhjrT3GtMUJpRIufYJASu67XmoEfR1XEu4BLEIxuJbP60XIaiVzM-A8iD_-B6reCMIzhAJHbv3_2t7iPqs_r2twcuAdX9WEyP6ZiEd3MYlAY2L3S5ZUS3w56x6mgZzwAMbFhlho3EBbRtlWlr9dmo-GrOhI2p-eAKdmotn_BMJpTV8RC-QQv105YyVsEMQiURFIYMvhelXY0tNV2BO_dM7EGwEeh35LWizwVHp6bz_RegQNstwcy-j3aseNnYu8vDrrNk" />
+                    </div>
+                    <div
+                        class="w-20 h-20 bg-surface-container-lowest rounded-xl flex items-center justify-center shadow-sm">
+                        <img class="w-12 opacity-80"
+                            data-alt="minimalist typescript logo with blue background and white letters on a clean white background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBazt7i4pq8a13SftHMUz-aBqkL8uwP2oNeF6EWIysbhlDlhVEpFshvQjLuOPoeFLiV7kAVm0fqzuCRM4HBJIsWdaJCZgwraK1KUyKv2rLUrJlPDHFM_PeZLbflRSdc2o7WPFCj6N1_KqwuJBwd9YlgMhchLdOapGftzf7LdjKOCk9uROuZBL96yxi_vn6ofYYfvyDgACcviugVjEEcwjIMSCLimTaHZ_UfZp9OQcvEh-KYGF_EGoKqUVH9tZDcavO3c9cRb4PudhU" />
+                    </div>
+                    <div
+                        class="w-20 h-20 bg-surface-container-lowest rounded-xl flex items-center justify-center shadow-sm -mt-4">
+                        <img class="w-12 opacity-80" data-alt="minimalist docker whale logo on a clean white background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJUzSa3BHwnQExjHXoHGd09y-Gof3APP2Qk4BwuTrpZctOENzvH1WPnU4sQCLBKQlC7qFp2CdyoJscoJFWIHML8u6gRoAVI9_m3EVkJD88boIazDgvpbkj_2ikdN9R_akApuNZ6BuqoGO7cKixa-Qm5BwXBdnbW94ejCCd16C3knt9evjEIpPDCFPnA-6O1cePhHUzrduMXMzdwldqUr66Z6Hp7KTuZU6fv0hW4p4M-7Ax1YtOI23hiCFoH1Q82X-26n59qrlrDfU" />
+                    </div>
+                    <div
+                        class="w-20 h-20 bg-surface-container-lowest rounded-xl flex items-center justify-center shadow-sm mt-4">
+                        <img class="w-12 opacity-80"
+                            data-alt="minimalist amazon web services cloud logo on a clean white background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuATHXvOL_Aik8cYCSG_hUapQ05lFOdolYjWUlwO8ihUPZsiq_l9ePT_sfe367cYCFcgnJpGKcF7fyrfQRg_E0hht_p0TA9TU8qO-XMcqLHEpqotEhft1TnO8uzh5c2PWCuAlsxq6tqKPLv8MD4HWHPmbxcih0eLIYE_Vvzt5TArKxzkgKRRANYK3Ol6pBLCuzkBBYK5F5Z8vd0OVg234yOJzWlMBxQqA-OJqywhH-4BjcYKm1Bt8x9bm9CyFW03Zj0Zo5LWlcX7wN4" />
+                    </div>
+                    <div
+                        class="w-20 h-20 bg-surface-container-lowest rounded-xl flex items-center justify-center shadow-sm">
+                        <img class="w-12 opacity-80"
+                            data-alt="minimalist react atom logo with soft blue glow on a clean white background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiaVijXJ-LRW0GhuQVtbTFo09KODbWKtnqnd70wj_EmIrF4DIFevmZjgxIeil2ZWwtfGBJb7dCMHHafGt2afjUp2E1C642KDvOIIwAZuqlgwbjwjWTK1jtNFpdn5c0VG292SMnr5_CrvT7gaq2EZqwwqkp-MLe-DXa6WE9Axl1E7ISwANen5uu5wN0OiuRnuqGbVMqrofC6m2pkp-r5KQpvSry5bsgImJ5t8mFvcVqMawm0iRhdR0IrWT_OjzcWlW0BFGc5rFtyqU" />
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer class="bg-slate-100 dark:bg-slate-950 w-full py-12">
-        <div
-            class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-6 font-inter text-sm">
-            <div class="font-manrope font-bold text-indigo-900 dark:text-indigo-100 text-lg">
-                Indigo Code
+    <!-- Footer -->
+    <footer class="bg-slate-100 dark:bg-slate-900 w-full py-12 border-t-0 font-['Inter'] text-sm">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto">
+            <div class="mb-8 md:mb-0">
+                <div class="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-2">Indigo Code</div>
+                <p class="text-slate-500 max-w-xs leading-relaxed">
+                    © 2024 Indigo Code. Built with precision. <br />
+                    Crafting digital futures through architectural excellence.
+                </p>
             </div>
-            <div class="flex gap-8">
-                <a class="text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100"
-                    href="#">GitHub</a>
-                <a class="text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100"
-                    href="#">LinkedIn</a>
-                <a class="text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100"
+            <div class="flex flex-wrap justify-center gap-8">
+                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100"
                     href="#">Twitter</a>
-                <a class="text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 underline-offset-4 hover:underline transition-opacity opacity-80 hover:opacity-100"
+                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100"
+                    href="#">GitHub</a>
+                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100"
+                    href="#">LinkedIn</a>
+                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 transition-all opacity-80 hover:opacity-100"
                     href="#">RSS</a>
-            </div>
-            <div class="text-slate-500 dark:text-slate-400 text-center md:text-right">
-                © 2024 Indigo Code. Designed for the Intellectual Architect.
             </div>
         </div>
     </footer>

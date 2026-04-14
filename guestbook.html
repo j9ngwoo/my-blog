@@ -1,25 +1,16 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Study Roadmap | Indigo Code</title>
-    <!-- Material Symbols -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@700;800&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         tailwind.config = {
@@ -27,53 +18,53 @@
             theme: {
                 extend: {
                     "colors": {
-                        "tertiary-container": "#006374",
-                        "primary-fixed": "#dee0ff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#00105c",
+                        "surface-bright": "#f7f9fb",
+                        "surface": "#f7f9fb",
                         "primary": "#24389c",
                         "on-primary": "#ffffff",
-                        "on-secondary-container": "#54647a",
-                        "secondary-fixed-dim": "#b7c8e1",
-                        "secondary-fixed": "#d3e4fe",
-                        "surface-container-lowest": "#ffffff",
-                        "surface-container-high": "#e6e8ea",
-                        "error": "#ba1a1a",
-                        "surface-container-low": "#f2f4f6",
-                        "on-primary-fixed-variant": "#293ca0",
-                        "on-tertiary-container": "#66e2ff",
-                        "on-error": "#ffffff",
-                        "on-tertiary": "#ffffff",
-                        "error-container": "#ffdad6",
-                        "background": "#f7f9fb",
-                        "on-secondary": "#ffffff",
-                        "surface-tint": "#4355b9",
-                        "outline": "#757684",
                         "surface-dim": "#d8dadc",
-                        "secondary": "#505f76",
-                        "primary-container": "#3f51b5",
-                        "on-surface-variant": "#454652",
-                        "on-error-container": "#93000a",
-                        "on-secondary-fixed-variant": "#38485d",
-                        "surface-container-highest": "#e0e3e5",
+                        "surface-container-low": "#f2f4f6",
                         "surface-container": "#eceef0",
-                        "secondary-container": "#d0e1fb",
-                        "on-surface": "#191c1e",
+                        "secondary": "#505f76",
                         "on-primary-container": "#cacfff",
-                        "surface-variant": "#e0e3e5",
-                        "inverse-surface": "#2d3133",
-                        "on-tertiary-fixed-variant": "#004e5c",
                         "on-secondary-fixed": "#0b1c30",
-                        "on-background": "#191c1e",
-                        "on-tertiary-fixed": "#001f26",
-                        "on-primary-fixed": "#00105c",
-                        "tertiary-fixed": "#acedff",
-                        "surface": "#f7f9fb",
-                        "tertiary": "#004a57",
-                        "outline-variant": "#c5c5d4",
-                        "surface-bright": "#f7f9fb",
                         "inverse-primary": "#bac3ff",
-                        "primary-fixed-dim": "#bac3ff",
+                        "on-surface-variant": "#454652",
+                        "on-secondary-container": "#54647a",
+                        "on-primary-fixed-variant": "#293ca0",
+                        "on-background": "#191c1e",
                         "tertiary-fixed-dim": "#4cd7f6",
-                        "inverse-on-surface": "#eff1f3"
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "tertiary-container": "#006374",
+                        "on-tertiary-container": "#66e2ff",
+                        "primary-container": "#3f51b5",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#dee0ff",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#c5c5d4",
+                        "inverse-surface": "#2d3133",
+                        "secondary-container": "#d0e1fb",
+                        "background": "#f7f9fb",
+                        "primary-fixed-dim": "#bac3ff",
+                        "on-surface": "#191c1e",
+                        "tertiary-fixed": "#acedff",
+                        "on-tertiary-fixed": "#001f26",
+                        "outline": "#757684",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#eff1f3",
+                        "secondary-fixed": "#d3e4fe",
+                        "tertiary": "#004a57",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "surface-tint": "#4355b9",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-high": "#e6e8ea",
+                        "on-secondary-fixed-variant": "#38485d"
                     },
                     "borderRadius": {
                         "DEFAULT": "0.25rem",
@@ -95,254 +86,196 @@
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
 
-        .timeline-line::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: repeating-linear-gradient(to bottom, transparent, transparent 4px, #c5c5d4 4px, #c5c5d4 8px);
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Manrope', sans-serif;
         }
     </style>
 </head>
 
-<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
-    <!-- TopAppBar -->
-    <nav
-        class="sticky top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none">
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+    <!-- Shared Component: TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl">
         <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-            <div class="text-2xl font-bold text-indigo-900 dark:text-white tracking-tighter font-headline">Indigo Code
+            <div class="text-xl font-bold tracking-tighter text-indigo-900 dark:text-indigo-100">
+                Indigo Code
             </div>
-            <div class="hidden md:flex items-center gap-8 font-manrope tracking-tight text-sm">
-                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-all duration-300"
-                    href="#">Home</a>
-                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-all duration-300"
-                    href="#">Essays</a>
-                <a class="text-indigo-700 dark:text-indigo-400 border-b-2 border-indigo-700 dark:border-indigo-400 pb-1"
-                    href="#">Projects</a>
-                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-all duration-300"
-                    href="#">About</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 font-['Manrope'] tracking-tight transition-colors"
+                    href="index.html">Home</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 font-['Manrope'] tracking-tight transition-colors"
+                    href="list.html">Essays</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 font-['Manrope'] tracking-tight transition-colors"
+                    href="projects.html">Projects</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 font-['Manrope'] tracking-tight transition-colors"
+                    href="about.html">About</a>
+                <a class="text-indigo-700 dark:text-indigo-400 font-bold border-b-2 border-indigo-600 font-['Manrope'] tracking-tight"
+                    href="#">Guestbook</a>
             </div>
             <button
-                class="bg-indigo-700 text-white px-6 py-2 rounded-lg font-medium hover:bg-indigo-800 scale-95 active:scale-90 transition-transform">
+                class="bg-primary px-5 py-2 text-on-primary rounded font-semibold scale-95 duration-200 hover:bg-primary-container">
                 Contact
             </button>
         </div>
     </nav>
-    <main class="max-w-7xl mx-auto px-8 py-16">
-        <!-- Hero Section -->
-        <header
-            class="mb-20 text-center md:text-left relative overflow-hidden rounded-xl p-12 bg-surface-container-low">
-            <div class="absolute -right-24 -top-24 w-96 h-96 bg-tertiary-fixed-dim opacity-20 blur-3xl rounded-full">
-            </div>
-            <h1
-                class="text-6xl md:text-7xl font-headline font-extrabold text-on-surface tracking-tighter mb-6 leading-none">
-                Engineering <br /><span class="text-primary italic">Expertise.</span>
+    <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+        <!-- Hero Section: Editorial Header -->
+        <header class="mb-20 relative">
+            <div class="absolute -top-16 -left-10 w-64 h-64 bg-tertiary-fixed-dim/20 blur-3xl rounded-full -z-10"></div>
+            <h1 class="text-5xl md:text-7xl font-extrabold text-on-surface tracking-tighter mb-6">
+                The Guestbook.
             </h1>
             <p class="text-xl text-secondary max-w-2xl leading-relaxed">
-                A non-linear journey through the technologies and patterns that shape the modern web. From fundamental
-                semantics to distributed systems.
+                A digital repository for thoughts, fragments, and connections.
+                <span class="text-tertiary font-medium">여기에 발자취를 남겨주세요.</span>
+                Mixed messages from around the globe.
             </p>
         </header>
-        <!-- Roadmap Timeline Container -->
-        <div class="relative">
-            <!-- Past Milestones -->
-            <section class="mb-16">
-                <div class="flex items-center gap-4 mb-10">
-                    <span
-                        class="text-xs font-bold tracking-widest uppercase text-outline px-3 py-1 bg-surface-container-highest rounded-full">Completed</span>
-                    <div class="h-px flex-grow bg-outline-variant opacity-20"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- HTML/CSS Mastery -->
-                    <div
-                        class="group bg-surface-container-lowest p-8 rounded-xl transition-all duration-300 hover:shadow-[0_32px_48px_-12px_rgba(36,56,156,0.08)]">
-                        <div class="flex justify-between items-start mb-6">
-                            <div
-                                class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
-                                <span class="material-symbols-outlined" data-icon="html">html</span>
-                            </div>
-                            <span class="text-sm font-medium text-primary bg-primary-fixed px-3 py-1 rounded-full">Q1
-                                2023</span>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- Post Message Column (Bento Style) -->
+            <section class="lg:col-span-5">
+                <div
+                    class="sticky top-32 p-8 rounded-xl bg-surface-container-low border border-outline-variant/15 shadow-sm">
+                    <h2 class="text-2xl font-bold text-on-surface-variant mb-6 flex items-center gap-3">
+                        <span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+                        Leave a fragment
+                    </h2>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-secondary mb-2">Name /
+                                닉네임</label>
+                            <input
+                                class="w-full bg-surface-container-lowest border-none rounded-lg p-4 ring-1 ring-outline-variant/20 focus:ring-primary focus:ring-2 transition-all outline-none"
+                                placeholder="Anonymous Architect" type="text" />
                         </div>
-                        <h3 class="text-2xl font-headline font-bold text-on-surface mb-3 tracking-tight">HTML/CSS
-                            Mastery</h3>
-                        <p class="text-secondary mb-6 leading-relaxed">Semantic architecture, CSS Grid/Flexbox layouts,
-                            and advanced responsive design principles.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">BEM</span>
-                            <span
-                                class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">Sass</span>
-                            <span
-                                class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">A11y</span>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-secondary mb-2">Message
+                                / 메시지</label>
+                            <textarea
+                                class="w-full bg-surface-container-lowest border-none rounded-lg p-4 ring-1 ring-outline-variant/20 focus:ring-primary focus:ring-2 transition-all outline-none resize-none"
+                                placeholder="Write something meaningful..." rows="5"></textarea>
                         </div>
-                    </div>
-                    <!-- JavaScript Deep Dive -->
-                    <div
-                        class="group bg-surface-container-lowest p-8 rounded-xl transition-all duration-300 hover:shadow-[0_32px_48px_-12px_rgba(36,56,156,0.08)]">
-                        <div class="flex justify-between items-start mb-6">
-                            <div
-                                class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
-                                <span class="material-symbols-outlined" data-icon="javascript">javascript</span>
-                            </div>
-                            <span class="text-sm font-medium text-primary bg-primary-fixed px-3 py-1 rounded-full">Q3
-                                2023</span>
-                        </div>
-                        <h3 class="text-2xl font-headline font-bold text-on-surface mb-3 tracking-tight">JavaScript Deep
-                            Dive</h3>
-                        <p class="text-secondary mb-6 leading-relaxed">Asynchronous patterns, memory management, and
-                            ESNext features for modern applications.</p>
-                        <div class="flex flex-wrap gap-2">
-                            <span
-                                class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">Closures</span>
-                            <span
-                                class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">Promises</span>
-                            <span
-                                class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-medium">V8
-                                Engine</span>
-                        </div>
+                        <button
+                            class="w-full py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-lg shadow-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2"
+                            type="submit">
+                            <span class="material-symbols-outlined" data-icon="send">send</span>
+                            Post to Book
+                        </button>
+                    </form>
+                    <div class="mt-8 pt-8 border-t border-outline-variant/10">
+                        <p class="text-sm text-secondary leading-snug italic">
+                            "Code is temporary, thoughts are permanent. Thank you for visiting my digital studio."
+                        </p>
                     </div>
                 </div>
             </section>
-            <!-- Current Focus -->
-            <section class="mb-16 relative">
-                <div class="flex items-center gap-4 mb-10">
-                    <span
-                        class="text-xs font-bold tracking-widest uppercase text-primary px-3 py-1 bg-primary-fixed rounded-full">Active
-                        Focus</span>
-                    <div class="h-px flex-grow bg-primary-container opacity-20"></div>
-                </div>
-                <!-- Featured Active Card -->
-                <div class="bg-gradient-to-br from-primary to-primary-container p-[1px] rounded-xl overflow-hidden">
-                    <div
-                        class="bg-surface-container-lowest p-10 rounded-[calc(0.75rem-1px)] flex flex-col md:flex-row gap-12 items-center">
-                        <div class="flex-shrink-0 relative">
-                            <div
-                                class="w-32 h-32 rounded-2xl bg-primary flex items-center justify-center text-on-primary">
-                                <span class="material-symbols-outlined text-5xl" data-icon="hub">hub</span>
+            <!-- Messages Feed Column -->
+            <section class="lg:col-span-7 space-y-6">
+                <!-- Message Card 1 -->
+                <div
+                    class="p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10 transition-all hover:shadow-2xl hover:shadow-primary/5">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+                                <span class="material-symbols-outlined text-on-secondary-container"
+                                    data-icon="person">person</span>
                             </div>
-                            <div
-                                class="absolute -bottom-2 -right-2 w-8 h-8 rounded-full bg-tertiary flex items-center justify-center animate-pulse">
-                                <span class="material-symbols-outlined text-white text-sm" data-icon="bolt"
-                                    data-weight="fill" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                            <div>
+                                <h3 class="font-bold text-on-surface">Alex Rivera</h3>
+                                <span class="text-xs text-secondary font-mono">2024.11.21</span>
                             </div>
                         </div>
-                        <div class="flex-grow">
-                            <h3 class="text-4xl font-headline font-bold text-on-surface mb-4 tracking-tight">React
-                                Framework &amp; Ecosystem</h3>
-                            <p class="text-lg text-secondary mb-8 leading-relaxed max-w-3xl">Implementing
-                                high-performance interfaces with server components, state synchronization, and complex
-                                interaction patterns using Framer Motion.</p>
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                <div class="bg-surface-container p-4 rounded-lg">
-                                    <div class="text-xs text-outline mb-1 uppercase tracking-wider font-bold">In
-                                        Progress</div>
-                                    <div class="font-bold text-primary">Next.js 14</div>
-                                </div>
-                                <div class="bg-surface-container p-4 rounded-lg">
-                                    <div class="text-xs text-outline mb-1 uppercase tracking-wider font-bold">Mastered
-                                    </div>
-                                    <div class="font-bold text-primary">Zustand</div>
-                                </div>
-                                <div class="bg-surface-container p-4 rounded-lg">
-                                    <div class="text-xs text-outline mb-1 uppercase tracking-wider font-bold">Up Next
-                                    </div>
-                                    <div class="font-bold text-primary">React Query</div>
-                                </div>
-                                <div class="bg-surface-container p-4 rounded-lg">
-                                    <div class="text-xs text-outline mb-1 uppercase tracking-wider font-bold">
-                                        Researching</div>
-                                    <div class="font-bold text-primary">TRPC</div>
-                                </div>
+                        <span
+                            class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-bold uppercase tracking-wider rounded-full">New</span>
+                    </div>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        Absolutely loving the minimal aesthetic of your essays. The technical depth on React performance
+                        was a great read. Keep building!
+                    </p>
+                </div>
+                <!-- Message Card 2 (Korean Mixed) -->
+                <div class="p-8 rounded-xl bg-surface-container-low transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center">
+                                <span class="material-symbols-outlined text-on-tertiary-container"
+                                    data-icon="flutter_dash">flutter_dash</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-on-surface">Minjun Kim</h3>
+                                <span class="text-xs text-secondary font-mono">2024.11.18</span>
                             </div>
                         </div>
                     </div>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        포트폴리오가 정말 인상적이네요. 특히 디자인 시스템에 대한 철학이 돋보입니다. 좋은 영감 받고 갑니다! Cheers from Seoul. 🇰🇷
+                    </p>
                 </div>
-            </section>
-            <!-- Future Horizon -->
-            <section class="mb-16">
-                <div class="flex items-center gap-4 mb-10">
-                    <span
-                        class="text-xs font-bold tracking-widest uppercase text-outline px-3 py-1 bg-surface-container-highest rounded-full">Future
-                        Horizon</span>
-                    <div class="h-px flex-grow bg-outline-variant opacity-20"></div>
+                <!-- Message Card 3 -->
+                <div class="p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/10">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center gap-3">
+                            <img class="w-10 h-10 rounded-full object-cover"
+                                data-alt="professional portrait of a creative director in a minimalist studio setting with soft natural light"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCob6G-XwuoWcQc1J3cOwnVD-tYS2gfOETufLSEayBGwom8sEMoevbuBCXqbVMX5e8rccRCZ6D5vsDSOju6XASCxLHTgm06wdM9nH9-kSprSzwtKT3cO6MdqfQDed6jtc6O42TDaMy2--0nfq9De3K0oSNsQZOmA89fn77AM1U0SFHU5KPIaJ3xrMBmVB-rjgL8uwOK_lJhTWfn9mkgx94Bhk8la_HlYD6UC8V2ieWkfHzPNAJn-SiwTnz3o2q1P-DcgIjANaCXVfA" />
+                            <div>
+                                <h3 class="font-bold text-on-surface">Sarah Chen</h3>
+                                <span class="text-xs text-secondary font-mono">2024.11.15</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        The "Intellectual Architect" theme is very evident. It's rare to see such intentional use of
+                        whitespace in a dev blog. Would love to collaborate one day.
+                    </p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- Data Structures -->
-                    <div
-                        class="bg-surface-container-low p-8 rounded-xl opacity-80 hover:opacity-100 transition-opacity">
-                        <div
-                            class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary mb-6">
-                            <span class="material-symbols-outlined" data-icon="schema">schema</span>
+                <!-- Message Card 4 -->
+                <div class="p-8 rounded-xl bg-surface-container-low transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center">
+                                <span class="material-symbols-outlined text-on-primary-container"
+                                    data-icon="terminal">terminal</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-on-surface">Root_User</h3>
+                                <span class="text-xs text-secondary font-mono">2024.11.10</span>
+                            </div>
                         </div>
-                        <h4 class="text-xl font-headline font-bold text-on-surface mb-2 tracking-tight">Data Structures
-                        </h4>
-                        <p class="text-sm text-secondary leading-relaxed">Algorithmic complexity, Big O analysis, and
-                            advanced graph theory for scalable systems.</p>
                     </div>
-                    <!-- System Design -->
-                    <div
-                        class="bg-surface-container-low p-8 rounded-xl opacity-80 hover:opacity-100 transition-opacity">
-                        <div
-                            class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary mb-6">
-                            <span class="material-symbols-outlined" data-icon="architecture">architecture</span>
-                        </div>
-                        <h4 class="text-xl font-headline font-bold text-on-surface mb-2 tracking-tight">System Design
-                        </h4>
-                        <p class="text-sm text-secondary leading-relaxed">Microservices, event-driven architecture, and
-                            database sharding strategies.</p>
-                    </div>
-                    <!-- WebAssembly -->
-                    <div
-                        class="bg-surface-container-low p-8 rounded-xl opacity-80 hover:opacity-100 transition-opacity">
-                        <div
-                            class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary mb-6">
-                            <span class="material-symbols-outlined" data-icon="memory">memory</span>
-                        </div>
-                        <h4 class="text-xl font-headline font-bold text-on-surface mb-2 tracking-tight">WebAssembly</h4>
-                        <p class="text-sm text-secondary leading-relaxed">Low-level execution performance for
-                            browser-based heavy computation tasks.</p>
-                    </div>
+                    <p class="text-on-surface-variant leading-relaxed">
+                        Hello world! Testing the guestbook. Everything looks pixel-perfect.
+                    </p>
                 </div>
+                <!-- Load More -->
+                <button
+                    class="w-full py-4 border border-outline-variant/20 rounded-xl text-secondary font-semibold hover:bg-surface-container-highest transition-colors flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined" data-icon="expand_more">expand_more</span>
+                    Load Previous Fragments
+                </button>
             </section>
         </div>
-        <!-- Call to Action -->
-        <section class="mt-24 p-12 rounded-xl bg-surface-container-highest text-center relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="text-3xl font-headline font-bold text-on-surface mb-4">Want to build together?</h2>
-                <p class="text-secondary mb-8 max-w-xl mx-auto">I'm always looking for ambitious projects that push the
-                    boundaries of what's possible on the web.</p>
-                <div class="flex justify-center gap-4">
-                    <button
-                        class="bg-primary text-on-primary px-8 py-3 rounded-lg font-bold transition-transform hover:scale-105 active:scale-95 shadow-lg">
-                        Reach Out
-                    </button>
-                    <button
-                        class="bg-surface-container-lowest text-primary border border-outline-variant/20 px-8 py-3 rounded-lg font-bold transition-transform hover:scale-105 active:scale-95">
-                        View Projects
-                    </button>
-                </div>
-            </div>
-            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5">
-            </div>
-        </section>
     </main>
-    <!-- Footer -->
-    <footer class="w-full py-12 bg-slate-100 dark:bg-slate-950 border-t border-slate-200/20">
-        <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-6">
-            <div class="font-manrope font-bold text-indigo-900 dark:text-indigo-100">Indigo Code</div>
-            <p class="font-inter text-sm text-slate-500 dark:text-slate-400">© 2024 Indigo Code. Designed for the
-                Intellectual Architect.</p>
-            <div class="flex gap-8 font-inter text-sm">
-                <a class="text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-opacity opacity-80 hover:opacity-100 underline-offset-4 hover:underline"
-                    href="#">GitHub</a>
-                <a class="text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-opacity opacity-80 hover:opacity-100 underline-offset-4 hover:underline"
-                    href="#">LinkedIn</a>
-                <a class="text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-opacity opacity-80 hover:opacity-100 underline-offset-4 hover:underline"
+    <!-- Shared Component: Footer -->
+    <footer class="w-full py-12 bg-slate-100 dark:bg-slate-900 border-t-0">
+        <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto">
+            <div class="mb-6 md:mb-0">
+                <div class="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-2">Indigo Code</div>
+                <div class="text-slate-500 font-['Inter'] text-sm">© 2024 Indigo Code. Built with precision.</div>
+            </div>
+            <div class="flex gap-8">
+                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 font-['Inter'] text-sm transition-all opacity-80 hover:opacity-100"
                     href="#">Twitter</a>
-                <a class="text-slate-500 dark:text-slate-400 hover:text-indigo-500 dark:hover:text-indigo-300 transition-opacity opacity-80 hover:opacity-100 underline-offset-4 hover:underline"
+                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 font-['Inter'] text-sm transition-all opacity-80 hover:opacity-100"
+                    href="#">GitHub</a>
+                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 font-['Inter'] text-sm transition-all opacity-80 hover:opacity-100"
+                    href="#">LinkedIn</a>
+                <a class="text-slate-500 hover:text-indigo-500 hover:underline decoration-indigo-500/30 underline-offset-4 font-['Inter'] text-sm transition-all opacity-80 hover:opacity-100"
                     href="#">RSS</a>
             </div>
         </div>
