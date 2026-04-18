@@ -13,9 +13,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -121,23 +118,25 @@
             <header
                 class="glass-nav sticky top-0 z-50 flex items-center justify-between border-b border-outline-variant/15 px-6 md:px-40 py-3">
                 <div class="flex items-center gap-8">
-                    <div class="flex items-center gap-4 text-primary">
+                    <a class="flex items-center gap-4 text-primary group" href="index.html">
                         <div class="size-6">
                             <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
                             </svg>
                         </div>
-                        <h2 class="text-on-surface text-lg font-extrabold leading-tight tracking-tight">Indigo Code</h2>
-                    </div>
+                        <h2
+                            class="text-on-surface text-lg font-extrabold leading-tight tracking-tight group-hover:text-primary transition-colors">
+                            Indigo Code</h2>
+                    </a>
                     <div class="hidden md:flex items-center gap-9">
                         <a class="text-on-surface text-sm font-semibold hover:text-primary transition-colors"
-                            href="#">Home</a>
+                            href="index.html">Home</a>
                         <a class="text-on-surface text-sm font-semibold hover:text-primary transition-colors border-b-2 border-primary"
-                            href="#">Essays</a>
+                            href="list.html">Essays</a>
                         <a class="text-on-surface text-sm font-semibold hover:text-primary transition-colors"
-                            href="#">Projects</a>
+                            href="projects.html">Projects</a>
                         <a class="text-on-surface text-sm font-semibold hover:text-primary transition-colors"
-                            href="#">About</a>
+                            href="about.html">About</a>
                     </div>
                 </div>
                 <div class="flex flex-1 justify-end gap-4 md:gap-8">
@@ -322,9 +321,8 @@
                                     <button
                                         class="px-4 py-2 bg-primary text-on-primary text-xs font-bold rounded-lg hover:brightness-110 transition-all">Follow
                                         Author</button>
-                                    <button
-                                        class="px-4 py-2 bg-transparent border border-outline-variant/30 text-on-surface text-xs font-bold rounded-lg hover:bg-surface-container-high transition-all">View
-                                        Projects</button>
+                                    <a class="px-4 py-2 bg-transparent border border-outline-variant/30 text-on-surface text-xs font-bold rounded-lg hover:bg-surface-container-high transition-all"
+                                        href="projects.html">View Projects</a>
                                 </div>
                             </div>
                         </div>
@@ -339,12 +337,13 @@
                                 <p class="text-on-surface-variant text-sm">More insights on engineering and philosophy
                                 </p>
                             </div>
-                            <button class="text-primary font-bold text-sm flex items-center gap-1">
+                            <a class="text-primary font-bold text-sm flex items-center gap-1 hover:underline"
+                                href="list.html">
                                 View all essays <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                            </button>
+                            </a>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            <div class="group cursor-pointer">
+                            <a class="group cursor-pointer block" href="psychology_essay.html">
                                 <div class="h-48 w-full rounded-lg bg-surface-container-highest mb-4 overflow-hidden">
                                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                         data-alt="Abstract neon circuit board lines on dark background"
@@ -356,8 +355,8 @@
                                 </h3>
                                 <p class="text-on-surface-variant text-sm mt-2 line-clamp-2">코드는 기계가 읽기 위한 것이 아니라 인간이 읽기
                                     위한 것임을 증명하는 심리학적 접근.</p>
-                            </div>
-                            <div class="group cursor-pointer">
+                            </a>
+                            <a class="group cursor-pointer block" href="dx_essay.html">
                                 <div class="h-48 w-full rounded-lg bg-surface-container-highest mb-4 overflow-hidden">
                                     <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                                         data-alt="Team brainstorming session in a minimalist studio with whiteboard"
@@ -369,7 +368,7 @@
                                     아키텍처</h3>
                                 <p class="text-on-surface-variant text-sm mt-2 line-clamp-2">훌륭한 기술은 훌륭한 문화에서 탄생합니다. 팀의
                                     협업 구조를 설계하는 방법.</p>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </section>
@@ -378,14 +377,16 @@
             <footer class="bg-surface px-4 md:px-40 py-16 border-t border-outline-variant/15">
                 <div class="flex flex-col md:flex-row justify-between gap-12">
                     <div class="max-w-xs">
-                        <div class="flex items-center gap-3 text-primary mb-6">
+                        <a class="flex items-center gap-3 text-primary mb-6 group" href="index.html">
                             <div class="size-6">
                                 <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
                                 </svg>
                             </div>
-                            <h2 class="text-on-surface text-lg font-extrabold">Indigo Code</h2>
-                        </div>
+                            <h2
+                                class="text-on-surface text-lg font-extrabold group-hover:text-primary transition-colors">
+                                Indigo Code</h2>
+                        </a>
                         <p class="text-on-surface-variant text-sm leading-relaxed mb-6">
                             Building digital structures with purpose and precision. A journal for the modern software
                             architect.
@@ -406,13 +407,13 @@
                             <h4 class="text-on-surface font-bold text-sm mb-6 uppercase tracking-widest">Navigation</h4>
                             <ul class="space-y-4">
                                 <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors"
-                                        href="#">Home</a></li>
+                                        href="index.html">Home</a></li>
                                 <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors"
-                                        href="#">Essays</a></li>
+                                        href="list.html">Essays</a></li>
                                 <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors"
-                                        href="#">Projects</a></li>
+                                        href="projects.html">Projects</a></li>
                                 <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors"
-                                        href="#">About</a></li>
+                                        href="about.html">About</a></li>
                             </ul>
                         </div>
                         <div>
