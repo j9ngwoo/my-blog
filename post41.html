@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>현대적 아키텍처의 철학적 고찰 | Indigo Code</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#004a57",
+                        "on-surface-variant": "#454652",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#006374",
+                        "on-secondary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#293ca0",
+                        "inverse-primary": "#bac3ff",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#d8dadc",
+                        "outline": "#757684",
+                        "secondary-fixed": "#d3e4fe",
+                        "tertiary-fixed": "#acedff",
+                        "surface-container-highest": "#e0e3e5",
+                        "secondary-container": "#d0e1fb",
+                        "on-primary-fixed": "#00105c",
+                        "on-tertiary-fixed": "#001f26",
+                        "surface-tint": "#4355b9",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#eceef0",
+                        "on-primary-container": "#cacfff",
+                        "surface-bright": "#f7f9fb",
+                        "inverse-on-surface": "#eff1f3",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f7f9fb",
+                        "primary-fixed-dim": "#bac3ff",
+                        "secondary": "#505f76",
+                        "primary-container": "#3f51b5",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#dee0ff",
+                        "on-surface": "#191c1e",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "surface-container-high": "#e6e8ea",
+                        "background": "#f7f9fb",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "on-tertiary-container": "#66e2ff",
+                        "on-background": "#191c1e",
+                        "surface-container-low": "#f2f4f6",
+                        "outline-variant": "#c5c5d4",
+                        "on-secondary-container": "#54647a",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2d3133",
+                        "primary": "#24389c",
+                        "on-secondary-fixed": "#0b1c30"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #191c1e;
+            background-color: #f7f9fb;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .glass-nav {
+            background: rgba(247, 249, 251, 0.8);
+            backdrop-filter: blur(16px);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #24389c 0%, #3f51b5 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface">
+    <!-- TopNavBar Shared Component -->
+    <div class="relative flex h-auto w-full flex-col bg-surface group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <header
+                class="glass-nav sticky top-0 z-50 flex items-center justify-between border-b border-outline-variant/15 px-6 md:px-40 py-3">
+                <div class="flex items-center gap-8">
+                    <a class="flex items-center gap-4 text-primary group" href="index.html">
+                        <div class="size-6">
+                            <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
+                            </svg>
+                        </div>
+                        <h2
+                            class="text-on-surface text-lg font-extrabold leading-tight tracking-tight group-hover:text-primary transition-colors">
+                            Indigo Code</h2>
+                    </a>
+                    <div class="hidden md:flex items-center gap-9">
+                        <a class="text-on-surface text-sm font-semibold hover:text-primary transition-colors"
+                            href="index.html">Home</a>
+                        <a class="text-on-surface text-sm font-semibold hover:text-primary transition-colors border-b-2 border-primary"
+                            href="list.html">Essays</a>
+                        <a class="text-on-surface text-sm font-semibold hover:text-primary transition-colors"
+                            href="projects.html">Projects</a>
+                        <a class="text-on-surface text-sm font-semibold hover:text-primary transition-colors"
+                            href="about.html">About</a>
+                    </div>
+                </div>
+                <div class="flex flex-1 justify-end gap-4 md:gap-8">
+                    <label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+                        <div class="flex w-full flex-1 items-stretch rounded-lg h-full overflow-hidden">
+                            <div class="text-on-surface-variant flex border-none bg-surface-container-high items-center justify-center pl-4"
+                                data-icon="search">
+                                <span class="material-symbols-outlined">search</span>
+                            </div>
+                            <input
+                                class="form-input flex w-full border-none bg-surface-container-high text-on-surface focus:ring-0 h-full placeholder:text-on-surface-variant px-4 pl-2 text-sm font-normal"
+                                placeholder="Search" value="" />
+                        </div>
+                    </label>
+                    <button
+                        class="flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 md:w-auto md:px-4 bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-all"
+                        data-icon="person">
+                        <span class="material-symbols-outlined">person</span>
+                    </button>
+                </div>
+            </header>
+            <main class="flex-1">
+                <!-- Hero Section -->
+                <section class="px-4 md:px-40 py-8">
+                    <div class="relative overflow-hidden rounded-lg min-h-[520px] flex flex-col items-start justify-end p-8 md:p-16 hero-gradient"
+                        data-alt="Monochromatic low-angle shot of a brutalist concrete building with sharp geometric shadows and blue ambient light reflecting off glass surfaces"
+                        style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDrSId7rYdwnKCffFd-whTpfTRXKRYz3esK52Rlrvomw2AJeVfyAZgVwMOdv4A_BR0OEXOL1hmxcTpcxAaO-lAtkbMOG7rV3scds9uZU4fk1fO-DROKPO12fEOGN7adQGja559QQDz-_KrAhTmzwDsIAUb8OWI3PyiFPN6EqGq1fnAbmdpEKnPZuNSsHqv3_oJ1aKi17sfxZDJoy_-WBufa-byRWbVj_52Bylm8h1XwkbZLqfgVTBujOATmRYgkj_zp5IDxVdayEL0'); background-size: cover; background-position: center;">
+                        <div class="relative z-10 max-w-3xl">
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span
+                                    class="px-3 py-1 bg-tertiary text-on-tertiary text-xs font-bold tracking-widest uppercase rounded-full">Philosophy</span>
+                                <span
+                                    class="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-bold tracking-widest uppercase rounded-full">Architecture</span>
+                            </div>
+                            <h1
+                                class="text-white text-4xl md:text-6xl font-extrabold leading-[1.1] tracking-tight mb-6">
+                                현대적 아키텍처의 철학적 고찰
+                            </h1>
+                            <p class="text-white/80 text-lg md:text-xl font-normal leading-relaxed mb-8 max-w-2xl">
+                                기술적 결정 뒤에 숨겨진 인간의 의도와 구조적 무결성에 대한 탐구. 우리는 단순히 코드를 작성하는 것이 아니라, 디지털 세계의 질서를 설계합니다.
+                            </p>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full border-2 border-white/50 overflow-hidden">
+                                    <img class="w-full h-full object-cover"
+                                        data-alt="Portrait of a professional man in spectacles, minimalist intellectual style"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg8mRKXxFlIZGtWwSPfHKph3YuPXsBZZCY7oaPuppJf52el03OqcOnI5uHXt463q4OPmavKRTcpvj2iCPSR2pn7b3sRUPWJVCNgApvAevZLl09p9zIDFBHXwP_sp7TBsWUy8AHsMv_O7mdt8hzZxWWyCd7DqtRlKEGn6WjxdMVbWBPN_1k-xsdEeiqPvtIEmLNhUmcqkcbHXuYpkDCg821Z57-G0qx7xXrHa9oYtAyK53rKbpfY2m-u0BHnRwP0k-6x7TZN07AWwo" />
+                                </div>
+                                <div class="text-white">
+                                    <p class="font-bold text-sm">By Indigo Architect</p>
+                                    <p class="text-xs opacity-70">Published on Oct 24, 2023 • 12 min read</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Floating Progress Card -->
+                        <div
+                            class="absolute top-8 right-8 hidden lg:block w-64 p-6 bg-surface-container-lowest rounded-lg shadow-xl">
+                            <div class="flex justify-between items-end mb-4">
+                                <span
+                                    class="text-xs font-bold text-on-surface-variant uppercase tracking-widest">Reading
+                                    Progress</span>
+                                <span class="text-primary text-xl font-black">35%</span>
+                            </div>
+                            <div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+                                <div class="h-full bg-primary rounded-full" style="width: 35%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Article Content -->
+                <article class="px-4 md:px-40 py-12 flex flex-col lg:flex-row gap-16">
+                    <!-- Sidebar Nav/Metadata -->
+                    <aside class="w-full lg:w-64 shrink-0">
+                        <div class="sticky top-24 space-y-8">
+                            <div class="p-6 bg-surface-container-low rounded-lg">
+                                <h4 class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-4">
+                                    Contents</h4>
+                                <ul class="space-y-4">
+                                    <li><a class="text-primary font-bold text-sm border-l-2 border-primary pl-3 block"
+                                            href="#human-intent">Human Intent</a></li>
+                                    <li><a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm pl-3 block"
+                                            href="#structural-durability">Structural Durability</a></li>
+                                    <li><a class="text-on-surface-variant hover:text-primary transition-colors font-medium text-sm pl-3 block"
+                                            href="#decision-making">Decision Making</a></li>
+                                </ul>
+                            </div>
+                            <div class="flex flex-col gap-4 px-2">
+                                <button
+                                    class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined text-xl">share</span>
+                                    <span class="text-sm font-semibold">Share Essay</span>
+                                </button>
+                                <button
+                                    class="flex items-center gap-3 text-on-surface-variant hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined text-xl">bookmark</span>
+                                    <span class="text-sm font-semibold">Save to Library</span>
+                                </button>
+                            </div>
+                        </div>
+                    </aside>
+                    <!-- Main Text Body -->
+                    <div class="flex-1 max-w-3xl">
+                        <div class="prose prose-lg prose-indigo">
+                            <p class="text-xl leading-relaxed text-on-surface-variant mb-12 font-medium italic">
+                                "소프트웨어 아키텍처는 기술적 한계를 극복하는 과정이 아니라, 인간의 사고를 구조화하는 철학적 실천이다."
+                            </p>
+                            <section class="mb-16" id="human-intent">
+                                <h2 class="text-3xl font-extrabold text-on-surface mb-6 flex items-center gap-3">
+                                    <span class="text-primary/20 text-4xl">01.</span>
+                                    인간의 의도 (Human Intent)
+                                </h2>
+                                <p class="mb-6 leading-relaxed text-on-surface-variant">
+                                    모든 클래스, 모든 함수, 모든 마이크로서비스의 경계에는 누군가의 의도가 담겨 있습니다. 아키텍처는 단순히 '작동하는 코드'를 넘어서, 미래의
+                                    개발자에게 전달하는 대화의 기록입니다. 우리가 선택한 패턴과 추상화 레이어는 시스템이 해결하고자 하는 문제의 본질을 정의합니다.
+                                </p>
+                                <div class="my-10 p-8 bg-surface-container-lowest rounded-lg border-l-4 border-primary">
+                                    <p class="text-on-surface font-semibold leading-relaxed">
+                                        "우리는 왜 이 기술을 선택했는가?"라는 질문에 대한 답은 코드 자체가 아니라, 그 결정을 내린 인간의 맥락에서 찾아야 합니다.
+                                    </p>
+                                </div>
+                                <p class="leading-relaxed text-on-surface-variant">
+                                    의도가 명확하지 않은 아키텍처는 기술 부채로 이어집니다. 그것은 마치 설계도 없는 건물을 짓는 것과 같으며, 시간이 흐를수록 구조적 붕괴는
+                                    가속화됩니다. 현대 아키텍트는 기술적 지식뿐만 아니라 소통과 의도의 투영이라는 인문학적 소양을 요구받습니다.
+                                </p>
+                            </section>
+                            <section class="mb-16" id="structural-durability">
+                                <div class="w-full h-80 rounded-lg overflow-hidden mb-10"
+                                    data-alt="Abstract architectural lines forming a complex grid, cold blue tones, sharp focus, digital precision aesthetic"
+                                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC_TyIu25NNaug55mcfPYW_0Oa5qxfOhxYPjJOtSEPJx-FD1mZFikwfA_tnZ63vRMJ0aap_i2hFi0p9BkHpdBftN4RGU-hW2Ny_JMoG1q4aitczAigRWeMV8MXJarfRk8_glAZpSdARHZMg7Zx222qqn1lnQRlLJJkfCbK4Q4AfUT0qpxnKMLbLaKXdV55RVZmKos1wFLve5Hu76xem6umLt_AQGJCIBE6kGMjcWMxVKina2lhYNeO6AK57P_Sgm1OF7tBkYV9TK2I'); background-size: cover; background-position: center;">
+                                </div>
+                                <h2 class="text-3xl font-extrabold text-on-surface mb-6 flex items-center gap-3">
+                                    <span class="text-primary/20 text-4xl">02.</span>
+                                    구조적 지속성 (Structural Durability)
+                                </h2>
+                                <p class="mb-6 leading-relaxed text-on-surface-variant">
+                                    견고함(Robustness)은 단순히 버그가 없음을 의미하지 않습니다. 그것은 변화하는 환경 속에서 시스템이 자신의 정체성을 유지할 수 있는 능력을
+                                    말합니다. 지속 가능한 아키텍처는 결합도(Coupling)를 낮추고 응집도(Cohesion)를 높이는 것에서 시작되지만, 그 끝은 시스템의 생애 주기
+                                    전반에 걸친 유지보수성에 닿아 있습니다.
+                                </p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                                    <div class="p-6 bg-surface-container-low rounded-lg">
+                                        <h5 class="font-bold text-primary mb-2">유연성 (Flexibility)</h5>
+                                        <p class="text-xs text-on-surface-variant leading-relaxed">새로운 요구사항이 추가될 때 기존
+                                            구조를 파괴하지 않고 확장할 수 있는 용량.</p>
+                                    </div>
+                                    <div class="p-6 bg-surface-container-low rounded-lg">
+                                        <h5 class="font-bold text-primary mb-2">복원력 (Resilience)</h5>
+                                        <p class="text-xs text-on-surface-variant leading-relaxed">예상치 못한 장애 상황에서도 핵심
+                                            기능을 보호하고 자가 치유되는 구조적 설계.</p>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="mb-16" id="decision-making">
+                                <h2 class="text-3xl font-extrabold text-on-surface mb-6 flex items-center gap-3">
+                                    <span class="text-primary/20 text-4xl">03.</span>
+                                    의사결정의 무게 (Decision Making)
+                                </h2>
+                                <p class="mb-6 leading-relaxed text-on-surface-variant">
+                                    아키텍처 설계는 트레이드오프(Trade-off)의 연속입니다. 모든 이점을 가진 완벽한 솔루션은 존재하지 않습니다. 성능과 가독성, 확장성과 복잡성
+                                    사이에서의 균형을 잡는 것이 아키텍트의 진정한 역할입니다. 우리는 이 선택의 기록을 '아키텍처 결정 기록(ADR)'으로 남기며, 그 정당성을
+                                    확보합니다.
+                                </p>
+                                <p class="leading-relaxed text-on-surface-variant">
+                                    현대의 복잡한 클라우드 네이티브 환경에서는 정적 결정보다 동적 적응력이 중요해지고 있습니다. 이제 아키텍처는 고정된 상태가 아니라, 지속적으로 진화하는
+                                    유기체와 같습니다.
+                                </p>
+                            </section>
+                        </div>
+                        <!-- Author Footer Card -->
+                        <div
+                            class="mt-20 p-10 bg-surface-container-highest rounded-lg flex flex-col md:flex-row gap-8 items-center">
+                            <div class="w-32 h-32 rounded-lg shrink-0 overflow-hidden shadow-lg transform -rotate-3">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="Portrait of the author in a modern office, cinematic lighting"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgJlCU8jRdCtrmX9UQDW9u42aKcAB9zA-M_pgsakGXz0lPsz4NoJMRUYBluny0-YcjBmmjMf2GrWVw5VaCmD9LvPkGjEWGIrbnlq3qKfAUiUSmdA1VmoyItFMhsXcdSLw02iYbfrIgxjCosqWyNNMoKC4rcE4-8Mq5jEqH82ZWSraXuPJG0AT9FMNhzLgB5ZLXXJJbJXz-EKdu_IiN26BC7kG5Ki_7n-SSyOzQTRDUrnPE9AkB41b2ZjpaUtQTel9RiCKUSLDlqug" />
+                            </div>
+                            <div class="text-center md:text-left">
+                                <h3 class="text-2xl font-bold mb-2">Indigo Architect</h3>
+                                <p class="text-on-surface-variant text-sm mb-4 leading-relaxed">
+                                    시스템의 본질과 인간의 상호작용을 연구하는 소프트웨어 아키텍트입니다. 복잡한 문제를 단순한 구조로 치환하는 과정에서 즐거움을 느낍니다.
+                                </p>
+                                <div class="flex justify-center md:justify-start gap-4">
+                                    <button
+                                        class="px-4 py-2 bg-primary text-on-primary text-xs font-bold rounded-lg hover:brightness-110 transition-all">Follow
+                                        Author</button>
+                                    <a class="px-4 py-2 bg-transparent border border-outline-variant/30 text-on-surface text-xs font-bold rounded-lg hover:bg-surface-container-high transition-all"
+                                        href="projects.html">View Projects</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!-- Next Essays Section -->
+                <section class="px-4 md:px-40 py-20 bg-surface-container-low">
+                    <div class="max-w-[960px] mx-auto">
+                        <div class="flex justify-between items-end mb-10">
+                            <div>
+                                <h2 class="text-3xl font-extrabold mb-2">Continue Reading</h2>
+                                <p class="text-on-surface-variant text-sm">More insights on engineering and philosophy
+                                </p>
+                            </div>
+                            <a class="text-primary font-bold text-sm flex items-center gap-1 hover:underline"
+                                href="list.html">
+                                View all essays <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <a class="group cursor-pointer block" href="psychology_essay.html">
+                                <div class="h-48 w-full rounded-lg bg-surface-container-highest mb-4 overflow-hidden">
+                                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        data-alt="Abstract neon circuit board lines on dark background"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQbzJHiBfcBIXrI41XLGXSOCoIQ_9qEun498h8UveSxiTCRkzztrDev6hUk3gOfszDsQGCw56GQ9zgH_5u9FIAN9np14fJoIg59haS7e-pgbJ6ch-legGL3XYu1fi5a8czaMwsJqGy_oVpTSsnu-7w3P-nuu70GK8ErrFbHOnpEAa45pifPhQoilsZnrPJiQm4PlnkL32nsSd1jAC6Q01W_COaS4tA8J7835bp-rTZZnLEAIca40iIUIsvsCiLZHFgsUPWRFkfv2M" />
+                                </div>
+                                <span
+                                    class="text-xs font-bold text-tertiary uppercase tracking-widest mb-2 block">Technology</span>
+                                <h3 class="text-xl font-bold group-hover:text-primary transition-colors">클린 코드와 가독성의 심리학
+                                </h3>
+                                <p class="text-on-surface-variant text-sm mt-2 line-clamp-2">코드는 기계가 읽기 위한 것이 아니라 인간이 읽기
+                                    위한 것임을 증명하는 심리학적 접근.</p>
+                            </a>
+                            <a class="group cursor-pointer block" href="dx_essay.html">
+                                <div class="h-48 w-full rounded-lg bg-surface-container-highest mb-4 overflow-hidden">
+                                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                        data-alt="Team brainstorming session in a minimalist studio with whiteboard"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0FJFCu6_SKjA_qvBlDf5nsLcA26v7Aw_5BlC-GSJsRPUp6ZWu55tPuD4-DVvl8GbYkoKtTn4WgBZ-sOk96Gi0I2VtNTCJVxh-Jff1RffXgGO5G5kiHqfSPOyXkuH38TaooRKDJxzXsztSZcOvIiJ5J74hmEsqvwbVqZqRV_UNoRs1ZOel905Ra_oPTkP52hwXU1bqs80WXjC441_N02oJ1i8nIfORwbn0p5bjS2rQOQp1xSubcSLtoFckXk7PoljxGfMqHUVz8EQ" />
+                                </div>
+                                <span
+                                    class="text-xs font-bold text-tertiary uppercase tracking-widest mb-2 block">Management</span>
+                                <h3 class="text-xl font-bold group-hover:text-primary transition-colors">엔지니어링 팀의 문화적
+                                    아키텍처</h3>
+                                <p class="text-on-surface-variant text-sm mt-2 line-clamp-2">훌륭한 기술은 훌륭한 문화에서 탄생합니다. 팀의
+                                    협업 구조를 설계하는 방법.</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <!-- Footer Section -->
+            <footer class="bg-surface px-4 md:px-40 py-16 border-t border-outline-variant/15">
+                <div class="flex flex-col md:flex-row justify-between gap-12">
+                    <div class="max-w-xs">
+                        <a class="flex items-center gap-3 text-primary mb-6 group" href="index.html">
+                            <div class="size-6">
+                                <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z"></path>
+                                </svg>
+                            </div>
+                            <h2
+                                class="text-on-surface text-lg font-extrabold group-hover:text-primary transition-colors">
+                                Indigo Code</h2>
+                        </a>
+                        <p class="text-on-surface-variant text-sm leading-relaxed mb-6">
+                            Building digital structures with purpose and precision. A journal for the modern software
+                            architect.
+                        </p>
+                        <div class="flex gap-4">
+                            <a class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-lg">public</span>
+                            </a>
+                            <a class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors"
+                                href="#">
+                                <span class="material-symbols-outlined text-lg">terminal</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-16">
+                        <div>
+                            <h4 class="text-on-surface font-bold text-sm mb-6 uppercase tracking-widest">Navigation</h4>
+                            <ul class="space-y-4">
+                                <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors"
+                                        href="index.html">Home</a></li>
+                                <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors"
+                                        href="list.html">Essays</a></li>
+                                <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors"
+                                        href="projects.html">Projects</a></li>
+                                <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors"
+                                        href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-on-surface font-bold text-sm mb-6 uppercase tracking-widest">Connect</h4>
+                            <ul class="space-y-4">
+                                <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors"
+                                        href="#">GitHub</a></li>
+                                <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors"
+                                        href="#">LinkedIn</a></li>
+                                <li><a class="text-on-surface-variant text-sm hover:text-primary transition-colors"
+                                        href="#">RSS Feed</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-span-2 md:col-span-1">
+                            <h4 class="text-on-surface font-bold text-sm mb-6 uppercase tracking-widest">Newsletter</h4>
+                            <div
+                                class="flex items-stretch h-10 w-full rounded-lg overflow-hidden border border-outline-variant/30">
+                                <input class="bg-surface-container-low border-none px-4 text-xs w-full focus:ring-0"
+                                    placeholder="Email address" type="email" />
+                                <button class="bg-primary text-on-primary px-4 text-xs font-bold">Join</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="mt-16 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between gap-4">
+                    <p class="text-on-surface-variant text-xs">© 2023 Indigo Code. All architectural rights reserved.
+                    </p>
+                    <div class="flex gap-6">
+                        <a class="text-on-surface-variant text-xs hover:text-primary transition-colors" href="#">Privacy
+                            Policy</a>
+                        <a class="text-on-surface-variant text-xs hover:text-primary transition-colors" href="#">Terms
+                            of Service</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

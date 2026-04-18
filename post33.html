@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e6e8ea",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "secondary-container": "#d0e1fb",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#001f26",
+                        "surface-container": "#eceef0",
+                        "primary-container": "#3f51b5",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#004a57",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dee0ff",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e0e3e5",
+                        "on-secondary-container": "#54647a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "outline-variant": "#c5c5d4",
+                        "secondary-fixed": "#d3e4fe",
+                        "surface-dim": "#d8dadc",
+                        "primary": "#24389c",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary-container": "#66e2ff",
+                        "inverse-primary": "#bac3ff",
+                        "on-background": "#191c1e",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f7f9fb",
+                        "surface": "#f7f9fb",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-primary-fixed": "#00105c",
+                        "tertiary-fixed": "#acedff",
+                        "background": "#f7f9fb",
+                        "on-primary-container": "#cacfff",
+                        "error": "#ba1a1a",
+                        "secondary": "#505f76",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "on-primary-fixed-variant": "#293ca0",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "surface-tint": "#4355b9",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-container": "#006374",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "outline": "#757684",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#0b1c30",
+                        "primary-fixed-dim": "#bac3ff",
+                        "on-surface-variant": "#454652"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
+            <a class="text-xl font-bold tracking-tighter text-indigo-900 dark:text-indigo-100 font-headline"
+                href="index.html">Indigo Code</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors font-inter tracking-tight"
+                    href="index.html">Home</a>
+                <a class="text-indigo-700 dark:text-indigo-400 font-semibold border-b-2 border-indigo-600 font-inter tracking-tight"
+                    href="list.html">Essays</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors font-inter tracking-tight"
+                    href="#">Projects</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors font-inter tracking-tight"
+                    href="#">Archive</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all scale-95 duration-200 ease-in-out text-indigo-700 dark:text-indigo-400">
+                    <span class="material-symbols-outlined">search</span>
+                </button>
+                <button
+                    class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all scale-95 duration-200 ease-in-out text-indigo-700 dark:text-indigo-400">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-16 min-h-screen">
+        <!-- Hero Section -->
+        <header class="relative w-full h-[614px] flex items-end overflow-hidden bg-primary overflow-hidden">
+            <img class="absolute inset-0 w-full h-full object-cover opacity-60"
+                data-alt="Modern minimalist workspace with a sleek laptop showing code, warm ambient desk lighting, and a soft blurred background of a creative office"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK1UBLT463IUxss-Z8OPjbFtdgp1ATCpIg7YYvDy9zNNWazn39LnmEd3mKU0bvEhL9iUGkEnsefeOaYKlgZmfe3Ow0ngs_XC111IykB9Td9Fyy8iWm04xSYiPOuzuhbCY63oyGjWuw34W3n8ReomyN1Msi2tkRrhzuj0rieYdUdvzDsszi04e8JDkYxIaaS4Nf41TsSfX_cOhq77JzdQAE6tQftk3aFHq9lXPPBrsD2WyKoi8iVNtCB1aoiIA3VqR3x1wdE4cp-gw" />
+            <div class="absolute inset-0 bg-gradient-to-t from-primary via-primary/20 to-transparent"></div>
+            <div class="relative max-w-5xl mx-auto px-6 pb-16 w-full">
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span
+                        class="px-4 py-1 rounded-full bg-tertiary text-white text-xs font-semibold tracking-wider">#HTML</span>
+                    <span
+                        class="px-4 py-1 rounded-full bg-tertiary text-white text-xs font-semibold tracking-wider">#CSS</span>
+                    <span
+                        class="px-4 py-1 rounded-full bg-tertiary text-white text-xs font-semibold tracking-wider">#Frontend</span>
+                </div>
+                <h1
+                    class="text-5xl md:text-7xl font-extrabold text-white font-headline tracking-tighter mb-4 leading-tight">
+                    웹 개발 기초
+                </h1>
+                <p class="text-primary-fixed font-medium text-lg max-w-2xl">
+                    모던 웹의 근간이 되는 구조와 스타일의 원리를 탐구합니다.
+                </p>
+            </div>
+        </header>
+        <!-- Content Layout (Asymmetrical) -->
+        <section class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <!-- Sidebar / Metadata -->
+            <aside class="lg:col-span-3 order-2 lg:order-1">
+                <div class="sticky top-24 space-y-10">
+                    <div class="bg-surface-container-low p-6 rounded-lg">
+                        <h3 class="text-on-surface-variant text-xs font-bold uppercase tracking-widest mb-4">Author</h3>
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary font-bold">
+                                KJ</div>
+                            <div>
+                                <p class="font-bold text-on-surface">Kim Jang-woo</p>
+                                <p class="text-xs text-on-surface-variant">Junior Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-on-surface-variant text-xs font-bold uppercase tracking-widest px-2">Table of
+                            Contents</h3>
+                        <ul class="space-y-3">
+                            <li><a class="block px-2 py-1 text-primary font-semibold border-l-2 border-primary"
+                                    href="#html">01. HTML: The Skeleton</a></li>
+                            <li><a class="block px-2 py-1 text-on-surface-variant hover:text-primary transition-colors border-l-2 border-transparent"
+                                    href="#css">02. CSS: The Style</a></li>
+                            <li><a class="block px-2 py-1 text-on-surface-variant hover:text-primary transition-colors border-l-2 border-transparent"
+                                    href="#conclusion">03. Conclusion</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+            <!-- Main Article Body -->
+            <article class="lg:col-span-8 lg:col-start-5 order-1 lg:order-2">
+                <div class="prose prose-lg max-w-none prose-slate">
+                    <section class="mb-16" id="html">
+                        <h2 class="text-3xl font-bold font-headline text-primary mb-6 flex items-center gap-3">
+                            <span
+                                class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container text-base">01</span>
+                            HTML: The Skeleton
+                        </h2>
+                        <div class="bg-surface-container-lowest p-8 rounded-xl shadow-sm mb-8">
+                            <p class="text-lg leading-relaxed text-on-surface-variant mb-6">
+                                HTML(HyperText Markup Language)은 웹 페이지의 **뼈대**입니다. 단순히 텍스트를 나열하는 것이 아니라, 시맨틱 태그를 통해 각
+                                요소의 의미를 브라우저와 검색 엔진에 전달하는 역할을 합니다.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="p-4 bg-surface-container rounded-lg">
+                                    <h4 class="font-bold text-primary mb-2">Structure</h4>
+                                    <p class="text-sm">문서의 계층 구조를 정의하여 정보의 우선순위를 결정합니다.</p>
+                                </div>
+                                <div class="p-4 bg-surface-container rounded-lg">
+                                    <h4 class="font-bold text-primary mb-2">Semantics</h4>
+                                    <p class="text-sm">header, main, footer 등 의미 있는 태그로 웹 접근성을 높입니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-on-surface-variant leading-relaxed">
+                            좋은 HTML 코드는 CSS 없이도 문서의 흐름을 완벽하게 파악할 수 있어야 합니다. 이는 개발자 간의 협업뿐만 아니라 스크린 리더 사용자들을 위한 필수적인
+                            과정입니다.
+                        </p>
+                    </section>
+                    <!-- Featured Image / Break -->
+                    <div class="my-16 rounded-xl overflow-hidden shadow-2xl rotate-1 group">
+                        <img class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Close-up of clean code on a dark theme editor with vibrant syntax highlighting in indigo and cyan tones"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBddtvH_4B8p_nD0LNCLjq4xmnqBkA9B9v50cq0iiBTb7KGxD3hMsOunnvx8E1j7ykLgkK11Ab7j6rOXDhzSDfrCL4MkCiJIzHfkK-FWOQJAbF0rs7FfS4yriQ4YAvzpfr0PQPih-KMDATgA__8uqzLCP2yQnhr0WC_V51UIG8663YFZhg-HOQTMoErYOTQR-bweVCYuhBTpveumX1nWmVOhQrpvQEKz3w0Vi4KAjTMI7mXMmQaaw40UWkYTTYFfHhleG1_IZvhoK0" />
+                        <div
+                            class="bg-surface-container-highest p-4 text-center text-xs text-on-surface-variant italic">
+                            Syntactic clarity leads to structural integrity.
+                        </div>
+                    </div>
+                    <section class="mb-16" id="css">
+                        <h2 class="text-3xl font-bold font-headline text-primary mb-6 flex items-center gap-3">
+                            <span
+                                class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container text-base">02</span>
+                            CSS: The Style
+                        </h2>
+                        <p class="text-lg leading-relaxed text-on-surface-variant mb-8">
+                            CSS(Cascading Style Sheets)는 HTML이라는 골격 위에 **피부와 옷**을 입히는 과정입니다. 레이아웃, 컬러, 타이포그래피를 통해 사용자
+                            경험(UX)을 결정짓는 시각적 가이드를 제공합니다.
+                        </p>
+                        <!-- Bento Grid Like Feature List -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                            <div
+                                class="md:col-span-2 bg-gradient-to-br from-primary to-primary-container p-8 rounded-xl text-on-primary">
+                                <h4 class="text-xl font-bold mb-4">Flexbox &amp; Grid</h4>
+                                <p class="opacity-90">복잡한 레이아웃을 선언적으로 구현하는 현대적 도구입니다. 반응형 디자인의 핵심 요소로 자리 잡았습니다.</p>
+                            </div>
+                            <div class="bg-secondary-container p-8 rounded-xl text-on-secondary-container">
+                                <h4 class="text-xl font-bold mb-4">Variables</h4>
+                                <p class="opacity-90">디자인 시스템의 일관성을 유지하기 위한 토큰 관리 기술입니다.</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="bg-surface-container-low p-10 rounded-xl border-l-4 border-primary" id="conclusion">
+                        <h2 class="text-2xl font-bold font-headline text-on-surface mb-4">결론: 상호보완의 미학</h2>
+                        <p class="text-on-surface-variant leading-relaxed">
+                            HTML과 CSS는 서로 독립적으로 존재할 수 있지만, 함께할 때 비로소 가치 있는 디지털 제품이 탄생합니다. 기초를 탄탄히 다지는 것이 곧 미래의 복잡한
+                            프레임워크를 이해하는 지름길입니다.
+                        </p>
+                    </section>
+                </div>
+                <!-- Footer of Article -->
+                <div
+                    class="mt-20 pt-10 border-t border-outline-variant/20 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <div class="flex items-center gap-4">
+                        <button
+                            class="flex items-center gap-2 text-primary font-bold hover:translate-x-[-4px] transition-transform">
+                            <span class="material-symbols-outlined">arrow_back</span>
+                            <span>이전 글</span>
+                        </button>
+                    </div>
+                    <div class="flex gap-4">
+                        <button
+                            class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all">
+                            <span class="material-symbols-outlined">share</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-all">
+                            <span class="material-symbols-outlined">bookmark</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full border-t border-slate-200/20 dark:border-slate-800/20 bg-slate-50 dark:bg-slate-950">
+        <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto py-12 px-6 gap-6">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <span class="text-lg font-black text-slate-900 dark:text-slate-100 font-headline">Indigo Code</span>
+                <p class="text-sm font-inter tracking-wide text-slate-500 dark:text-slate-500">© 2024 Kim Jang-woo.
+                    Built with Precision.</p>
+            </div>
+            <div class="flex gap-8">
+                <a class="text-sm font-inter tracking-wide text-slate-500 dark:text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all opacity-80 hover:opacity-100"
+                    href="#">Twitter</a>
+                <a class="text-sm font-inter tracking-wide text-slate-500 dark:text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all opacity-80 hover:opacity-100"
+                    href="#">GitHub</a>
+                <a class="text-sm font-inter tracking-wide text-slate-500 dark:text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all opacity-80 hover:opacity-100"
+                    href="#">LinkedIn</a>
+                <a class="text-sm font-inter tracking-wide text-slate-500 dark:text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all opacity-80 hover:opacity-100"
+                    href="#">RSS</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

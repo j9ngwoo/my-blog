@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="light" lang="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Inter:wght@300..700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e6e8ea",
+                        "secondary-fixed-dim": "#b7c8e1",
+                        "secondary-container": "#d0e1fb",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#001f26",
+                        "surface-container": "#eceef0",
+                        "primary-container": "#3f51b5",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#004a57",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dee0ff",
+                        "on-error-container": "#93000a",
+                        "surface-variant": "#e0e3e5",
+                        "on-secondary-container": "#54647a",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "outline-variant": "#c5c5d4",
+                        "secondary-fixed": "#d3e4fe",
+                        "surface-dim": "#d8dadc",
+                        "primary": "#24389c",
+                        "inverse-surface": "#2d3133",
+                        "on-tertiary-container": "#66e2ff",
+                        "inverse-primary": "#bac3ff",
+                        "on-background": "#191c1e",
+                        "surface-container-low": "#f2f4f6",
+                        "surface-bright": "#f7f9fb",
+                        "surface": "#f7f9fb",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-primary-fixed": "#00105c",
+                        "tertiary-fixed": "#acedff",
+                        "background": "#f7f9fb",
+                        "on-primary-container": "#cacfff",
+                        "error": "#ba1a1a",
+                        "secondary": "#505f76",
+                        "on-secondary-fixed-variant": "#38485d",
+                        "on-primary-fixed-variant": "#293ca0",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "surface-tint": "#4355b9",
+                        "inverse-on-surface": "#eff1f3",
+                        "tertiary-container": "#006374",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "outline": "#757684",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#0b1c30",
+                        "primary-fixed-dim": "#bac3ff",
+                        "on-surface-variant": "#454652"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .headline {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopNavBar Implementation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl">
+        <div class="flex justify-between items-center max-w-7xl mx-auto px-6 h-16">
+            <a class="text-xl font-bold tracking-tighter text-indigo-900 dark:text-indigo-100 font-headline"
+                href="index.html">Indigo Code</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors font-inter tracking-wide text-sm"
+                    href="index.html">Home</a>
+                <a class="text-indigo-700 dark:text-indigo-400 font-semibold border-b-2 border-indigo-600 font-inter tracking-wide text-sm"
+                    href="list.html">Essays</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors font-inter tracking-wide text-sm"
+                    href="#">Projects</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-300 transition-colors font-inter tracking-wide text-sm"
+                    href="#">Archive</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all scale-95 active:scale-90">
+                    <span class="material-symbols-outlined text-slate-600 dark:text-slate-400">search</span>
+                </button>
+                <button
+                    class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 rounded-lg transition-all scale-95 active:scale-90">
+                    <span class="material-symbols-outlined text-slate-600 dark:text-slate-400">dark_mode</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-16 min-h-screen">
+        <!-- Hero Section -->
+        <header class="relative w-full overflow-hidden py-24 md:py-32">
+            <div class="absolute inset-0 z-0">
+                <img alt="" class="w-full h-full object-cover opacity-10 blur-sm"
+                    data-alt="Futuristic robotic hand interacting with a glowing digital holographic interface in a dark, high-tech laboratory setting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_Yqtur_N2v39enpnXumebGNOtBEQkXlhapajO5Qj2rfV_3W7xLTzgg3z3yu5guXyRjM3Hp7b_A-Y-0H1A-l0CVrnloq3MEmwv5UXGZ_pfQp7sXDFZxi_n29yW1HW0qPpy5Qsz5YW14pargiAwvgyvsUEZh2lpDULCkXyEg0AMcozFLf7rZb-E5x1SkRsA3AEBE9KOPS5nBfQATjEclg9OOxCQYQtSTylcfV65kPLj_hkRsI32wrZlHjOV7m_uipf4KP7L-ouDLjA" />
+                <div class="absolute inset-0 bg-gradient-to-br from-surface via-surface/80 to-primary-container/10">
+                </div>
+            </div>
+            <div class="relative z-10 max-w-4xl mx-auto px-6">
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <span
+                        class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-wider">#AI-Powered</span>
+                    <span
+                        class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-wider">#Web-Development</span>
+                    <span
+                        class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold tracking-wider">#GitHub</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface mb-8 leading-[1.1]">
+                    AI 블로그 <br />
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-container">제작
+                        과정</span>
+                </h1>
+                <div class="flex items-center gap-4 text-secondary">
+                    <div
+                        class="w-12 h-12 rounded-full bg-surface-container-high border-2 border-surface-container-lowest overflow-hidden">
+                        <img alt="Author"
+                            data-alt="Professional portrait of a young developer in a clean studio setting with soft lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA84ngjOOzGzk53gIjqE1S2bZpLwi8dnKumT4W3Dplq2gjhjTGuE-YkC80BRZhFxb-LbryLDSrmyAt_o3DZANdJy4ViDNmmNaB1uuJjc6ZCR08LAT2CTW85R_PWFXuYXe4I1oO6XR4Q0ZIyQJWdKH8NyJ5iNOd7HqUspycbJ2-o4OXpzDqQIRKZ_LK9ghAdbki-I8514WMqW9yYkB2a3g8zkP7qOXtiXAjeMU2FCQUmLa4MxChhr9P4hXbmyB94cOQxGXkeZmEQ1U8" />
+                    </div>
+                    <div>
+                        <p class="font-bold text-on-surface">Kim Jang-woo</p>
+                        <p class="text-sm opacity-70">2024. 05. 24 • 8 min read</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Content Section -->
+        <article class="max-w-4xl mx-auto px-6 pb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Sidebar Navigation -->
+                <aside class="hidden lg:block lg:col-span-3 sticky top-24 h-fit">
+                    <div class="p-6 bg-surface-container-low rounded-xl">
+                        <h3 class="text-xs font-black uppercase tracking-widest text-primary mb-4">Table of Contents
+                        </h3>
+                        <ul class="space-y-4 text-sm font-medium text-on-surface-variant">
+                            <li><a class="hover:text-primary transition-colors" href="#intro">01. 시작하며</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#chatgpt">02. ChatGPT와의 협업</a>
+                            </li>
+                            <li><a class="hover:text-primary transition-colors" href="#github">03. GitHub 아키텍처</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#deployment">04. GitHub Pages
+                                    배포</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                <!-- Body Text -->
+                <div class="lg:col-span-9 space-y-12">
+                    <section class="prose prose-lg prose-slate max-w-none" id="intro">
+                        <p class="text-xl leading-relaxed text-on-surface-variant font-body">
+                            현대 웹 개발 생태계는 AI의 등장으로 거대한 변화를 맞이하고 있습니다. 더 이상 단순히 코드를 짜는 것에 그치지 않고,
+                            어떻게 효율적으로 AI를 도구로서 활용하여 구조화된 시스템을 구축하느냐가 핵심입니다. 이번 포스트에서는
+                            ChatGPT를 활용해 블로그의 구조를 설계하고, GitHub와 GitHub Pages를 통해 배포하는 전체 여정을 다룹니다.
+                        </p>
+                    </section>
+                    <section class="space-y-6" id="chatgpt">
+                        <div class="p-8 bg-surface-container-lowest rounded-xl shadow-sm border-l-4 border-primary">
+                            <h2 class="text-3xl font-bold tracking-tight mb-4 text-on-surface">ChatGPT: 브레인스토밍부터 코드 구현까지
+                            </h2>
+                            <p class="text-on-surface-variant leading-relaxed">
+                                블로그의 초기 컨셉 설정 단계에서 ChatGPT는 훌륭한 파트너가 되었습니다. 특히 Tailwind CSS 설정과 디자인 시스템의
+                                컬러 팔레트를 확정할 때, 인지 부하를 줄여주면서도 일관성 있는 디자인을 유지하도록 도와주었습니다. 프롬프트 엔지니어링을 통해
+                                원하는 컴포넌트의 명세(Specification)를 정확히 전달하는 과정이 가장 중요했습니다.
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-surface-container-high p-6 rounded-lg">
+                                <span class="material-symbols-outlined text-primary text-4xl mb-2">terminal</span>
+                                <h4 class="font-bold mb-1">Tailwind Configuration</h4>
+                                <p class="text-sm text-on-surface-variant">AI가 제안한 확장된 컬러 팔레트와 타이포그래피 설정</p>
+                            </div>
+                            <div class="bg-surface-container-high p-6 rounded-lg">
+                                <span class="material-symbols-outlined text-primary text-4xl mb-2">grid_view</span>
+                                <h4 class="font-bold mb-1">Component Shells</h4>
+                                <p class="text-sm text-on-surface-variant">재사용 가능한 React/HTML 스니펫의 자동 생성</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="space-y-6" id="github">
+                        <h2 class="text-3xl font-bold tracking-tight text-on-surface">GitHub를 통한 소스 코드 관리</h2>
+                        <p class="text-on-surface-variant leading-relaxed">
+                            버전 관리는 개발자 블로그의 근간입니다. GitHub의 Issue와 Project 보드를 활용하여 개발 로드맵을 시각화하고,
+                            각 기능별로 브랜치를 나누어 작업을 진행했습니다. 특히 AI가 생성한 코드의 경우 반드시 코드 리뷰를 거쳐
+                            보안 취약점이나 불필요한 중복을 제거하는 과정을 거쳤습니다.
+                        </p>
+                        <div class="rounded-xl overflow-hidden shadow-2xl">
+                            <img alt="Code Editor" class="w-full"
+                                data-alt="Macro close-up of a high-resolution laptop screen displaying complex source code with colorful syntax highlighting"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWLD64d_uEqRDOmnCCaG6Sj-AqxdbAoq6MjagDZinpchtEQeo7qw8VJXkHwfw4Z8wEmIgiwIe2xX95QNx6fvmfUH59ktAwu3s6MTsDwRFJPfnbOt_SnuMGpYhCAwS2-k7ec1e71m85L2Dm8JyoVGKe_6mIm2j-vptI9rjaFeAWAcIW4yvDI7ukUM6tmgYeCKPULxdyEbwhe_xfwaNVrQi9g-nvAtXQKDNeWud_YpXsqC1-oH4RUPEJLVZSWrs_d6nCptWrua-NhoQ" />
+                        </div>
+                    </section>
+                    <section class="space-y-6" id="deployment">
+                        <h2 class="text-3xl font-bold tracking-tight text-on-surface">GitHub Pages: 심리스한 배포 경험</h2>
+                        <div class="bg-primary p-8 rounded-xl text-on-primary">
+                            <p class="text-lg font-medium opacity-90 leading-relaxed italic">
+                                "GitHub Actions를 활용한 자동 배포(CI/CD) 파이프라인 구축은 블로그 운영의 효율성을 극대화합니다.
+                                메인 브랜치에 푸시하는 것만으로 단 몇 초 만에 전 세계에 새로운 글이 공개됩니다."
+                            </p>
+                        </div>
+                        <p class="text-on-surface-variant leading-relaxed">
+                            GitHub Pages는 정적 사이트 호스팅에 최적화되어 있습니다. 별도의 서버 비용 없이 안정적인 서비스를 제공할 수 있으며,
+                            커스텀 도메인 연결과 SSL 인증서 자동 갱신 기능을 통해 전문적인 웹사이트 운영이 가능해졌습니다.
+                        </p>
+                    </section>
+                    <!-- Footer Action -->
+                    <div class="pt-12 border-t border-outline-variant/10">
+                        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                            <div class="flex gap-4">
+                                <button
+                                    class="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded font-bold transition-transform hover:scale-105 active:scale-95">
+                                    <span class="material-symbols-outlined">thumb_up</span>
+                                    Post Like
+                                </button>
+                                <button
+                                    class="flex items-center gap-2 px-6 py-3 border border-outline-variant/20 text-primary rounded font-bold transition-all hover:bg-surface-container-low">
+                                    <span class="material-symbols-outlined">share</span>
+                                    Share
+                                </button>
+                            </div>
+                            <div class="flex gap-3">
+                                <a class="flex items-center gap-2 text-tertiary font-bold hover:underline"
+                                    href="list.html">
+                                    <span class="material-symbols-outlined">arrow_back</span>
+                                    Back to Essays
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <!-- Footer Implementation -->
+    <footer class="w-full border-t border-slate-200/20 dark:border-slate-800/20 bg-slate-50 dark:bg-slate-950">
+        <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto py-12 px-6 gap-6">
+            <div class="space-y-2">
+                <h2 class="text-lg font-black text-slate-900 dark:text-slate-100 font-headline">Indigo Code</h2>
+                <p class="text-sm font-inter tracking-wide text-slate-500 dark:text-slate-500">© 2024 Kim Jang-woo.
+                    Built with Precision.</p>
+            </div>
+            <div class="flex gap-8">
+                <a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all opacity-80 hover:opacity-100 font-inter tracking-wide text-sm"
+                    href="#">Twitter</a>
+                <a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all opacity-80 hover:opacity-100 font-inter tracking-wide text-sm"
+                    href="#">GitHub</a>
+                <a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all opacity-80 hover:opacity-100 font-inter tracking-wide text-sm"
+                    href="#">LinkedIn</a>
+                <a class="text-slate-500 dark:text-slate-500 hover:text-indigo-500 dark:hover:text-indigo-300 transition-all opacity-80 hover:opacity-100 font-inter tracking-wide text-sm"
+                    href="#">RSS</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
